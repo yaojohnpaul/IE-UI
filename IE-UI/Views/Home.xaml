@@ -1,0 +1,64 @@
+﻿<Page x:Class="IE_UI.Views.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IE_UI.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="900"
+      Title="Home">
+
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="20">
+                <Button x:Name="ExtractButton" BorderThickness="4"
+                    BorderBrush="Black"
+                    Background="Transparent"
+                    Margin="4, 20, 4, 20"
+                    Width="200" Click="ExtractButton_Click">
+                    <StackPanel Orientation="Vertical"
+                            Margin="20">
+                        <Label Content="&#xE7E6;"
+                           FontFamily="Segoe MDL2 Assets"
+                           FontSize="72"
+                           Padding="0, 40, 0, 40"/>
+                        <TextBlock Text="extractor"
+                               Foreground="Black"
+                               FontSize="20"
+                               HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="ViewButton" BorderThickness="4"
+                    BorderBrush="Black"
+                    Background="Transparent"
+                    Margin="4, 20, 4, 20"
+                    Width="200" Click="ViewButton_Click">
+                    <StackPanel Orientation="Vertical"
+                            Margin="20">
+                        <Label Content="&#xE8E5;"
+                           FontFamily="Segoe MDL2 Assets"
+                           FontSize="72"
+                           Padding="0, 40, 0, 40"/>
+                        <TextBlock Text="viewer"
+                               Foreground="Black"
+                               FontSize="20"
+                               HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="recent files"
+                       FontSize="20"
+                       Foreground="Black"
+                       Margin="40, 20, 40, 10"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="IE_UI.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IE_UI.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="900" MaxWidth="900" MaxHeight="600" MinWidth="450" MinHeight="450" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Background="WhiteSmoke">
+            <Label Grid.Row="0" 
+                   Content="Information Extraction"
+                   HorizontalAlignment="Center"
+                   Padding="20"
+                   FontSize="24"
+                   FontWeight="Bold"/>
+        </Grid>
+        <Frame Name="MainFrame"
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
