@@ -37,7 +37,7 @@
   <ItemGroup>
     <Reference Include="Hammer.SpinningWheel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Hammer.SpinningWheel.dll</HintPath>
+      <HintPath>..\lib\Hammer.SpinningWheel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
