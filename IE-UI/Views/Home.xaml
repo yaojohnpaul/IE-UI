@@ -53,7 +53,8 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1"
+                        Visibility="Hidden">
                 <TextBlock Text="recent files"
                        FontSize="20"
                        Foreground="Black"
