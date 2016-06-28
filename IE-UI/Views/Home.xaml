@@ -53,12 +53,53 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            <StackPanel Grid.Row="1"
-                        Visibility="Hidden">
+            <StackPanel Grid.Row="1">
                 <TextBlock Text="recent files"
                        FontSize="20"
                        Foreground="Black"
                        Margin="40, 20, 40, 10"/>
+                <ListView Name="RecentFilesListView"
+                          BorderBrush="Transparent"
+                          Margin="40, 0, 40, 20" MouseDoubleClick="RecentFilesListView_MouseDoubleClick">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0, 0, 4, 0"
+                                        Width="250"
+                                        Orientation="Horizontal">
+                                <!--Icon-->
+                                <TextBlock Text="{Binding OperationType}"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Segoe MDL2 Assets"
+                                           FontSize="24"
+                                           Margin="8, 0, 0, 0"/>
+                                <StackPanel>
+                                    <!--File Name-->
+                                    <TextBlock Text="{Binding Name}"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       VerticalAlignment="Center"
+                                       Margin="8, 8, 8, 0"/>
+                                    <!--File Path-->
+                                    <TextBlock Text="{Binding SourcePath}"
+                                       FontSize="15"
+                                       VerticalAlignment="Center"
+                                       Margin="8, 0, 8, 8"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Width="{Binding (FrameworkElement.ActualWidth), 
+            RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
+            ItemWidth="{Binding (ListView.View).ItemWidth, 
+            RelativeSource={RelativeSource AncestorType=ListView}}"
+            MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"
+            ItemHeight="{Binding (ListView.View).ItemHeight, 
+            RelativeSource={RelativeSource AncestorType=ListView}}" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
             </StackPanel>
         </Grid>
     </ScrollViewer>
