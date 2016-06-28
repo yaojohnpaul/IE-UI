@@ -122,6 +122,7 @@ namespace IE_UI.Views
             else
             {
                 DisplayArticles(ListRawListArticles);
+                IsAdvanced = false;
             }
         }
 
