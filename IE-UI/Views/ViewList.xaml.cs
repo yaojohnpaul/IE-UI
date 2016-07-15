@@ -126,7 +126,7 @@ namespace IE_UI.Views
         {
             if (!IsAdvanced)
             {
-                this.NavigationService.Navigate(new ViewSetup());
+                this.NavigationService.Navigate(new Home());
             }
             else
             {

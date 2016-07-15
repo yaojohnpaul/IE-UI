@@ -1,5 +1,6 @@
 ﻿using Hammer.SpinningWheel;
 using IE_UI.Models;
+using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows;
@@ -47,7 +48,7 @@ namespace IE_UI.Views
             {
                 if (!(bool)args.Result)
                 {
-                    MessageBox.Show(Application.Current.MainWindow, 
+                    MessageBox.Show(Application.Current.MainWindow,
                         "Please check the debug.log for further information.",
                         "Unexpected error encountered");
 
@@ -70,9 +71,18 @@ namespace IE_UI.Views
         private void EndProcess()
         {
             ProgressRing.Visibility = Visibility.Hidden;
-            RepeatButton.Visibility = Visibility.Visible;
+            //RepeatButton.Visibility = Visibility.Visible;
 
             StatusTextBlock.Margin = new Thickness(0);
+
+            this.NavigationService.Navigate(new ViewList(Config.DestinationFilePath));
+
+            RecentFileManager.AddRecentFile(new RecentFile()
+            {
+                OperationType = Char.ConvertFromUtf32(0xE8E5),
+                Name = System.IO.Path.GetFileNameWithoutExtension(Config.DestinationFilePath),
+                SourcePath = System.IO.Path.GetDirectoryName(Config.DestinationFilePath),
+            });
         }
 
         private void RepeatButton_Click(object sender, RoutedEventArgs e)
