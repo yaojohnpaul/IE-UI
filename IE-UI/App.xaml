@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:IE_UI"
              StartupUri="Views\MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="ForegroundThemeBrush" Color="#FF7400"/>
+        <SolidColorBrush x:Key="ForegroundAccentBrush" Color="#FF943C"/>
+        <SolidColorBrush x:Key="BackgroundThemeBrush" Color="#F5F1EE"/>
+        <SolidColorBrush x:Key="BackgroundLightBrush" Color="#F9E3D1"/>
+        <SolidColorBrush x:Key="BackgroundHeavyBrush" Color="#FFC290"/>
     </Application.Resources>
 </Application>

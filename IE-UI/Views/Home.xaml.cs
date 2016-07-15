@@ -27,24 +27,18 @@ namespace IE_UI.Views
 
             App.Current.MainWindow.Title = "Home";
 
-            List<Test> test = new List<Test>();
+            /// TODO: Check if paths are valid
+            /// 
+            var recentFilesList = RecentFileManager.GetRecentFilesList();
 
-            test.Add(new Test()
+            if (recentFilesList.Count() > 0)
             {
-                OperationType = Char.ConvertFromUtf32(0xE7E6),
-                Name = "input",
-                SourcePath = "D:\\Documents",
-                DestinationPath = "D:\\Documents"
-            });
-
-            test.Add(new Test()
+                RecentFilesListView.ItemsSource = recentFilesList.Skip(Math.Max(0, recentFilesList.Count() - 3)).Take(3); ;
+            }
+            else
             {
-                OperationType = Char.ConvertFromUtf32(0xE8E5),
-                Name = "result",
-                SourcePath = "D:\\Documents"
-            });
-
-            RecentFilesListView.ItemsSource = test;
+                RecentFilesPanel.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void ExtractButton_Click(object sender, RoutedEventArgs e)
@@ -57,9 +51,9 @@ namespace IE_UI.Views
             this.NavigationService.Navigate(new ViewSetup());
         }
 
-        private void RecentFilesListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void RecentFilesListView_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var item = ((FrameworkElement)e.OriginalSource).DataContext as Test;
+            var item = ((FrameworkElement)e.OriginalSource).DataContext as RecentFile;
 
             if (item != null)
             {
@@ -68,7 +62,7 @@ namespace IE_UI.Views
                     this.NavigationService.Navigate(new ExtractProcess(new ExtractConfig()
                     {
                         SourceFilePath = String.Format("{0}\\{1}.xml", item.SourcePath, item.Name),
-                        DestinationFilePath = String.Format("{0}\\{1}.xml", item.DestinationPath, "results")
+                        DestinationFilePath = item.DestinationPath
                     }));
                 }
                 else if (item.OperationType == Char.ConvertFromUtf32(0xE8E5))
@@ -77,16 +71,5 @@ namespace IE_UI.Views
                 }
             }
         }
-    }
-
-    public class Test
-    {
-        public string OperationType { get; set; }
-
-        public string Name { get; set; }
-
-        public string SourcePath { get; set; }
-
-        public string DestinationPath { get; set; }
     }
 }

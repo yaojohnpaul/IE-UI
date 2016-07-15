@@ -59,8 +59,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="InlineExpression.cs" />
     <Compile Include="Models\ExtractConfig.cs" />
     <Compile Include="Models\ListArticle.cs" />
+    <Compile Include="Models\RecentFile.cs" />
+    <Compile Include="RecentFileManager.cs" />
     <Compile Include="Views\ExtractProcess.xaml.cs">
       <DependentUpon>ExtractProcess.xaml</DependentUpon>
     </Compile>

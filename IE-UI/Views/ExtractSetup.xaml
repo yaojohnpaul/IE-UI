@@ -23,7 +23,7 @@
                 Grid.Column="0"
                 FontFamily="Segoe MDL2 Assets"
                 FontSize="20"
-                Foreground="Black"
+                Foreground="{StaticResource ForegroundThemeBrush}"
                 Background="Transparent"
                 BorderBrush="Transparent"
                 Content="&#xE830;"
@@ -96,7 +96,7 @@
                 <TextBlock Text="proceed"
                            FontWeight="Bold"
                            FontSize="24"
-                           Foreground="Black"/>
+                           Foreground="{StaticResource ForegroundThemeBrush}"/>
             </Button>
         </StackPanel>
     </Grid>

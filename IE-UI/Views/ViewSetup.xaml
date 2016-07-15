@@ -23,7 +23,7 @@
                 Grid.Column="0"
                 FontFamily="Segoe MDL2 Assets"
                 FontSize="20"
-                Foreground="Black"
+                Foreground="{StaticResource ForegroundThemeBrush}"
                 Background="Transparent"
                 Content="&#xE830;"
                 VerticalAlignment="Top"
@@ -61,9 +61,6 @@
                             Click="SourceBrowseButton_Click"
                             Background="WhiteSmoke"/>
                 </Grid>
-                <TextBlock FontSize="12" 
-                           Foreground="Red"
-                           Text="* Ensure that all three result files (base, format date, and inverted index) are in the same directory. Choose the base result file."/>
             </StackPanel>
         </ScrollViewer>
         <!--Proceed Button-->
@@ -81,7 +78,7 @@
                 <TextBlock Text="proceed"
                            FontWeight="Bold"
                            FontSize="24"
-                           Foreground="Black"/>
+                           Foreground="{StaticResource ForegroundThemeBrush}"/>
             </Button>
         </StackPanel>
     </Grid>

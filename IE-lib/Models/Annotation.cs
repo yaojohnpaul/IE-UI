@@ -10,14 +10,16 @@ namespace IE_lib.Models
     {
         public int Index { get; set; }
 
-        public String Who { get; set; }
+        public string Who { get; set; }
 
-        public String Where { get; set; }
+        public string Where { get; set; }
 
-        public String When { get; set; }
+        public string When { get; set; }
 
-        public String What { get; set; }
+        public string What { get; set; }
 
-        public String Why { get; set; }
+        public string Why { get; set; }
+
+        public string FormattedWhen { get; set; }
     }
 }

@@ -44,13 +44,22 @@ namespace IE_UI.Views
 
             ListRawListArticles = new List<ListArticle>();
 
-            foreach (DisplayArticle d in Results.ListDisplayArticles)
+            if (Results == null)
             {
-                ListRawListArticles.Add(new ListArticle()
+                MessageBox.Show(Application.Current.MainWindow,
+                    "Either there are no articles found or other input files are missing.",
+                    "Invalid input file");
+            }
+            else
+            {
+                foreach (DisplayArticle d in Results.ListDisplayArticles)
                 {
-                    DisplayArticle = d,
-                    MatchedString = d.Article.Body.Substring(0, 120) + "..."
-                });
+                    ListRawListArticles.Add(new ListArticle()
+                    {
+                        DisplayArticle = d,
+                        MatchedString = d.Article.Body.Substring(0, 120) + "..."
+                    });
+                }
             }
 
             DisplayArticles(ListRawListArticles);
@@ -115,7 +124,7 @@ namespace IE_UI.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if(!IsAdvanced)
+            if (!IsAdvanced)
             {
                 this.NavigationService.Navigate(new ViewSetup());
             }
@@ -128,8 +137,6 @@ namespace IE_UI.Views
 
         private void DisplayArticles(List<ListArticle> articles)
         {
-            StatusText.Text = String.Format("displaying {0} articles", articles.Count);
-
             if (AdvancedSearchPanel.Visibility == Visibility.Visible)
             {
                 AdvancedSearchPanel.Visibility = Visibility.Collapsed;
@@ -139,17 +146,15 @@ namespace IE_UI.Views
                 QueryPanel.Children.RemoveRange(0, QueryPanel.Children.Count);
             }
 
-            ArticleListView.ItemsSource = articles;
-        }
-
-        private void ArticleListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            var item = ((FrameworkElement)e.OriginalSource).DataContext as ListArticle;
-
-            if (item != null)
+            if (articles.Count > 0)
             {
-                ViewArticle v = new ViewArticle(item.DisplayArticle, Results.FilePath);
-                v.Show();
+                StatusText.Text = String.Format(articles.Count > 1 ? "displaying {0} articles" : "displaying {0} article", articles.Count);
+                ArticleListView.ItemsSource = articles;
+            }
+            else
+            {
+                StatusText.Text = String.Format("no articles found");
+                ArticleListView.ItemsSource = null;
             }
         }
 
@@ -159,7 +164,7 @@ namespace IE_UI.Views
 
             foreach (ListArticle l in ListRawListArticles)
             {
-                if(l.DisplayArticle.Article.Title.ToLower().Contains(BasicSearchTextBox.Text.ToLower()))
+                if (l.DisplayArticle.Article.Title.ToLower().Contains(BasicSearchTextBox.Text.ToLower()))
                 {
                     filtered.Add(l);
                 }
@@ -176,14 +181,15 @@ namespace IE_UI.Views
             List<int> whatIndex = new List<int>();
             List<int> whyIndex = new List<int>();
             List<int> finalResults = new List<int>();
-            List<int>[] queryResults = new List<int>[ListQueryTextBoxes.Count]; // result of each query
+            List<int>[] queryResults = new List<int>[ListQueryTextBoxes.Count];
+
             for (int i = 0; i < ListQueryTextBoxes.Count; i++)
             {
                 queryResults[i] = new List<int>();
             }
+
             List<List<int>> mergedAndResults = new List<List<int>>();
             List<ListArticle> filtered = new List<ListArticle>();
-            Console.WriteLine("im in");
 
             //Find the index of the queries for each w
             for (int i = 0; i < ListCriteriaComboBoxes.Count; i++)
@@ -217,10 +223,8 @@ namespace IE_UI.Views
                 {
                     foreach (int queryIndex in whoIndex)
                     {
-                        Console.WriteLine(entry.Key + " VS" + ListQueryTextBoxes[queryIndex].Text);
                         if (entry.Key.IndexOf(ListQueryTextBoxes[queryIndex].Text, StringComparison.OrdinalIgnoreCase) >= 0)
                         {
-                            Console.WriteLine("im in 2");
                             queryResults[queryIndex].AddRange(entry.Value);
                         }
                     }
@@ -287,6 +291,19 @@ namespace IE_UI.Views
                 }
             }
 
+            int itr = 0;
+
+            foreach (List<int> list in queryResults)
+            {
+                Console.WriteLine("Iteration " + itr);
+
+                foreach (int num in list)
+                {
+                    Console.Write(num + ";");
+                }
+
+                itr++;
+            }
 
             //Merge results from queries
             for (int i = 0; i < ListTypeComboBoxes.Count; i++)
@@ -297,7 +314,12 @@ namespace IE_UI.Views
                 }
                 else if (ListTypeComboBoxes[i].Text.Equals("OR"))
                 {
-                    mergedAndResults.Add(queryResults[i + 1]);
+                    mergedAndResults.Add(queryResults[i]);
+
+                    if (i + 1 == ListTypeComboBoxes.Count)
+                    {
+                        finalResults.AddRange(queryResults[i + 1]);
+                    }
                 }
             }
 
@@ -375,7 +397,38 @@ namespace IE_UI.Views
             ListTypeComboBoxes.Add(newType);
             newPanel.Children.Add(newType);
 
+            newPanel.Margin = new Thickness(0, 4, 0, 0);
+
             QueryPanel.Children.Add(newPanel);
+        }
+
+        private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            ScrollViewer scv = (ScrollViewer)sender;
+            scv.ScrollToVerticalOffset(scv.VerticalOffset - e.Delta);
+            e.Handled = true;
+        }
+
+        private void ArticleListView_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var item = ((FrameworkElement)e.OriginalSource).DataContext as ListArticle;
+
+            if (item != null)
+            {
+                ViewArticle v = new ViewArticle(item.DisplayArticle, Results.FilePath);
+                v.Show();
+            }
+        }
+
+        private void ArticleListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var item = ((FrameworkElement)e.OriginalSource).DataContext as ListArticle;
+
+            if (item != null)
+            {
+                ViewArticle v = new ViewArticle(item.DisplayArticle, Results.FilePath);
+                v.Show();
+            }
         }
     }
 }

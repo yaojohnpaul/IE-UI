@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -36,8 +37,6 @@ namespace IE_UI.Views
 
         private void ProceedButton_Click(object sender, RoutedEventArgs e)
         {
-            /// TODO: Check if paths are valid
-
             if (SourceTextBox.Text.Any() && DestinationTextBox.Text.Any())
             {
                 this.NavigationService.Navigate(new ExtractProcess(new ExtractConfig()
@@ -45,10 +44,18 @@ namespace IE_UI.Views
                     SourceFilePath = SourceTextBox.Text,
                     DestinationFilePath = DestinationTextBox.Text
                 }));
+
+                RecentFileManager.AddRecentFile(new RecentFile()
+                {
+                    OperationType = Char.ConvertFromUtf32(0xE7E6),
+                    Name = System.IO.Path.GetFileNameWithoutExtension(SourceTextBox.Text),
+                    SourcePath = System.IO.Path.GetDirectoryName(SourceTextBox.Text),
+                    DestinationPath = DestinationTextBox.Text
+                });
             }
             else
             {
-                MessageBox.Show(Application.Current.MainWindow, 
+                MessageBox.Show(Application.Current.MainWindow,
                     "Please enter valid file paths.",
                     "Invalid file paths");
             }

@@ -109,10 +109,19 @@ namespace IE_lib
 
         public static ParsedResults View(string path)
         {
+            if (path.Contains("_inverted_index"))
+            {
+                path = path.Replace("_inverted_index", "");
+            }
+
+            string invertedIndexDestinationPath = path.Insert(path.Length - 4, "_inverted_index");
+            string formattedDateDestinationPath = path.Insert(path.Length - 4, "_format_date");
+
             FileParser fileParser = new FileParser();
 
             List<Article> listArticles = fileParser.parseFile(path);
             List<Annotation> listAnnotations = fileParser.parseAnnotations(path);
+            List<Annotation> listFormattedDateAnnotations = fileParser.parseAnnotations(formattedDateDestinationPath);
 
             ParsedResults results = new ParsedResults();
 
@@ -124,28 +133,34 @@ namespace IE_lib
             results.WhatReverseIndex = new Dictionary<string, List<int>>();
             results.WhyReverseIndex = new Dictionary<string, List<int>>();
 
-            String formatDateDestinationPath = path.Insert(path.Length - 4, "_inverted_index");
-
             if (listArticles.Count <= 0 || listAnnotations.Count <= 0)
             {
                 return null;
             }
 
-            foreach (int i in Enumerable.Range(0, listAnnotations.Count()))
+            if (File.Exists(formattedDateDestinationPath) && listAnnotations.Count == listFormattedDateAnnotations.Count)
             {
-                listAnnotations[i].Index = i;
-                results.ListDisplayArticles.Add(new DisplayArticle()
+                foreach (int i in Enumerable.Range(0, listAnnotations.Count()))
                 {
-                    Article = listArticles[i],
-                    Annotation = listAnnotations[i]
-                });
+                    listAnnotations[i].Index = i;
+                    listAnnotations[i].FormattedWhen = listFormattedDateAnnotations[i].When;
+                    results.ListDisplayArticles.Add(new DisplayArticle()
+                    {
+                        Article = listArticles[i],
+                        Annotation = listAnnotations[i]
+                    });
+                }
+            }
+            else
+            {
+                return null;
             }
 
-            if (File.Exists(formatDateDestinationPath))
+            if (File.Exists(invertedIndexDestinationPath))
             {
                 XmlDocument doc = new XmlDocument();
 
-                doc.Load(formatDateDestinationPath);
+                doc.Load(invertedIndexDestinationPath);
 
                 XmlNodeList whoNodes = doc.DocumentElement.SelectNodes("/data/who/entry");
                 XmlNodeList whenNodes = doc.DocumentElement.SelectNodes("/data/when/entry");
@@ -210,5 +225,5 @@ namespace IE_lib
 
             return results;
         }
-}
+    }
 }

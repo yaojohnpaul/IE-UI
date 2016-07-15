@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using IE_UI.Models;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,11 +53,16 @@ namespace IE_UI.Views
 
         private void ProceedButton_Click(object sender, RoutedEventArgs e)
         {
-            /// TODO: Check if paths are valid
-
             if (SourceTextBox.Text.Any())
             {
                 this.NavigationService.Navigate(new ViewList(SourceTextBox.Text));
+
+                RecentFileManager.AddRecentFile(new RecentFile()
+                {
+                    OperationType = Char.ConvertFromUtf32(0xE8E5),
+                    Name = System.IO.Path.GetFileNameWithoutExtension(SourceTextBox.Text),
+                    SourcePath = System.IO.Path.GetDirectoryName(SourceTextBox.Text),
+                });
             }
             else
             {

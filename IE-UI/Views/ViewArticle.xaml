@@ -106,7 +106,7 @@
                        Text="edit"
                        FontWeight="Bold"
                        FontSize="16"
-                       Foreground="Black"/>
+                       Foreground="{StaticResource ForegroundThemeBrush}"/>
         </Button>
     </Grid>
 </Window>

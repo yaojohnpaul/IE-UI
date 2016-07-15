@@ -15,6 +15,7 @@
               Background="WhiteSmoke">
             <Label Grid.Row="0" 
                    Content="Information Extraction"
+                   Foreground="{StaticResource ForegroundAccentBrush}"
                    HorizontalAlignment="Center"
                    Padding="20"
                    FontSize="24"

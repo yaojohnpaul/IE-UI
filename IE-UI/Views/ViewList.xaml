@@ -24,7 +24,7 @@
                 Grid.Column="0"
                 FontFamily="Segoe MDL2 Assets"
                 FontSize="20"
-                Foreground="Black"
+                Foreground="{StaticResource ForegroundThemeBrush}"
                 Background="Transparent"
                 Content="&#xE830;"
                 VerticalAlignment="Top"
@@ -47,14 +47,14 @@
         </StackPanel>
         <!--Search Box-->
         <StackPanel Grid.Row="0"
-                 Grid.Column="2"
-                 Width="200"
-                 Height="32"
-                 Margin="16"
-                 Orientation="Horizontal">
+                    Grid.Column="2"
+                    Width="200"
+                    Height="32"
+                    Margin="16"
+                    Orientation="Horizontal">
             <TextBox Name="BasicSearchTextBox"
                      Width="168"
-                 Background="WhiteSmoke"
+                     Background="{StaticResource BackgroundLightBrush}"
                      BorderBrush="Transparent"
                      FontSize="16"
                      Padding="4" TextChanged="BasicSearchTextBox_TextChanged"/>
@@ -63,8 +63,8 @@
                     Width="32"
                     FontFamily="Segoe MDL2 Assets"
                     FontSize="20"
-                    Foreground="Black"
-                 Background="WhiteSmoke"
+                    Foreground="{StaticResource ForegroundThemeBrush}"
+                    Background="{StaticResource BackgroundLightBrush}"
                     Content="&#xE713;"
                     BorderBrush="Transparent"
                     HorizontalAlignment="Right" Click="AdvancedSearchToggle_Click"/>
@@ -98,7 +98,7 @@
                     <TextBlock Text="add"
                            FontWeight="Bold"
                            FontSize="24"
-                           Foreground="Black"/>
+                           Foreground="{StaticResource ForegroundThemeBrush}"/>
                 </Button>
                 <Button Name="AdvancedSearchButton"
                     VerticalAlignment="Center"
@@ -108,17 +108,18 @@
                     <TextBlock Text="search"
                            FontWeight="Bold"
                            FontSize="24"
-                           Foreground="Black"/>
+                           Foreground="{StaticResource ForegroundThemeBrush}"/>
                 </Button>
             </StackPanel>
         </Grid>
         <!--Main Form Region-->
         <ScrollViewer Grid.Row="2"
                       Grid.Column="1"
-                      Grid.ColumnSpan="2">
+                      Grid.ColumnSpan="2" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel"
+                      VerticalScrollBarVisibility="Auto">
             <ListView Name="ArticleListView"
                       BorderBrush="Transparent" 
-                      MouseDoubleClick="ArticleListView_MouseDoubleClick">
+                      PreviewMouseLeftButtonDown="ArticleListView_PreviewMouseLeftButtonDown">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0, 0, 0, 4">
