@@ -257,16 +257,14 @@ namespace IE_UI.Views
                 body = body.Insert(segment.StartIndex, "<bold>");
             }
 
-            Console.WriteLine(body);
-
             InlineExpression.SetInlineExpression(BodyTextBlock, body);
 
-            Console.WriteLine("Who: {0} | When: {1} | Where: {2} | What: {3} | Why: {4}",
-                whoAnnotations.Count > 0 ? whoMatched.Count(x => x == true) / whoAnnotations.Count : -1,
-                whenAnnotations.Count > 0 ? whenMatched.Count(x => x == true) / whenAnnotations.Count : -1,
-                whereAnnotations.Count > 0 ? whereMatched.Count(x => x == true) / whereAnnotations.Count : -1,
-                whatMatched ? 1 : -1,
-                whyMatched ? 1 : -1);
+            //Console.WriteLine("Who: {0} | When: {1} | Where: {2} | What: {3} | Why: {4}",
+            //    whoAnnotations.Count > 0 ? whoMatched.Count(x => x == true) / whoAnnotations.Count : -1,
+            //    whenAnnotations.Count > 0 ? whenMatched.Count(x => x == true) / whenAnnotations.Count : -1,
+            //    whereAnnotations.Count > 0 ? whereMatched.Count(x => x == true) / whereAnnotations.Count : -1,
+            //    whatMatched ? 1 : -1,
+            //    whyMatched ? 1 : -1);
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)

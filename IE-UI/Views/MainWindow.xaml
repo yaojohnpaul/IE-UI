@@ -12,10 +12,10 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0"
-              Background="WhiteSmoke">
+              Background="{StaticResource ForegroundAccentBrush}">
             <Label Grid.Row="0" 
                    Content="Information Extraction"
-                   Foreground="{StaticResource ForegroundAccentBrush}"
+                   Foreground="WhiteSmoke"
                    HorizontalAlignment="Center"
                    Padding="20"
                    FontSize="24"

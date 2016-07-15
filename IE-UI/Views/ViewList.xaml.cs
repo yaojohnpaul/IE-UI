@@ -416,19 +416,19 @@ namespace IE_UI.Views
             if (item != null)
             {
                 ViewArticle v = new ViewArticle(item.DisplayArticle, Results.FilePath);
-                v.Show();
+                v.ShowDialog();
             }
         }
 
-        private void ArticleListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            var item = ((FrameworkElement)e.OriginalSource).DataContext as ListArticle;
+        //private void ArticleListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        //{
+        //    var item = ((FrameworkElement)e.OriginalSource).DataContext as ListArticle;
 
-            if (item != null)
-            {
-                ViewArticle v = new ViewArticle(item.DisplayArticle, Results.FilePath);
-                v.Show();
-            }
-        }
+        //    if (item != null)
+        //    {
+        //        ViewArticle v = new ViewArticle(item.DisplayArticle, Results.FilePath);
+        //        v.Show();
+        //    }
+        //}
     }
 }
