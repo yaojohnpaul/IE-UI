@@ -61,8 +61,6 @@ namespace IE_lib
                 {
                     candidateWeight += 0.7;
                 }
-
-                bool found = false;
       
                 for (int currentIndex = candidate.Position - 1; currentIndex < candidate.Position + candidate.Length - 1; currentIndex++)
                 {

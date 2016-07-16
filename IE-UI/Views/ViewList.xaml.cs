@@ -1,6 +1,7 @@
 ﻿using IE_lib.Models;
 using IE_UI.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -70,7 +71,7 @@ namespace IE_UI.Views
                 }
             }
 
-            DisplayArticles(ListRawListArticles);
+            if (!IsAdvanced) DisplayArticles(ListRawListArticles);
         }
 
         private void AdvancedSearchToggle_Click(object sender, RoutedEventArgs e)
