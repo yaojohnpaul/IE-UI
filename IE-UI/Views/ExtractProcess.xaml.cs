@@ -49,14 +49,18 @@ namespace IE_UI.Views
                 if (!(bool)args.Result)
                 {
                     MessageBox.Show(Application.Current.MainWindow,
-                        "Please check the debug.log for further information.",
-                        "Unexpected error encountered");
+                        "Invalid input file.",
+                        "Process failed");
 
                     StatusTextBlock.Text = "process failed";
+
+                    this.NavigationService.Navigate(new Home());
                 }
                 else
                 {
                     StatusTextBlock.Text = "process completed";
+
+                    this.NavigationService.Navigate(new ViewList(Config.DestinationFilePath));
                 }
 
                 EndProcess();
@@ -74,8 +78,6 @@ namespace IE_UI.Views
             //RepeatButton.Visibility = Visibility.Visible;
 
             StatusTextBlock.Margin = new Thickness(0);
-
-            this.NavigationService.Navigate(new ViewList(Config.DestinationFilePath));
         }
 
         private void RepeatButton_Click(object sender, RoutedEventArgs e)
