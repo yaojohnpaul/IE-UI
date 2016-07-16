@@ -33,6 +33,7 @@ namespace IE_UI.Views
         private String[] Types = new String[] { "AND", "OR" };
 
         private bool IsAdvanced = false;
+        private string Path;
 
         public ViewList(string path)
         {
@@ -40,7 +41,14 @@ namespace IE_UI.Views
 
             App.Current.MainWindow.Title = "Articles list";
 
-            Results = IE_lib.Main.View(path);
+            Path = path;
+
+            LoadArticles();
+        }
+
+        private void LoadArticles()
+        {
+            Results = IE_lib.Main.View(Path);
 
             ListRawListArticles = new List<ListArticle>();
 
@@ -416,7 +424,12 @@ namespace IE_UI.Views
             if (item != null)
             {
                 ViewArticle v = new ViewArticle(item.DisplayArticle, Results.FilePath);
+                v.Closed += (s, args) =>
+                {
+                    LoadArticles();
+                };
                 v.ShowDialog();
+
             }
         }
 

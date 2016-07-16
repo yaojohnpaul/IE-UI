@@ -76,13 +76,6 @@ namespace IE_UI.Views
             StatusTextBlock.Margin = new Thickness(0);
 
             this.NavigationService.Navigate(new ViewList(Config.DestinationFilePath));
-
-            RecentFileManager.AddRecentFile(new RecentFile()
-            {
-                OperationType = Char.ConvertFromUtf32(0xE8E5),
-                Name = System.IO.Path.GetFileNameWithoutExtension(Config.DestinationFilePath),
-                SourcePath = System.IO.Path.GetDirectoryName(Config.DestinationFilePath),
-            });
         }
 
         private void RepeatButton_Click(object sender, RoutedEventArgs e)

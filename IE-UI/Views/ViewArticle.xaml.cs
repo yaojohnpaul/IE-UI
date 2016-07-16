@@ -280,43 +280,107 @@ namespace IE_UI.Views
                 SetTextBoxesIsReadOnly(true);
 
                 XmlDocument doc = new XmlDocument();
+                XmlNode root;
+                string formattedDateFilePath = FilePath.Insert(FilePath.Length - 4, "_format_date");
+                string invertedIndexFilePath = FilePath.Insert(FilePath.Length - 4, "_inverted_index");
+                bool whoChanged = Article.Annotation.Who.Trim() != WhoTextBox.Text.Trim();
+                bool whenChanged = Article.Annotation.FormattedWhen.Trim() != WhenTextBox.Text.Trim();
+                bool whereChanged = Article.Annotation.Where.Trim() != WhereTextBox.Text.Trim();
+                bool whatChanged = Article.Annotation.What.Trim() != WhatTextBox.Text.Trim();
+                bool whyChanged = Article.Annotation.Why.Trim() != WhyTextBox.Text.Trim();
 
                 // Edit base file
 
                 doc.Load(FilePath);
 
-                XmlNode root = doc.DocumentElement;
+                root = doc.DocumentElement;
 
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["who"].InnerText = WhoTextBox.Text;
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["when"].InnerText = WhenTextBox.Text;
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["where"].InnerText = WhereTextBox.Text;
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["what"].InnerText = WhatTextBox.Text;
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["why"].InnerText = WhyTextBox.Text;
+                if(whoChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["who"].InnerText = WhoTextBox.Text;
+                if(whenChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["when"].InnerText = WhenTextBox.Text;
+                if(whereChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["where"].InnerText = WhereTextBox.Text;
+                if(whatChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["what"].InnerText = WhatTextBox.Text;
+                if(whyChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["why"].InnerText = WhyTextBox.Text;
 
                 doc.Save(FilePath);
 
                 // Edit formatted date file
                 
-                string formattedDateFilePath = FilePath.Insert(FilePath.Length - 4, "_format_date");
-
                 doc.Load(formattedDateFilePath);
 
                 root = doc.DocumentElement;
 
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["who"].InnerText = WhoTextBox.Text;
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["when"].InnerText = WhenTextBox.Text;
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["where"].InnerText = WhereTextBox.Text;
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["what"].InnerText = WhatTextBox.Text;
-                root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["why"].InnerText = WhyTextBox.Text;
+                if(whoChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["who"].InnerText = WhoTextBox.Text;
+                if(whenChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["when"].InnerText = WhenTextBox.Text;
+                if(whereChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["where"].InnerText = WhereTextBox.Text;
+                if(whatChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["what"].InnerText = WhatTextBox.Text;
+                if(whyChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["why"].InnerText = WhyTextBox.Text;
 
-                doc.Save(FilePath);
+                doc.Save(formattedDateFilePath);
 
                 // Edit inverted index file
                 
-                string invertedIndexFilePath = FilePath.Insert(FilePath.Length - 4, "_inverted_index");
+                doc.Load(invertedIndexFilePath);
+
+                XmlNode whoNode = doc.DocumentElement.SelectSingleNode("/data/who");
+                XmlNode whenNode = doc.DocumentElement.SelectSingleNode("/data/when");
+                XmlNode whereNode = doc.DocumentElement.SelectSingleNode("/data/where");
+                XmlNode whatNode = doc.DocumentElement.SelectSingleNode("/data/what");
+                XmlNode whyNode = doc.DocumentElement.SelectSingleNode("/data/why");
+
+                if(whoChanged) UpdateInvertedIndexFile(doc, whoNode, Article.Annotation.Who, WhoTextBox.Text);
+                if(whenChanged) UpdateInvertedIndexFile(doc, whenNode, Article.Annotation.When, WhenTextBox.Text);
+                if(whereChanged) UpdateInvertedIndexFile(doc, whereNode, Article.Annotation.Where, WhereTextBox.Text);
+                if(whatChanged) UpdateInvertedIndexFile(doc, whatNode, Article.Annotation.What, WhatTextBox.Text);
+                if(whyChanged) UpdateInvertedIndexFile(doc, whyNode, Article.Annotation.Why, WhyTextBox.Text);
+
+                doc.Save(invertedIndexFilePath);
 
                 EditButtonLabel.Text = "edit";
             }
+        }
+
+        private void UpdateInvertedIndexFile(XmlDocument doc, XmlNode baseNode, string oldFeature, string newFeature)
+        {
+            XmlNode newNode = null;
+            XmlNodeList nodeList = baseNode.SelectNodes("entry");
+
+            foreach (XmlNode entry in nodeList)
+            {
+                Console.WriteLine("''{0}'' vs ''{1}''", entry["text"].InnerText, oldFeature);
+
+                if (entry["text"].InnerText == oldFeature)
+                {
+                    foreach (XmlNode index in entry.SelectNodes("articleIndex"))
+                    {
+                        if (Convert.ToInt32(index.InnerText) == Article.Annotation.Index)
+                        {
+                            index.ParentNode.RemoveChild(index);
+                        }
+                    }
+                }
+                else if (entry["text"].InnerText == newFeature)
+                {
+                    newNode = entry;
+                }
+            }
+
+            if (newNode == null)
+            {
+                XmlNode newText = doc.CreateElement("text");
+                newText.InnerText = newFeature;
+
+                XmlNode newEntry = doc.CreateElement("entry");
+                newEntry.AppendChild(newText);
+
+                baseNode.AppendChild(newEntry);
+
+                newNode = newEntry;
+            }
+
+            XmlNode newIndex = doc.CreateElement("articleIndex");
+            newIndex.InnerText = Convert.ToString(Article.Annotation.Index);
+
+            newNode.AppendChild(newIndex);
         }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
