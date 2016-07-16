@@ -1,4 +1,4 @@
-﻿
+﻿    
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,5 +44,13 @@ namespace IE_lib.Models
             Value = value;
             Position = position;
         }
+
+        public double Score { get; set; }
+
+        public int NumWho { get; set; }
+
+        public int NumWhen { get; set; }
+
+        public int NumWhere { get; set; }
     }
 }
