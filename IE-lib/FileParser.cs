@@ -63,30 +63,43 @@ namespace IE_lib
             List<Annotation> annotationList = new List<Annotation>();
 
             String xmlContents = "";
-            using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
+            try
             {
-                xmlContents = streamReader.ReadToEnd();
+                using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
+                {
+                    xmlContents = streamReader.ReadToEnd();
+                }
             }
+            catch(Exception)
+            {
+                // File does not exist
+                return null;
+            }
+
             xmlContents = WebUtility.HtmlDecode(xmlContents);
             xmlContents = xmlContents.Replace("&", "&amp;");
 
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(xmlContents);
 
-            XmlNodeList articleNodes = doc.DocumentElement.SelectNodes("/data/article");
-
-            foreach (XmlNode articleNode in articleNodes)
+            try
             {
-                Annotation annotation = new Annotation();
+                XmlNodeList articleNodes = doc.DocumentElement.SelectNodes("/data/article");
 
-                annotation.Who = WebUtility.HtmlDecode(articleNode.SelectSingleNode("who").InnerText);
-                annotation.Where = WebUtility.HtmlDecode(articleNode.SelectSingleNode("where").InnerText);
-                annotation.When = WebUtility.HtmlDecode(articleNode.SelectSingleNode("when").InnerText);
-                annotation.What = WebUtility.HtmlDecode(articleNode.SelectSingleNode("what").InnerText);
-                annotation.Why = WebUtility.HtmlDecode(articleNode.SelectSingleNode("why").InnerText);
+                foreach (XmlNode articleNode in articleNodes)
+                {
+                    Annotation annotation = new Annotation();
 
-                annotationList.Add(annotation);
+                    annotation.Who = WebUtility.HtmlDecode(articleNode.SelectSingleNode("who").InnerText);
+                    annotation.Where = WebUtility.HtmlDecode(articleNode.SelectSingleNode("where").InnerText);
+                    annotation.When = WebUtility.HtmlDecode(articleNode.SelectSingleNode("when").InnerText);
+                    annotation.What = WebUtility.HtmlDecode(articleNode.SelectSingleNode("what").InnerText);
+                    annotation.Why = WebUtility.HtmlDecode(articleNode.SelectSingleNode("why").InnerText);
+
+                    annotationList.Add(annotation);
+                }
             }
+            catch (Exception) { } // Invalid file format
 
             return annotationList;
         }
