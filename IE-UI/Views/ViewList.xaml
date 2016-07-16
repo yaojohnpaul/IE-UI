@@ -34,7 +34,8 @@
         <StackPanel Grid.Row="0"
                     Grid.Column="1"
                     Orientation="Horizontal">
-            <TextBlock FontSize="24"
+            <TextBlock Name="LabelTextBlock"
+                       FontSize="24"
                        FontWeight="Bold"
                        Text="ARTICLES"
                        VerticalAlignment="Center"/>

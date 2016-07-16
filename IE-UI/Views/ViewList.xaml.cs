@@ -139,6 +139,7 @@ namespace IE_UI.Views
             else
             {
                 DisplayArticles(ListRawListArticles);
+                LabelTextBlock.Text = "ARTICLES";
                 IsAdvanced = false;
             }
         }
@@ -350,6 +351,8 @@ namespace IE_UI.Views
             }
 
             DisplayArticles(filtered);
+
+            LabelTextBlock.Text = "SEARCH RESULTS";
 
             IsAdvanced = true;
         }
