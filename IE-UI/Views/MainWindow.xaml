@@ -13,13 +13,15 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0"
               Background="{StaticResource ForegroundAccentBrush}">
-            <Label Grid.Row="0" 
-                   Content="Information Extraction"
+            <TextBlock Grid.Row="0" 
                    Foreground="WhiteSmoke"
                    HorizontalAlignment="Center"
                    Padding="20"
-                   FontSize="24"
-                   FontWeight="Bold"/>
+                   FontSize="24">
+                <TextBlock.Inlines>
+                    <Run FontWeight="Bold">fil</Run><Run>NXT</Run><Run FontWeight="Bold">+</Run>
+                </TextBlock.Inlines>
+            </TextBlock>
         </Grid>
         <Frame Name="MainFrame"
                Grid.Row="1"
