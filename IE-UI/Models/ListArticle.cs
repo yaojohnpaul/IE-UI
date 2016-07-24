@@ -7,10 +7,25 @@ using System.Threading.Tasks;
 
 namespace IE_UI.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ListArticle
     {
+        /// <summary>
+        /// Gets or sets the display article.
+        /// </summary>
+        /// <value>
+        /// The display article.
+        /// </value>
         public DisplayArticle DisplayArticle { get; set; }
 
+        /// <summary>
+        /// Gets or sets the matched string.
+        /// </summary>
+        /// <value>
+        /// The matched string.
+        /// </value>
         public string MatchedString { get; set; }
     }
 }

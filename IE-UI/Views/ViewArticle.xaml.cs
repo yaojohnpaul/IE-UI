@@ -21,12 +21,28 @@ namespace IE_UI.Views
     /// <summary>
     /// Interaction logic for ViewArticle.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Window" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class ViewArticle : Window
     {
+        /// <summary>
+        /// The text boxes
+        /// </summary>
         private List<TextBox> TextBoxes;
+        /// <summary>
+        /// The article
+        /// </summary>
         private DisplayArticle Article;
+        /// <summary>
+        /// The file path
+        /// </summary>
         private string FilePath;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ViewArticle"/> class.
+        /// </summary>
+        /// <param name="article">The article.</param>
+        /// <param name="filePath">The file path.</param>
         public ViewArticle(DisplayArticle article, string filePath)
         {
             InitializeComponent();
@@ -58,6 +74,10 @@ namespace IE_UI.Views
             WhyTextBox.Text = article.Annotation.Why;
         }
 
+        /// <summary>
+        /// Sets the text boxes is read only.
+        /// </summary>
+        /// <param name="v">if set to <c>true</c> [v].</param>
         private void SetTextBoxesIsReadOnly(bool v)
         {
             foreach (TextBox tb in TextBoxes)
@@ -66,6 +86,9 @@ namespace IE_UI.Views
             }
         }
 
+        /// <summary>
+        /// Sets the body text block.
+        /// </summary>
         private void SetBodyTextBlock()
         {
             string body = Article.Article.Body;
@@ -267,6 +290,11 @@ namespace IE_UI.Views
             //    whyMatched ? 1 : -1);
         }
 
+        /// <summary>
+        /// Handles the Click event of the EditButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
             if (EditButtonLabel.Text == "edit")
@@ -339,6 +367,13 @@ namespace IE_UI.Views
             }
         }
 
+        /// <summary>
+        /// Updates the inverted index file.
+        /// </summary>
+        /// <param name="doc">The document.</param>
+        /// <param name="baseNode">The base node.</param>
+        /// <param name="oldFeature">The old feature.</param>
+        /// <param name="newFeature">The new feature.</param>
         private void UpdateInvertedIndexFile(XmlDocument doc, XmlNode baseNode, string oldFeature, string newFeature)
         {
             XmlNode newNode = null;
@@ -383,6 +418,11 @@ namespace IE_UI.Views
             newNode.AppendChild(newIndex);
         }
 
+        /// <summary>
+        /// Handles the RequestNavigate event of the Hyperlink control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RequestNavigateEventArgs"/> instance containing the event data.</param>
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
             Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
@@ -390,14 +430,40 @@ namespace IE_UI.Views
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class BodySegment
     {
+        /// <summary>
+        /// Gets or sets the start index.
+        /// </summary>
+        /// <value>
+        /// The start index.
+        /// </value>
         public int StartIndex { get; set; }
 
+        /// <summary>
+        /// Gets or sets the end index.
+        /// </summary>
+        /// <value>
+        /// The end index.
+        /// </value>
         public int EndIndex { get; set; }
 
+        /// <summary>
+        /// Gets or sets the label.
+        /// </summary>
+        /// <value>
+        /// The label.
+        /// </value>
         public string Label { get; set; }
 
+        /// <summary>
+        /// Intersectses the specified bs.
+        /// </summary>
+        /// <param name="bs">The bs.</param>
+        /// <returns></returns>
         public bool Intersects(BodySegment bs)
         {
             if (this.StartIndex <= bs.EndIndex)

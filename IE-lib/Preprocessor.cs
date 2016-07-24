@@ -12,22 +12,64 @@ using System.Xml;
 
 namespace IE_lib
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Preprocessor
     {
+        /// <summary>
+        /// The article current
+        /// </summary>
         private Article articleCurrent;
+        /// <summary>
+        /// The annotation current
+        /// </summary>
         private Annotation annotationCurrent;
+        /// <summary>
+        /// The list latest tokenized article
+        /// </summary>
         private List<Token> listLatestTokenizedArticle;
+        /// <summary>
+        /// The list who candidates
+        /// </summary>
         private List<Candidate> listWhoCandidates;
+        /// <summary>
+        /// The list when candidates
+        /// </summary>
         private List<Candidate> listWhenCandidates;
+        /// <summary>
+        /// The list where candidates
+        /// </summary>
         private List<Candidate> listWhereCandidates;
+        /// <summary>
+        /// The list what candidates
+        /// </summary>
         private List<List<Token>> listWhatCandidates;
+        /// <summary>
+        /// The list why candidates
+        /// </summary>
         private List<List<Token>> listWhyCandidates;
+        /// <summary>
+        /// The ner classifier
+        /// </summary>
         private CRFClassifier nerClassifier;
+        /// <summary>
+        /// The position tagger
+        /// </summary>
         private MaxentTagger posTagger;
 
+        /// <summary>
+        /// The ner model path
+        /// </summary>
         private readonly String nerModelPath = @"..\..\..\NER\filipino.ser.gz";
+        /// <summary>
+        /// The position model path
+        /// </summary>
         private readonly String posModelPath = @"..\..\..\POST\filipino.tagger";
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Preprocessor" /> class.
+        /// </summary>
         public Preprocessor()
         {
             listLatestTokenizedArticle = new List<Token>();
@@ -41,11 +83,19 @@ namespace IE_lib
         }
 
         #region Setters
+        /// <summary>
+        /// Sets the current article.
+        /// </summary>
+        /// <param name="pArticle">The p article.</param>
         public void setCurrentArticle(Article pArticle)
         {
             articleCurrent = pArticle;
         }
 
+        /// <summary>
+        /// Sets the current annotation.
+        /// </summary>
+        /// <param name="pAnnotation">The p annotation.</param>
         public void setCurrentAnnotation(Annotation pAnnotation)
         {
             annotationCurrent = pAnnotation;
@@ -53,47 +103,83 @@ namespace IE_lib
         #endregion
 
         #region Getters
+        /// <summary>
+        /// Gets the current article.
+        /// </summary>
+        /// <returns></returns>
         public Article getCurrentArticle()
         {
             return articleCurrent;
         }
 
+        /// <summary>
+        /// Gets the current annotation.
+        /// </summary>
+        /// <returns></returns>
         public Annotation getCurrentAnnotation()
         {
             return annotationCurrent;
         }
 
+        /// <summary>
+        /// Gets the latest tokenized article.
+        /// </summary>
+        /// <returns></returns>
         public List<Token> getLatestTokenizedArticle()
         {
             return listLatestTokenizedArticle;
         }
 
+        /// <summary>
+        /// Gets the who candidates.
+        /// </summary>
+        /// <returns></returns>
         public List<Candidate> getWhoCandidates()
         {
             return listWhoCandidates;
         }
 
+        /// <summary>
+        /// Gets the when candidates.
+        /// </summary>
+        /// <returns></returns>
         public List<Candidate> getWhenCandidates()
         {
             return listWhenCandidates;
         }
 
+        /// <summary>
+        /// Gets the where candidates.
+        /// </summary>
+        /// <returns></returns>
         public List<Candidate> getWhereCandidates()
         {
             return listWhereCandidates;
         }
 
+        /// <summary>
+        /// Gets the what candidates.
+        /// </summary>
+        /// <returns></returns>
         public List<List<Token>> getWhatCandidates()
         {
             return listWhatCandidates;
         }
 
+        /// <summary>
+        /// Gets the why candidates.
+        /// </summary>
+        /// <returns></returns>
         public List<List<Token>> getWhyCandidates()
         {
             return listWhyCandidates;
         }
         #endregion
 
+        /// <summary>
+        /// Preprocesses this instance.
+        /// </summary>
+        /// <returns></returns>
         public List<Token> preprocess()
         {
             if (articleCurrent == null)
@@ -126,6 +212,7 @@ namespace IE_lib
         /// <summary>
         /// Assign an article's token to whether or not it is part of a 5W.
         /// </summary>
+        /// <returns></returns>
         public float[][] performAnnotationAssignment()
         {
             float[][] statistics = new float[5][];
@@ -144,6 +231,9 @@ namespace IE_lib
         }
 
 
+        /// <summary>
+        /// Performs the candidate selection.
+        /// </summary>
         private void performCandidateSelection()
         {
             CandidateSelector selector = new CandidateSelector();
@@ -155,11 +245,19 @@ namespace IE_lib
         }
 
         #region Article Preprocessing Functions
+        /// <summary>
+        /// Performs the tokenization and ss.
+        /// </summary>
         private void performTokenizationAndSS()
         {
             listLatestTokenizedArticle = performTokenizationAndSS(articleCurrent.Body);
         }
 
+        /// <summary>
+        /// Performs the tokenization and ss.
+        /// </summary>
+        /// <param name="toBeTokenized">To be tokenized.</param>
+        /// <returns></returns>
         public List<Token> performTokenizationAndSS(String toBeTokenized)
         {
             List<Token> tokenizedString = new List<Token>();
@@ -241,6 +339,9 @@ namespace IE_lib
             return tokenizedString;
         }
 
+        /// <summary>
+        /// Performs the ner.
+        /// </summary>
         private void performNER()
         {
             java.util.List tokens;
@@ -262,6 +363,9 @@ namespace IE_lib
             }
         }
 
+        /// <summary>
+        /// Performs the post.
+        /// </summary>
         private void performPOST()
         {
             //Get all tokens and segregate them into lists based on sentence number
@@ -307,6 +411,9 @@ namespace IE_lib
             }
         }
 
+        /// <summary>
+        /// Performs the ws.
+        /// </summary>
         private void performWS()
         {
             Dictionary<string, int> frequencies = new Dictionary<string, int>();
@@ -331,6 +438,11 @@ namespace IE_lib
         #endregion
 
         #region Annotation Preprocessing Functions
+        /// <summary>
+        /// Performs the single annotation assignment.
+        /// </summary>
+        /// <param name="annotationType">Type of the annotation.</param>
+        /// <returns></returns>
         private float[] performSingleAnnotationAssignment(String annotationType)
         {
             float[] statistics = new float[4] { 0, 0, 0, -1 }; //[0] = recall, [1] = precision, [2]  total, [3] sentence number
@@ -460,6 +572,11 @@ namespace IE_lib
             return statistics;
         }
 
+        /// <summary>
+        /// Performs the multiple annotation assignment.
+        /// </summary>
+        /// <param name="annotationType">Type of the annotation.</param>
+        /// <returns></returns>
         private float[] performMultipleAnnotationAssignment(String annotationType)
         {
             float[] statistics = new float[3] { 0, 0, 0 }; //[0] = recall, [1] = precision, [2]  total

@@ -21,21 +21,54 @@ namespace IE_UI.Views
     /// <summary>
     /// Interaction logic for ViewList.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Controls.Page" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class ViewList : Page
     {
+        /// <summary>
+        /// The results
+        /// </summary>
         ParsedResults Results;
+        /// <summary>
+        /// The list raw list articles
+        /// </summary>
         List<ListArticle> ListRawListArticles;
 
+        /// <summary>
+        /// The list query text boxes
+        /// </summary>
         List<TextBox> ListQueryTextBoxes;
+        /// <summary>
+        /// The list criteria combo boxes
+        /// </summary>
         List<ComboBox> ListCriteriaComboBoxes;
+        /// <summary>
+        /// The list type combo boxes
+        /// </summary>
         List<ComboBox> ListTypeComboBoxes;
 
+        /// <summary>
+        /// The criterias
+        /// </summary>
         private String[] Criterias = new String[] { "Sino", "Kailan", "Saan", "Ano", "Bakit" };
+        /// <summary>
+        /// The types
+        /// </summary>
         private String[] Types = new String[] { "AND", "OR" };
 
+        /// <summary>
+        /// The is advanced
+        /// </summary>
         private bool IsAdvanced = false;
+        /// <summary>
+        /// The path
+        /// </summary>
         private string Path;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ViewList"/> class.
+        /// </summary>
+        /// <param name="path">The path.</param>
         public ViewList(string path)
         {
             InitializeComponent();
@@ -47,6 +80,9 @@ namespace IE_UI.Views
             LoadArticles();
         }
 
+        /// <summary>
+        /// Loads the articles.
+        /// </summary>
         private void LoadArticles()
         {
             Results = IE_lib.Main.View(Path);
@@ -74,6 +110,11 @@ namespace IE_UI.Views
             if (!IsAdvanced) DisplayArticles(ListRawListArticles);
         }
 
+        /// <summary>
+        /// Handles the Click event of the AdvancedSearchToggle control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void AdvancedSearchToggle_Click(object sender, RoutedEventArgs e)
         {
             if (AdvancedSearchPanel.Visibility == Visibility.Collapsed)
@@ -131,6 +172,11 @@ namespace IE_UI.Views
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the BackButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             if (!IsAdvanced)
@@ -145,6 +191,10 @@ namespace IE_UI.Views
             }
         }
 
+        /// <summary>
+        /// Displays the articles.
+        /// </summary>
+        /// <param name="articles">The articles.</param>
         private void DisplayArticles(List<ListArticle> articles)
         {
             if (AdvancedSearchPanel.Visibility == Visibility.Visible)
@@ -168,6 +218,11 @@ namespace IE_UI.Views
             }
         }
 
+        /// <summary>
+        /// Handles the TextChanged event of the BasicSearchTextBox control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="TextChangedEventArgs"/> instance containing the event data.</param>
         private void BasicSearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             List<ListArticle> filtered = new List<ListArticle>();
@@ -183,6 +238,11 @@ namespace IE_UI.Views
             DisplayArticles(filtered);
         }
 
+        /// <summary>
+        /// Handles the Click event of the AdvancedSearchButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void AdvancedSearchButton_Click(object sender, RoutedEventArgs e)
         {
             List<int> whoIndex = new List<int>();
@@ -358,6 +418,11 @@ namespace IE_UI.Views
             IsAdvanced = true;
         }
 
+        /// <summary>
+        /// Handles the Click event of the CriteriaAddButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void CriteriaAddButton_Click(object sender, RoutedEventArgs e)
         {
             StackPanel newPanel = new StackPanel();
@@ -414,6 +479,11 @@ namespace IE_UI.Views
             QueryPanel.Children.Add(newPanel);
         }
 
+        /// <summary>
+        /// Handles the PreviewMouseWheel event of the ScrollViewer control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="MouseWheelEventArgs"/> instance containing the event data.</param>
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             ScrollViewer scv = (ScrollViewer)sender;
@@ -421,6 +491,11 @@ namespace IE_UI.Views
             e.Handled = true;
         }
 
+        /// <summary>
+        /// Handles the PreviewMouseLeftButtonDown event of the ArticleListView control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="MouseButtonEventArgs"/> instance containing the event data.</param>
         private void ArticleListView_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var item = ((FrameworkElement)e.OriginalSource).DataContext as ListArticle;

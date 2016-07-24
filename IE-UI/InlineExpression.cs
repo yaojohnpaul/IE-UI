@@ -11,6 +11,9 @@ using System.Xml;
 
 namespace IE_UI
 {
+    /// <summary>
+    /// Code from https://stackoverflow.com/questions/5582893/wpf-generate-textblock-inlines/8309907#8309907
+    /// </summary>
     public class InlineExpression
     {
         public static readonly DependencyProperty InlineExpressionProperty = DependencyProperty.RegisterAttached(

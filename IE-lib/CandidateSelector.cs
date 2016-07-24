@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 
 namespace IE_lib
 {
+    /// <summary>
+    /// 
+    /// </summary>
     class CandidateSelector
     {
+        /// <summary>
+        /// Performs the who candidate selection.
+        /// </summary>
+        /// <param name="tokenizedArticle">The tokenized article.</param>
+        /// <param name="articleTitle">The article title.</param>
+        /// <returns></returns>
         public List<Candidate> performWhoCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             List<Candidate> candidates = new List<Candidate>();
@@ -118,6 +127,12 @@ namespace IE_lib
             return candidates;
         }
 
+        /// <summary>
+        /// Performs the when candidate selection.
+        /// </summary>
+        /// <param name="tokenizedArticle">The tokenized article.</param>
+        /// <param name="articleTitle">The article title.</param>
+        /// <returns></returns>
         public List<Candidate> performWhenCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             List<Candidate> candidates = new List<Candidate>();
@@ -205,6 +220,12 @@ namespace IE_lib
             return candidates;
         }
 
+        /// <summary>
+        /// Performs the where candidate selection.
+        /// </summary>
+        /// <param name="tokenizedArticle">The tokenized article.</param>
+        /// <param name="articleTitle">The article title.</param>
+        /// <returns></returns>
         public List<Candidate> performWhereCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             List<Candidate> candidates = new List<Candidate>();
@@ -303,6 +324,12 @@ namespace IE_lib
             return candidates;
         }
 
+        /// <summary>
+        /// Performs the what candidate selection.
+        /// </summary>
+        /// <param name="tokenizedArticle">The tokenized article.</param>
+        /// <param name="articleTitle">The article title.</param>
+        /// <returns></returns>
         public List<List<Token>> performWhatCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             int maxNumberOfCandidates = 2;
@@ -320,6 +347,12 @@ namespace IE_lib
             return candidates;
         }
 
+        /// <summary>
+        /// Performs the why candidate selection.
+        /// </summary>
+        /// <param name="tokenizedArticle">The tokenized article.</param>
+        /// <param name="articleTitle">The article title.</param>
+        /// <returns></returns>
         public List<List<Token>> performWhyCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             int maxNumberOfCandidates = 6;
@@ -337,6 +370,14 @@ namespace IE_lib
             return candidates;
         }
 
+        /// <summary>
+        /// Gets the candidate by ner.
+        /// </summary>
+        /// <param name="nerTag">The ner tag.</param>
+        /// <param name="i">The i.</param>
+        /// <param name="candidates">The candidates.</param>
+        /// <param name="tokenizedArticle">The tokenized article.</param>
+        /// <returns></returns>
         private int getCandidateByNer(String nerTag, int i, List<Candidate> candidates, List<Token> tokenizedArticle)
         {
             if (tokenizedArticle[i].NamedEntity.Equals(nerTag))
@@ -376,6 +417,19 @@ namespace IE_lib
             return i;
         }
 
+        /// <summary>
+        /// Gets the candidate by markers.
+        /// </summary>
+        /// <param name="generalStopWords">The general stop words.</param>
+        /// <param name="startMarkers">The start markers.</param>
+        /// <param name="endMarkers">The end markers.</param>
+        /// <param name="enderMarkers">The ender markers.</param>
+        /// <param name="enderPOS">The ender position.</param>
+        /// <param name="enderPOSType">Type of the ender position.</param>
+        /// <param name="i">The i.</param>
+        /// <param name="candidates">The candidates.</param>
+        /// <param name="tokenizedArticle">The tokenized article.</param>
+        /// <param name="isExclusive">if set to <c>true</c> [is exclusive].</param>
         private void getCandidateByMarkers(String[] generalStopWords, String[] startMarkers, String[][] endMarkers, String[][] enderMarkers, String[][] enderPOS, String[][] enderPOSType, int i, List<Candidate> candidates, List<Token> tokenizedArticle, Boolean isExclusive)
         {
             /*
@@ -523,6 +577,14 @@ namespace IE_lib
             }
         }
 
+        /// <summary>
+        /// Gets the candidate by position.
+        /// </summary>
+        /// <param name="posTag">The position tag.</param>
+        /// <param name="i">The i.</param>
+        /// <param name="candidates">The candidates.</param>
+        /// <param name="tokenizedArticle">The tokenized article.</param>
+        /// <returns></returns>
         private int getCandidateByPos(String posTag, int i, List<Candidate> candidates, List<Token> tokenizedArticle)
         {
             if (i < tokenizedArticle.Count && tokenizedArticle[i].PartOfSpeech != null && tokenizedArticle[i].PartOfSpeech.Equals(posTag))
@@ -555,6 +617,13 @@ namespace IE_lib
             return i;
         }
 
+        /// <summary>
+        /// Gets the candidate by gazette.
+        /// </summary>
+        /// <param name="gazette">The gazette.</param>
+        /// <param name="i">The i.</param>
+        /// <param name="candidates">The candidates.</param>
+        /// <param name="tokenizedArticle">The tokenized article.</param>
         private void getCandidateByGazette(String[] gazette, int i, List<Candidate> candidates, List<Token> tokenizedArticle)
         {
             if (i < tokenizedArticle.Count && tokenizedArticle[i].Sentence <= 3)

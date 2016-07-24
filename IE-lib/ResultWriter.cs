@@ -8,18 +8,60 @@ using System.Xml;
 
 namespace IE_lib
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ResultWriter
     {
+        /// <summary>
+        /// The string path
+        /// </summary>
         private String strPath;
+        /// <summary>
+        /// The format date DST path
+        /// </summary>
         private String formatDateDstPath;
+        /// <summary>
+        /// The inverted index DST path
+        /// </summary>
         private String invertedIndexDstPath;
+        /// <summary>
+        /// The list all articles
+        /// </summary>
         List<Article> listAllArticles;
+        /// <summary>
+        /// The list all who annotations
+        /// </summary>
         List<List<String>> listAllWhoAnnotations;
+        /// <summary>
+        /// The list all when annotations
+        /// </summary>
         List<List<String>> listAllWhenAnnotations;
+        /// <summary>
+        /// The list all where annotations
+        /// </summary>
         List<List<String>> listAllWhereAnnotations;
+        /// <summary>
+        /// The list all what annotations
+        /// </summary>
         List<String> listAllWhatAnnotations;
+        /// <summary>
+        /// The list all why annotations
+        /// </summary>
         List<String> listAllWhyAnnotations;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResultWriter"/> class.
+        /// </summary>
+        /// <param name="pPath">The p path.</param>
+        /// <param name="invertedPath">The inverted path.</param>
+        /// <param name="formatDatePath">The format date path.</param>
+        /// <param name="pAllArticles">The p all articles.</param>
+        /// <param name="pAllWhoAnnotations">The p all who annotations.</param>
+        /// <param name="pAllWhenAnnotations">The p all when annotations.</param>
+        /// <param name="pAllWhereAnnotations">The p all where annotations.</param>
+        /// <param name="pAllWhatAnnotations">The p all what annotations.</param>
+        /// <param name="pAllWhyAnnotations">The p all why annotations.</param>
         public ResultWriter(String pPath,
             String invertedPath,
             String formatDatePath,
@@ -41,6 +83,9 @@ namespace IE_lib
             listAllWhyAnnotations = pAllWhyAnnotations;
         }
 
+        /// <summary>
+        /// Generates the output.
+        /// </summary>
         public void generateOutput()
         {
             if (listAllWhoAnnotations.Count > listAllArticles.Count() ||
@@ -70,6 +115,21 @@ namespace IE_lib
             writer.Close();
         }
 
+        /// <summary>
+        /// Adds the article to XML.
+        /// </summary>
+        /// <param name="writer">The writer.</param>
+        /// <param name="title">The title.</param>
+        /// <param name="author">The author.</param>
+        /// <param name="date">The date.</param>
+        /// <param name="body">The body.</param>
+        /// <param name="link">The link.</param>
+        /// <param name="who">The who.</param>
+        /// <param name="when">The when.</param>
+        /// <param name="where">The where.</param>
+        /// <param name="what">The what.</param>
+        /// <param name="why">The why.</param>
+        /// <param name="index">The index.</param>
         public void addArticleToXML(XmlTextWriter writer, String title, String author, DateTime date, String body, String link,
             String who, String when, String where, String what, String why, int index)
         {
@@ -118,6 +178,11 @@ namespace IE_lib
             writer.WriteEndElement();
         }
 
+        /// <summary>
+        /// Generates the index of the inverted.
+        /// </summary>
+        /// <param name="feature">The feature.</param>
+        /// <returns></returns>
         public Dictionary<string, List<string>> generateInvertedIndex (string feature)
         {
             List<Article> articleList = new List<Article>();
@@ -157,6 +222,9 @@ namespace IE_lib
             return hash;
         }
 
+        /// <summary>
+        /// Generates the inverted index output.
+        /// </summary>
         public void generateInvertedIndexOutput()
         {
             XmlTextWriter writer = new XmlTextWriter(invertedIndexDstPath, System.Text.Encoding.UTF8);
@@ -185,6 +253,11 @@ namespace IE_lib
             writer.Close();
         }
 
+        /// <summary>
+        /// Adds the feature to XML.
+        /// </summary>
+        /// <param name="writer">The writer.</param>
+        /// <param name="feature">The feature.</param>
         public void addFeatureToXML(XmlTextWriter writer, string feature)
         {
             Dictionary<string, List<string>> hash = new Dictionary<string, List<string>>();
@@ -205,6 +278,12 @@ namespace IE_lib
             }
         }
 
+        /// <summary>
+        /// Processes the when.
+        /// </summary>
+        /// <param name="date">The date.</param>
+        /// <param name="annotation">The annotation.</param>
+        /// <param name="writer">The writer.</param>
         public void processWhen(DateTime date, string annotation, XmlTextWriter writer)
         {
             Console.WriteLine("Annotation: " + annotation + "DATE: " + date);
@@ -310,6 +389,9 @@ namespace IE_lib
             Console.WriteLine("NEW DATE: " + date);
         }
 
+        /// <summary>
+        /// Generates the output format date.
+        /// </summary>
         public void generateOutputFormatDate()
         {
 
@@ -340,6 +422,21 @@ namespace IE_lib
             writer.Close();
         }
 
+        /// <summary>
+        /// Adds the article to XML format when.
+        /// </summary>
+        /// <param name="writer">The writer.</param>
+        /// <param name="title">The title.</param>
+        /// <param name="author">The author.</param>
+        /// <param name="date">The date.</param>
+        /// <param name="body">The body.</param>
+        /// <param name="link">The link.</param>
+        /// <param name="who">The who.</param>
+        /// <param name="when">The when.</param>
+        /// <param name="where">The where.</param>
+        /// <param name="what">The what.</param>
+        /// <param name="why">The why.</param>
+        /// <param name="index">The index.</param>
         public void addArticleToXMLFormatWhen(XmlTextWriter writer, String title, String author, DateTime date, String body, String link,
             String who, String when, String where, String what, String why, int index)
         {

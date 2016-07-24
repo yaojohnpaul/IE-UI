@@ -10,8 +10,16 @@ using System.Xml;
 
 namespace IE_lib
 {
+    /// <summary>
+    /// 
+    /// </summary>
     class FileParser
     {
+        /// <summary>
+        /// Parses the file.
+        /// </summary>
+        /// <param name="path">The path.</param>
+        /// <returns></returns>
         public List<Article> parseFile(String path)
         {
             List<Article> articleList = new List<Article>();
@@ -58,6 +66,11 @@ namespace IE_lib
             return articleList;
         }
 
+        /// <summary>
+        /// Parses the annotations.
+        /// </summary>
+        /// <param name="path">The path.</param>
+        /// <returns></returns>
         public List<Annotation> parseAnnotations(String path)
         {
             List<Annotation> annotationList = new List<Annotation>();

@@ -11,12 +11,27 @@ namespace IE_UI.Views
     /// <summary>
     /// Interaction logic for Process.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Controls.Page" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class ExtractProcess : Page
     {
+        /// <summary>
+        /// The configuration
+        /// </summary>
         private ExtractConfig Config;
+        /// <summary>
+        /// The progress ring
+        /// </summary>
         private SpinningWheel ProgressRing;
+        /// <summary>
+        /// The worker
+        /// </summary>
         private BackgroundWorker Worker;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExtractProcess"/> class.
+        /// </summary>
+        /// <param name="config">The configuration.</param>
         public ExtractProcess(ExtractConfig config)
         {
             this.InitializeComponent();
@@ -67,11 +82,18 @@ namespace IE_UI.Views
             };
         }
 
+        /// <summary>
+        /// Starts the process.
+        /// </summary>
+        /// <returns></returns>
         private bool StartProcess()
         {
             return Task.Run(() => IE_lib.Main.Extract(Config.SourceFilePath, Config.DestinationFilePath)).Result;
         }
 
+        /// <summary>
+        /// Ends the process.
+        /// </summary>
         private void EndProcess()
         {
             ProgressRing.Visibility = Visibility.Hidden;
@@ -80,11 +102,21 @@ namespace IE_UI.Views
             StatusTextBlock.Margin = new Thickness(0);
         }
 
+        /// <summary>
+        /// Handles the Click event of the RepeatButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void RepeatButton_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new Home());
         }
 
+        /// <summary>
+        /// Handles the Loaded event of the Page control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             Worker.RunWorkerAsync();

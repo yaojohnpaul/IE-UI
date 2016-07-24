@@ -6,10 +6,20 @@ using System.Linq;
 
 namespace IE_UI
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class RecentFileManager
     {
+        /// <summary>
+        /// The file name
+        /// </summary>
         private static string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "recentfiles.txt");
 
+        /// <summary>
+        /// Adds the recent file.
+        /// </summary>
+        /// <param name="t">The t.</param>
         public static void AddRecentFile(RecentFile t)
         {
             try
@@ -35,6 +45,11 @@ namespace IE_UI
             }
         }
 
+        /// <summary>
+        /// Gets the text.
+        /// </summary>
+        /// <param name="t">The t.</param>
+        /// <returns></returns>
         private static string GetText(RecentFile t)
         {
             if (t.OperationType == Char.ConvertFromUtf32(0xE8E5))
@@ -49,6 +64,10 @@ namespace IE_UI
             return "";
         }
 
+        /// <summary>
+        /// Gets the recent files list.
+        /// </summary>
+        /// <returns></returns>
         public static List<RecentFile> GetRecentFilesList()
         {
             List<RecentFile> recentFilesList = new List<RecentFile>();

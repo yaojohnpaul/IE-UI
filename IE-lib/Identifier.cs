@@ -14,28 +14,91 @@ using weka.filters.unsupervised.attribute;
 
 namespace IE_lib
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Identifier
     {
+        /// <summary>
+        /// The article current
+        /// </summary>
         private List<Token> articleCurrent;
+        /// <summary>
+        /// The title current
+        /// </summary>
         private String titleCurrent;
+        /// <summary>
+        /// The segregated article current
+        /// </summary>
         private List<List<Token>> segregatedArticleCurrent;
+        /// <summary>
+        /// The list who candidates
+        /// </summary>
         private List<Candidate> listWhoCandidates;
+        /// <summary>
+        /// The list when candidates
+        /// </summary>
         private List<Candidate> listWhenCandidates;
+        /// <summary>
+        /// The list where candidates
+        /// </summary>
         private List<Candidate> listWhereCandidates;
+        /// <summary>
+        /// The list secondary why candidates
+        /// </summary>
         private List<Candidate> listSecondaryWhyCandidates;
+        /// <summary>
+        /// The list what candidates
+        /// </summary>
         private List<List<Token>> listWhatCandidates;
+        /// <summary>
+        /// The list why candidates
+        /// </summary>
         private List<List<Token>> listWhyCandidates;
+        /// <summary>
+        /// The list who
+        /// </summary>
         private List<String> listWho;
+        /// <summary>
+        /// The list when
+        /// </summary>
         private List<String> listWhen;
+        /// <summary>
+        /// The list where
+        /// </summary>
         private List<String> listWhere;
+        /// <summary>
+        /// The string what
+        /// </summary>
         private String strWhat;
+        /// <summary>
+        /// The string why
+        /// </summary>
         private String strWhy;
+        /// <summary>
+        /// The fv position
+        /// </summary>
         private FastVector fvPOS;
+        /// <summary>
+        /// The who classifier
+        /// </summary>
         Classifier whoClassifier;
+        /// <summary>
+        /// The when classifier
+        /// </summary>
         Classifier whenClassifier;
+        /// <summary>
+        /// The where classifier
+        /// </summary>
         Classifier whereClassifier;
+        /// <summary>
+        /// The why classifier
+        /// </summary>
         Classifier whyClassifier;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Identifier"/> class.
+        /// </summary>
         public Identifier()
         {
             listWhoCandidates = new List<Candidate>();
@@ -59,6 +122,9 @@ namespace IE_lib
             initializeAnnotations();
         }
 
+        /// <summary>
+        /// Initializes the annotations.
+        /// </summary>
         private void initializeAnnotations()
         {
             listWho = new List<String>();
@@ -69,6 +135,10 @@ namespace IE_lib
         }
 
         #region Setters
+        /// <summary>
+        /// Sets the current article.
+        /// </summary>
+        /// <param name="pArticle">The p article.</param>
         public void setCurrentArticle(List<Token> pArticle)
         {
             articleCurrent = pArticle;
@@ -78,31 +148,55 @@ namespace IE_lib
                         .ToList();
         }
 
+        /// <summary>
+        /// Sets the who candidates.
+        /// </summary>
+        /// <param name="pCandidates">The p candidates.</param>
         public void setWhoCandidates(List<Candidate> pCandidates)
         {
             listWhoCandidates = pCandidates;
         }
 
+        /// <summary>
+        /// Sets the when candidates.
+        /// </summary>
+        /// <param name="pCandidates">The p candidates.</param>
         public void setWhenCandidates(List<Candidate> pCandidates)
         {
             listWhenCandidates = pCandidates;
         }
 
+        /// <summary>
+        /// Sets the where candidates.
+        /// </summary>
+        /// <param name="pCandidates">The p candidates.</param>
         public void setWhereCandidates(List<Candidate> pCandidates)
         {
             listWhereCandidates = pCandidates;
         }
 
+        /// <summary>
+        /// Sets the what candidates.
+        /// </summary>
+        /// <param name="pCandidates">The p candidates.</param>
         public void setWhatCandidates(List<List<Token>> pCandidates)
         {
             listWhatCandidates = pCandidates;
         }
 
+        /// <summary>
+        /// Sets the why candidates.
+        /// </summary>
+        /// <param name="pCandidates">The p candidates.</param>
         public void setWhyCandidates(List<List<Token>> pCandidates)
         {
             listWhyCandidates = pCandidates;
         }
 
+        /// <summary>
+        /// Sets the title.
+        /// </summary>
+        /// <param name="pTitle">The p title.</param>
         public void setTitle(String pTitle)
         {
             titleCurrent = pTitle;
@@ -110,37 +204,64 @@ namespace IE_lib
         #endregion
 
         #region Getters
+        /// <summary>
+        /// Gets the current article.
+        /// </summary>
+        /// <returns></returns>
         public List<Token> getCurrentArticle()
         {
             return articleCurrent;
         }
 
+        /// <summary>
+        /// Gets the who.
+        /// </summary>
+        /// <returns></returns>
         public List<String> getWho()
         {
             return listWho;
         }
 
+        /// <summary>
+        /// Gets the when.
+        /// </summary>
+        /// <returns></returns>
         public List<String> getWhen()
         {
             return listWhen;
         }
 
+        /// <summary>
+        /// Gets the where.
+        /// </summary>
+        /// <returns></returns>
         public List<String> getWhere()
         {
             return listWhere;
         }
 
+        /// <summary>
+        /// Gets the what.
+        /// </summary>
+        /// <returns></returns>
         public String getWhat()
         {
             return strWhat;
         }
 
+        /// <summary>
+        /// Gets the why.
+        /// </summary>
+        /// <returns></returns>
         public String getWhy()
         {
             return strWhy;
         }
         #endregion
 
+        /// <summary>
+        /// Labels the annotations.
+        /// </summary>
         public void labelAnnotations()
         {
             initializeAnnotations();
@@ -152,6 +273,9 @@ namespace IE_lib
         }
 
         #region Labelling Functions
+        /// <summary>
+        /// Labels the who.
+        /// </summary>
         private void labelWho()
         {
             Instances whoInstances = createWhoInstances();
@@ -166,6 +290,9 @@ namespace IE_lib
             }
         }
 
+        /// <summary>
+        /// Labels the when.
+        /// </summary>
         private void labelWhen()
         {
             Instances whenInstances = createWhenInstances();
@@ -180,6 +307,9 @@ namespace IE_lib
             }
         }
 
+        /// <summary>
+        /// Labels the where.
+        /// </summary>
         private void labelWhere()
         {
             Instances whereInstances = createWhereInstances();
@@ -194,6 +324,9 @@ namespace IE_lib
             }
         }
 
+        /// <summary>
+        /// Labels the what.
+        /// </summary>
         private void labelWhat()
         {
             double WEIGHT_PER_WHO = 0.3;
@@ -260,6 +393,9 @@ namespace IE_lib
             }
         }
 
+        /// <summary>
+        /// Labels the why.
+        /// </summary>
         private void labelWhy()
         {
             double WEIGHT_PER_MARKER = 0.5;
@@ -387,6 +523,10 @@ namespace IE_lib
 
         #region Instances Creation
         #region Instance Group Creation
+        /// <summary>
+        /// Creates the who instances.
+        /// </summary>
+        /// <returns></returns>
         private Instances createWhoInstances()
         {
             FastVector fvWho = createWhoFastVector();
@@ -402,6 +542,10 @@ namespace IE_lib
             return whoInstances;
         }
 
+        /// <summary>
+        /// Creates the when instances.
+        /// </summary>
+        /// <returns></returns>
         private Instances createWhenInstances()
         {
             FastVector fvWhen = createWhenFastVector();
@@ -417,6 +561,10 @@ namespace IE_lib
             return whenInstances;
         }
 
+        /// <summary>
+        /// Creates the where instances.
+        /// </summary>
+        /// <returns></returns>
         private Instances createWhereInstances()
         {
             FastVector fvWhere = createWhereFastVector();
@@ -432,6 +580,10 @@ namespace IE_lib
             return whereInstances;
         }
 
+        /// <summary>
+        /// Creates the why instances.
+        /// </summary>
+        /// <returns></returns>
         private Instances createWhyInstances()
         {
             FastVector fvWhy = createWhyFastVector();
@@ -448,16 +600,46 @@ namespace IE_lib
         }
         #endregion
 
+        /// <summary>
+        /// The who words before
+        /// </summary>
         private const int whoWordsBefore = 10;
+        /// <summary>
+        /// The who words after
+        /// </summary>
         private const int whoWordsAfter = 10;
+        /// <summary>
+        /// The when words before
+        /// </summary>
         private const int whenWordsBefore = 3;
+        /// <summary>
+        /// The when words after
+        /// </summary>
         private const int whenWordsAfter = 3;
+        /// <summary>
+        /// The where words before
+        /// </summary>
         private const int whereWordsBefore = 10;
+        /// <summary>
+        /// The where words after
+        /// </summary>
         private const int whereWordsAfter = 10;
+        /// <summary>
+        /// The why words before
+        /// </summary>
         private const int whyWordsBefore = 10;
+        /// <summary>
+        /// The why words after
+        /// </summary>
         private const int whyWordsAfter = 10;
 
         #region Single Instance Creation
+        /// <summary>
+        /// Creates the single who instance.
+        /// </summary>
+        /// <param name="fvWho">The fv who.</param>
+        /// <param name="candidate">The candidate.</param>
+        /// <returns></returns>
         private Instance createSingleWhoInstance(FastVector fvWho, Token candidate)
         {
             //first word-n attribute number
@@ -516,6 +698,12 @@ namespace IE_lib
             return whoCandidate;
         }
 
+        /// <summary>
+        /// Creates the single when instance.
+        /// </summary>
+        /// <param name="fvWhen">The fv when.</param>
+        /// <param name="candidate">The candidate.</param>
+        /// <returns></returns>
         private Instance createSingleWhenInstance(FastVector fvWhen, Token candidate)
         {
             //first word-n attribute number
@@ -573,6 +761,12 @@ namespace IE_lib
             return whenCandidate;
         }
 
+        /// <summary>
+        /// Creates the single where instance.
+        /// </summary>
+        /// <param name="fvWhere">The fv where.</param>
+        /// <param name="candidate">The candidate.</param>
+        /// <returns></returns>
         private Instance createSingleWhereInstance(FastVector fvWhere, Token candidate)
         {
             //first word-n attribute number
@@ -629,6 +823,12 @@ namespace IE_lib
             }
             return whereCandidate;
         }
+        /// <summary>
+        /// Creates the single why instance.
+        /// </summary>
+        /// <param name="fvWhy">The fv why.</param>
+        /// <param name="candidate">The candidate.</param>
+        /// <returns></returns>
         private Instance createSingleWhyInstance(FastVector fvWhy, Token candidate)
         {
             //first word-n attribute number
@@ -678,6 +878,10 @@ namespace IE_lib
         #endregion
 
         #region Fast Vector Creation
+        /// <summary>
+        /// Creates the who fast vector.
+        /// </summary>
+        /// <returns></returns>
         private FastVector createWhoFastVector()
         {
             FastVector fvWho = new FastVector(7 + whoWordsBefore * 2 + whoWordsAfter * 2);
@@ -710,6 +914,10 @@ namespace IE_lib
             return fvWho;
         }
 
+        /// <summary>
+        /// Creates the when fast vector.
+        /// </summary>
+        /// <returns></returns>
         private FastVector createWhenFastVector()
         {
             FastVector fvWhen = new FastVector(5 + whenWordsBefore * 2 + whenWordsAfter * 2);
@@ -742,6 +950,10 @@ namespace IE_lib
             return fvWhen;
         }
 
+        /// <summary>
+        /// Creates the where fast vector.
+        /// </summary>
+        /// <returns></returns>
         private FastVector createWhereFastVector()
         {
             FastVector fvWhere = new FastVector(5 + whereWordsBefore * 2 + whereWordsAfter * 2);
@@ -774,6 +986,10 @@ namespace IE_lib
             return fvWhere;
         }
 
+        /// <summary>
+        /// Creates the why fast vector.
+        /// </summary>
+        /// <returns></returns>
         private FastVector createWhyFastVector()
         {
             FastVector fvWhy = new FastVector(8 + whyWordsBefore * 2 + whyWordsAfter * 2);
