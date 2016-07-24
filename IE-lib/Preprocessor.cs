@@ -13,57 +13,53 @@ using System.Xml;
 namespace IE_lib
 {
     /// <summary>
-    /// 
+    /// Class responsible for text processing functions.
     /// </summary>
     public class Preprocessor
     {
         /// <summary>
-        /// The article current
+        /// The current article.
         /// </summary>
         private Article articleCurrent;
         /// <summary>
-        /// The annotation current
-        /// </summary>
-        private Annotation annotationCurrent;
-        /// <summary>
-        /// The list latest tokenized article
+        /// The current article after tokenization.
         /// </summary>
         private List<Token> listLatestTokenizedArticle;
         /// <summary>
-        /// The list who candidates
+        /// The list of who candidates for the current article.
         /// </summary>
         private List<Candidate> listWhoCandidates;
         /// <summary>
-        /// The list when candidates
+        /// The list of when candidates for the current article.
         /// </summary>
         private List<Candidate> listWhenCandidates;
         /// <summary>
-        /// The list where candidates
+        /// The list of where candidates for the current article.
         /// </summary>
         private List<Candidate> listWhereCandidates;
         /// <summary>
-        /// The list what candidates
+        /// The list of what candidates for the current article.
         /// </summary>
         private List<List<Token>> listWhatCandidates;
         /// <summary>
-        /// The list why candidates
+        /// The list of why candidates for the current article.
         /// </summary>
         private List<List<Token>> listWhyCandidates;
         /// <summary>
-        /// The ner classifier
+        /// The NER classifier.
         /// </summary>
         private CRFClassifier nerClassifier;
         /// <summary>
-        /// The position tagger
+        /// The POS tagger.
         /// </summary>
         private MaxentTagger posTagger;
 
         /// <summary>
-        /// The ner model path
+        /// The NER model path.
         /// </summary>
         private readonly String nerModelPath = @"..\..\..\NER\filipino.ser.gz";
         /// <summary>
-        /// The position model path
+        /// The POS tagger model path.
         /// </summary>
         private readonly String posModelPath = @"..\..\..\POST\filipino.tagger";
 
@@ -91,40 +87,22 @@ namespace IE_lib
         {
             articleCurrent = pArticle;
         }
-
-        /// <summary>
-        /// Sets the current annotation.
-        /// </summary>
-        /// <param name="pAnnotation">The p annotation.</param>
-        public void setCurrentAnnotation(Annotation pAnnotation)
-        {
-            annotationCurrent = pAnnotation;
-        }
         #endregion
 
         #region Getters
         /// <summary>
         /// Gets the current article.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The current article.</returns>
         public Article getCurrentArticle()
         {
             return articleCurrent;
         }
 
         /// <summary>
-        /// Gets the current annotation.
-        /// </summary>
-        /// <returns></returns>
-        public Annotation getCurrentAnnotation()
-        {
-            return annotationCurrent;
-        }
-
-        /// <summary>
         /// Gets the latest tokenized article.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The latest tokenized article.</returns>
         public List<Token> getLatestTokenizedArticle()
         {
             return listLatestTokenizedArticle;
@@ -133,7 +111,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the who candidates.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The who candidates of the current article.</returns>
         public List<Candidate> getWhoCandidates()
         {
             return listWhoCandidates;
@@ -142,7 +120,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the when candidates.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The when candidates of the current article.</returns>
         public List<Candidate> getWhenCandidates()
         {
             return listWhenCandidates;
@@ -151,7 +129,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the where candidates.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The where candidates of the current article.</returns>
         public List<Candidate> getWhereCandidates()
         {
             return listWhereCandidates;
@@ -160,7 +138,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the what candidates.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The what candidates of the current article.</returns>
         public List<List<Token>> getWhatCandidates()
         {
             return listWhatCandidates;
@@ -169,7 +147,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the why candidates.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The why candidates of the current article.</returns>
         public List<List<Token>> getWhyCandidates()
         {
             return listWhyCandidates;
@@ -177,9 +155,9 @@ namespace IE_lib
         #endregion
 
         /// <summary>
-        /// Preprocesses this instance.
+        /// Performs text processing on the current article.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The tokenized version of the current article.</returns>
         public List<Token> preprocess()
         {
             if (articleCurrent == null)
@@ -210,28 +188,6 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Assign an article's token to whether or not it is part of a 5W.
-        /// </summary>
-        /// <returns></returns>
-        public float[][] performAnnotationAssignment()
-        {
-            float[][] statistics = new float[5][];
-            if (annotationCurrent == null)
-            {
-                return null;
-            }
-
-            statistics[0] = performMultipleAnnotationAssignment("WHO");
-            statistics[1] = performMultipleAnnotationAssignment("WHEN");
-            statistics[2] = performMultipleAnnotationAssignment("WHERE");
-            statistics[3] = performSingleAnnotationAssignment("WHAT");
-            statistics[4] = performSingleAnnotationAssignment("WHY");
-
-            return statistics;
-        }
-
-
-        /// <summary>
         /// Performs the candidate selection.
         /// </summary>
         private void performCandidateSelection()
@@ -246,7 +202,7 @@ namespace IE_lib
 
         #region Article Preprocessing Functions
         /// <summary>
-        /// Performs the tokenization and ss.
+        /// Performs the tokenization and sentence segmentation on the current article's body.
         /// </summary>
         private void performTokenizationAndSS()
         {
@@ -254,10 +210,10 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Performs the tokenization and ss.
+        /// Performs the tokenization and sentence segmentation on the <c>String</c> parameter.
         /// </summary>
-        /// <param name="toBeTokenized">To be tokenized.</param>
-        /// <returns></returns>
+        /// <param name="toBeTokenized">String to be tokenized.</param>
+        /// <returns>Tokenized version of passed string.</returns>
         public List<Token> performTokenizationAndSS(String toBeTokenized)
         {
             List<Token> tokenizedString = new List<Token>();
@@ -340,7 +296,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Performs the ner.
+        /// Performs NER tagging of tokens.
         /// </summary>
         private void performNER()
         {
@@ -364,7 +320,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Performs the post.
+        /// Performs POS tagging of tokens.
         /// </summary>
         private void performPOST()
         {
@@ -412,7 +368,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Performs the ws.
+        /// Performs Word Scoring of Tokens.
         /// </summary>
         private void performWS()
         {
@@ -434,365 +390,6 @@ namespace IE_lib
             {
                 token.Frequency = frequencies[token.Value];
             }
-        }
-        #endregion
-
-        #region Annotation Preprocessing Functions
-        /// <summary>
-        /// Performs the single annotation assignment.
-        /// </summary>
-        /// <param name="annotationType">Type of the annotation.</param>
-        /// <returns></returns>
-        private float[] performSingleAnnotationAssignment(String annotationType)
-        {
-            float[] statistics = new float[4] { 0, 0, 0, -1 }; //[0] = recall, [1] = precision, [2]  total, [3] sentence number
-            Boolean totalMatch = false;
-            annotationType = annotationType.ToUpper();
-            String strAnnotation = "";
-            if (annotationType == "WHAT")
-            {
-                strAnnotation = String.Copy(annotationCurrent.What);
-                //System.Console.WriteLine("WHAT Annotation: " + strAnnotation);
-            }
-            else if (annotationType == "WHY")
-            {
-                strAnnotation = String.Copy(annotationCurrent.Why);
-                //System.Console.WriteLine("WHY Annotation: " + strAnnotation);
-            }
-            if (annotationType != "WHAT" && annotationType != "WHY" || strAnnotation.Count() <= 0 || strAnnotation == "N/A")
-            {
-                return statistics;
-            }
-            String original = strAnnotation;
-            strAnnotation = strAnnotation.Replace("-LRB- ", "(");
-            strAnnotation = strAnnotation.Replace(" -RRB-", ")");
-            strAnnotation = strAnnotation.Replace("''", "");
-            strAnnotation = strAnnotation.Replace("\"", "");
-            strAnnotation = strAnnotation.Replace(" ,", ",");
-            strAnnotation = strAnnotation.Replace(" !", "!");
-            Regex rgx = new Regex("[^a-zA-Z0-9]");
-            strAnnotation = rgx.Replace(strAnnotation, "");
-
-
-            if (annotationType == "WHAT")
-            {
-                if (strAnnotation != "")
-                {
-                    statistics[2] = 1;
-                    foreach (var candidate in listWhatCandidates)
-                    {
-                        //System.Console.WriteLine("WHAT CANDIDATES: " + string.Join(" ", candidate.Select(x => x.Value).ToArray()));
-                        var tempCandidate = string.Join("", candidate.Select(x => x.Value).ToArray());
-                        tempCandidate = tempCandidate.Replace("-LRB-", "(");
-                        tempCandidate = tempCandidate.Replace("-RRB-", ")");
-                        tempCandidate = tempCandidate.Replace("''", "");
-                        tempCandidate = tempCandidate.Replace("\"", "");
-                        tempCandidate = tempCandidate.Replace("``", "");
-                        tempCandidate = tempCandidate.Replace(" !", "!");
-                        tempCandidate = rgx.Replace(tempCandidate, "");
-                        if (tempCandidate.Equals(strAnnotation, StringComparison.OrdinalIgnoreCase))
-                        {
-                            totalMatch = true;
-                            statistics[3] = candidate.ElementAt(0).Sentence;
-                            break;
-                        }
-                        else if (strAnnotation.Contains(tempCandidate))
-                        {
-                            totalMatch = true;
-                            statistics[3] = candidate.ElementAt(0).Sentence;
-                            //System.Console.WriteLine("'WHAT' Under-extracted: " + tempCandidate + " - " + strAnnotation);
-                        }
-                        else if (tempCandidate.Contains(strAnnotation))
-                        {
-                            totalMatch = true;
-                            statistics[3] = candidate.ElementAt(0).Sentence;
-                            //System.Console.WriteLine("'WHAT' Over-extracted: " + candidate.Value + " - " + annotation);
-                        }
-                        else
-                        {
-                            //System.Console.WriteLine("'WHAT' Complete Mismatch: " + candidate.Value + " - " + annotation);
-                        }
-                    }
-                    if (statistics[3] < 0)
-                    {
-                        //System.Console.WriteLine("NO MATCH: " + original);
-                    }
-                    statistics[0] = totalMatch ? 1 : 0;
-                    statistics[1] = statistics[0] / listWhatCandidates.Count;
-                }
-            }
-            else if (annotationType == "WHY")
-            {
-                if (strAnnotation != "")
-                {
-                    statistics[2] = 1;
-                    foreach (var candidate in listWhyCandidates)
-                    {
-                        //System.Console.WriteLine("WHY CANDIDATES: " + string.Join(" ", candidate.Select(x => x.Value).ToArray()));
-                        var tempCandidate = string.Join("", candidate.Select(x => x.Value).ToArray());
-                        tempCandidate = tempCandidate.Replace("-LRB-", "(");
-                        tempCandidate = tempCandidate.Replace("-RRB-", ")");
-                        tempCandidate = tempCandidate.Replace(" . ", ".");
-                        tempCandidate = tempCandidate.Replace(" .", ".");
-                        tempCandidate = tempCandidate.Replace(" ,", ",");
-                        tempCandidate = tempCandidate.Replace(" !", "!");
-                        tempCandidate = rgx.Replace(tempCandidate, "");
-                        if (tempCandidate.Equals(strAnnotation, StringComparison.OrdinalIgnoreCase))
-                        {
-                            totalMatch = true;
-                            statistics[3] = candidate.ElementAt(0).Sentence;
-                            break;
-                        }
-                        else if (strAnnotation.Contains(tempCandidate))
-                        {
-                            totalMatch = true;
-                            statistics[3] = candidate.ElementAt(0).Sentence;
-                            //System.Console.WriteLine("'WHY' Under-extracted: " + tempCandidate + " - " + strAnnotation);
-                        }
-                        else if (tempCandidate.Contains(strAnnotation))
-                        {
-                            totalMatch = true;
-                            statistics[3] = candidate.ElementAt(0).Sentence;
-                            //System.Console.WriteLine("'WHY' Over-extracted: " + candidate.Value + " - " + annotation);
-                        }
-                        else
-                        {
-                            //System.Console.WriteLine("'WHY' Complete Mismatch: " + candidate.Value + " - " + annotation);
-                        }
-                    }
-                    if (statistics[3] < 0)
-                    {
-                        //System.Console.WriteLine("NO MATCH: " + original);
-                    }
-                    statistics[0] = totalMatch ? 1 : 0;
-                    statistics[1] = statistics[0] / listWhyCandidates.Count;
-                }
-            }
-
-            return statistics;
-        }
-
-        /// <summary>
-        /// Performs the multiple annotation assignment.
-        /// </summary>
-        /// <param name="annotationType">Type of the annotation.</param>
-        /// <returns></returns>
-        private float[] performMultipleAnnotationAssignment(String annotationType)
-        {
-            float[] statistics = new float[3] { 0, 0, 0 }; //[0] = recall, [1] = precision, [2]  total
-            int totalMatch = 0;
-            annotationType = annotationType.ToUpper();
-            if (annotationType != "WHO" && annotationType != "WHEN" && annotationType != "WHERE")
-            {
-                return statistics;
-            }
-
-            String strAnnotation = "";
-            Action<string> assignmentMethod = null;
-            string[] arrAnnotations = null;
-            bool foundMatchingCandidate = false;
-            switch (annotationType)
-            {
-                case "WHO":
-                    strAnnotation = annotationCurrent.Who;
-                    if (strAnnotation != null)
-                    {
-                        //System.Console.WriteLine("WHO Annotation: " + strAnnotation);
-                        assignmentMethod = annotation =>
-                        {
-                            foreach (var candidate in listWhoCandidates)
-                            {
-                                if (candidate.Value == annotation)
-                                {
-                                    candidate.IsWho = true;
-                                    foundMatchingCandidate = true;
-                                    //System.Console.WriteLine("WHO\nBEFORE: " + (((candidate.Position - 2) >= 0) ? listLatestTokenizedArticle[candidate.Position - 2].Value : "N/A"));
-                                    //string[] temp = candidate.Value.Split(' ');
-                                    //System.Console.WriteLine("AFTER: " + (((candidate.Position + temp.Length - 1) <= listLatestTokenizedArticle.Count()) ? listLatestTokenizedArticle[candidate.Position + temp.Length - 1].Value : "N/A"));
-                                    break;
-                                }
-                                else if (annotation.Contains(candidate.Value))
-                                {
-
-                                    //System.Console.WriteLine("'WHO' Under-extracted: " + candidate.Value + " - " + annotation);
-                                }
-                                else if (candidate.Value.Contains(annotation))
-                                {
-                                    //System.Console.WriteLine("'WHO' Over-extracted: " + candidate.Value + " - " + annotation);
-                                }
-                                else
-                                {
-                                    //System.Console.WriteLine("'WHO' Complete Mismatch: " + candidate.Value + " - " + annotation);
-                                }
-                            }
-                        };
-                    }
-                    break;
-                case "WHEN":
-                    strAnnotation = annotationCurrent.When;
-                    if (strAnnotation != null)
-                    {
-                        //System.Console.WriteLine("WHEN Annotation: " + strAnnotation);
-                        assignmentMethod = annotation =>
-                        {
-                            foreach (var candidate in listWhenCandidates)
-                            {
-                                if (candidate.Value == annotation)
-                                {
-                                    candidate.IsWhen = true;
-                                    foundMatchingCandidate = true;
-                                    //System.Console.WriteLine("WHEN\nBEFORE: " + (((candidate.Position - 2) >= 0) ? listLatestTokenizedArticle[candidate.Position - 2].Value : "N/A"));
-                                    //string[] temp = candidate.Value.Split(' ');
-                                    //System.Console.WriteLine("AFTER: " + (((candidate.Position + temp.Length - 1) <= listLatestTokenizedArticle.Count()) ? listLatestTokenizedArticle[candidate.Position + temp.Length - 1].Value : "N/A"));
-                                    break;
-                                }
-                                else if (annotation.Contains(candidate.Value))
-                                {
-                                    //System.Console.WriteLine("'WHEN' Under-extracted: " + candidate.Value + " - " + annotation);
-                                }
-                                else if (candidate.Value.Contains(annotation))
-                                {
-                                    //System.Console.WriteLine("'WHEN' Over-extracted: " + candidate.Value + " - " + annotation);
-                                }
-                                else
-                                {
-                                    //System.Console.WriteLine("'WHEN' Complete Mismatch: " + candidate.Value + " - " + annotation);
-                                }
-                            }
-                        };
-                    }
-                    break;
-                case "WHERE":
-                    strAnnotation = annotationCurrent.Where;
-                    if (strAnnotation != null)
-                    {
-                        //System.Console.WriteLine("WHERE Annotation: " + strAnnotation);
-                        assignmentMethod = annotation =>
-                        {
-                            foreach (var candidate in listWhereCandidates)
-                            {
-                                if (candidate.Value == annotation)
-                                {
-                                    candidate.IsWhere = true;
-                                    foundMatchingCandidate = true;
-                                    //System.Console.WriteLine("WHERE\nBEFORE: " + (((candidate.Position - 2) >= 0) ? listLatestTokenizedArticle[candidate.Position - 2].Value : "N/A"));
-                                    //string[] temp = candidate.Value.Split(' ');
-                                    //System.Console.WriteLine("AFTER: " + (((candidate.Position + temp.Length - 1) <= listLatestTokenizedArticle.Count()) ? listLatestTokenizedArticle[candidate.Position + temp.Length - 1].Value : "N/A"));
-                                    break;
-                                }
-                                else if (annotation.Contains(candidate.Value))
-                                {
-                                    //System.Console.WriteLine("'WHERE' Under-extracted: " + candidate.Value + " - " + annotation);
-                                }
-                                else if (candidate.Value.Contains(annotation))
-                                {
-                                    //System.Console.WriteLine("'WHERE' Over-extracted: " + candidate.Value + " - " + annotation);
-                                }
-                                else
-                                {
-                                    //System.Console.WriteLine("'WHERE' Complete Mismatch: " + candidate.Value + " - " + annotation);
-                                }
-                            }
-                        };
-                    }
-                    break;
-            }
-
-            if (strAnnotation.Count() <= 0 || strAnnotation == "N/A")
-            {
-                return statistics;
-            }
-
-            arrAnnotations = strAnnotation.Split(';');
-
-            for (int r = 0; r < arrAnnotations.Length; r++)
-            {
-                if (arrAnnotations[r].Length > 0 && arrAnnotations[r][0] == ' ')
-                {
-                    arrAnnotations[r] = arrAnnotations[r].Substring(1);
-                }
-
-                ////System.Console.WriteLine(annotationType + " ANNOTATIONS-" + arrAnnotations[r]);
-                if (assignmentMethod != null)
-                {
-                    assignmentMethod(arrAnnotations[r]);
-                }
-
-                if (!foundMatchingCandidate)
-                {
-                    int i = -1;
-                    String[] wordForWordAnnotation = arrAnnotations[r].Split(' ');
-                    for (int ctr = 0; ctr < listLatestTokenizedArticle.Count; ctr++)
-                    {
-                        if (wordForWordAnnotation[0].Contains(listLatestTokenizedArticle[ctr].Value))
-                        {
-                            i = ctr;
-                            break;
-                        }
-                    }
-
-                    if (i > -1)
-                    {
-                        //add as candidate
-                        int startIndex = i;
-                        int tempWs = listLatestTokenizedArticle[i].Frequency;
-
-                        for (int ctr = startIndex; ctr < startIndex + wordForWordAnnotation.Count(); ctr++)
-                        {
-                            if (ctr < listLatestTokenizedArticle.Count && listLatestTokenizedArticle[ctr].Frequency > tempWs)
-                            {
-                                tempWs = listLatestTokenizedArticle[ctr].Frequency;
-                            }
-                        }
-
-                        var newToken = new Candidate(arrAnnotations[r], listLatestTokenizedArticle[startIndex].Position, startIndex + wordForWordAnnotation.Count() - 1);
-                        newToken.Sentence = listLatestTokenizedArticle[i].Sentence;
-                        newToken.NamedEntity = listLatestTokenizedArticle[i].NamedEntity;
-                        newToken.PartOfSpeech = listLatestTokenizedArticle[i].PartOfSpeech;
-                        newToken.Frequency = tempWs;
-                        switch (annotationType)
-                        {
-                            case "WHO":
-                                newToken.IsWho = true;
-                                listWhoCandidates.Add(newToken);
-                                break;
-                            case "WHEN":
-                                newToken.IsWhen = true;
-                                listWhenCandidates.Add(newToken);
-                                break;
-                            case "WHERE":
-                                newToken.IsWhere = true;
-                                listWhereCandidates.Add(newToken);
-                                break;
-                        }
-                    }
-                }
-                else
-                {
-                    totalMatch += 1;
-                    foundMatchingCandidate = false;
-                }
-            }
-
-            //System.Console.WriteLine("Annotations Count: {0}", arrAnnotations.GetLength(0));
-            statistics[2] += 1;
-            statistics[0] = (float)totalMatch / arrAnnotations.GetLength(0);
-            switch (annotationType)
-            {
-                case "WHO":
-                    statistics[1] = (float)totalMatch / listWhoCandidates.Count;
-                    //System.Console.WriteLine("Total Match: {0}, Who Candidates Count: {1}", totalMatch, listWhoCandidates.Count);
-                    break;
-                case "WHEN":
-                    statistics[1] = (float)totalMatch / listWhenCandidates.Count;
-                    //System.Console.WriteLine("Total Match: {0}, When Candidates Count: {1}", totalMatch, listWhenCandidates.Count);
-                    break;
-                case "WHERE":
-                    statistics[1] = (float)totalMatch / listWhereCandidates.Count;
-                    //System.Console.WriteLine("Total Match: {0}, Where Candidates Count: {1}", totalMatch, listWhereCandidates.Count);
-                    break;
-            }
-            return statistics;
         }
         #endregion
     }
