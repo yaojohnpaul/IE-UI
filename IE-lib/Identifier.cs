@@ -15,7 +15,7 @@ using weka.filters.unsupervised.attribute;
 namespace IE_lib
 {
     /// <summary>
-    /// 
+    /// Class used for extracting the 5Ws from the list of candidates for each article.
     /// </summary>
     public class Identifier
     {
