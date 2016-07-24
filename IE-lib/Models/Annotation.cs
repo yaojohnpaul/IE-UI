@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace IE_lib.Models
 {
     /// <summary>
-    /// 
+    /// Model class holding annotation data for an article.
     /// </summary>
     public class Annotation
     {
@@ -15,55 +15,55 @@ namespace IE_lib.Models
         /// Gets or sets the index.
         /// </summary>
         /// <value>
-        /// The index.
+        /// The index of the article that this annotation belongs to.
         /// </value>
         public int Index { get; set; }
 
         /// <summary>
-        /// Gets or sets the who.
+        /// Gets or sets the who annotation.
         /// </summary>
         /// <value>
-        /// The who.
+        /// The who annotation.
         /// </value>
         public string Who { get; set; }
 
         /// <summary>
-        /// Gets or sets the where.
+        /// Gets or sets the where annotation.
         /// </summary>
         /// <value>
-        /// The where.
+        /// The where annotation.
         /// </value>
         public string Where { get; set; }
 
         /// <summary>
-        /// Gets or sets the when.
+        /// Gets or sets the when annotation.
         /// </summary>
         /// <value>
-        /// The when.
+        /// The when annotation.
         /// </value>
         public string When { get; set; }
 
         /// <summary>
-        /// Gets or sets the what.
+        /// Gets or sets the what annotation.
         /// </summary>
         /// <value>
-        /// The what.
+        /// The what annotation.
         /// </value>
         public string What { get; set; }
 
         /// <summary>
-        /// Gets or sets the why.
+        /// Gets or sets the why annotation.
         /// </summary>
         /// <value>
-        /// The why.
+        /// The why annotation.
         /// </value>
         public string Why { get; set; }
 
         /// <summary>
-        /// Gets or sets the formatted when.
+        /// Gets or sets the formatted when annotation.
         /// </summary>
         /// <value>
-        /// The formatted when.
+        /// The formatted when annotation.
         /// </value>
         public string FormattedWhen { get; set; }
     }

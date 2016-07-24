@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace IE_lib.Models
 {
     /// <summary>
-    /// 
+    /// Class for holding information of an article to be displayed to the users.
     /// </summary>
     public class DisplayArticle
     {

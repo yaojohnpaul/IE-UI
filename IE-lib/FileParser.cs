@@ -11,14 +11,14 @@ using System.Xml;
 namespace IE_lib
 {
     /// <summary>
-    /// 
+    /// Class used for parsing the input files.
     /// </summary>
     class FileParser
     {
         /// <summary>
-        /// Parses the file.
+        /// Parses the input XML file.
         /// </summary>
-        /// <param name="path">The path.</param>
+        /// <param name="path">The path of the input XML file.</param>
         /// <returns></returns>
         public List<Article> parseFile(String path)
         {
@@ -67,9 +67,9 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Parses the annotations.
+        /// Parses the annotations from the input XML file if the data is annotated.
         /// </summary>
-        /// <param name="path">The path.</param>
+        /// <param name="path">The path of the input XML file.</param>
         /// <returns></returns>
         public List<Annotation> parseAnnotations(String path)
         {
