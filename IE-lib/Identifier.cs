@@ -20,79 +20,79 @@ namespace IE_lib
     public class Identifier
     {
         /// <summary>
-        /// The article current
+        /// The current article being processed.
         /// </summary>
         private List<Token> articleCurrent;
         /// <summary>
-        /// The title current
+        /// The title of the current article. Must be set together with <see cref="articleCurrent"/>.
         /// </summary>
         private String titleCurrent;
         /// <summary>
-        /// The segregated article current
+        /// The current article grouped into sentences.
         /// </summary>
         private List<List<Token>> segregatedArticleCurrent;
         /// <summary>
-        /// The list who candidates
+        /// The list of current who candidates.
         /// </summary>
         private List<Candidate> listWhoCandidates;
         /// <summary>
-        /// The list when candidates
+        /// The list of current when candidates.
         /// </summary>
         private List<Candidate> listWhenCandidates;
         /// <summary>
-        /// The list where candidates
+        /// The list of current where candidates.
         /// </summary>
         private List<Candidate> listWhereCandidates;
         /// <summary>
-        /// The list secondary why candidates
+        /// The list of current why candidates after further processing in the <see cref="labelWhy"/> function.
         /// </summary>
         private List<Candidate> listSecondaryWhyCandidates;
         /// <summary>
-        /// The list what candidates
+        /// The list of current what candidates.
         /// </summary>
         private List<List<Token>> listWhatCandidates;
         /// <summary>
-        /// The list why candidates
+        /// The list of current why candidates.
         /// </summary>
         private List<List<Token>> listWhyCandidates;
         /// <summary>
-        /// The list who
+        /// The list of final who annotations of the current article.
         /// </summary>
         private List<String> listWho;
         /// <summary>
-        /// The list when
+        /// The list of final when annotations of the current article.
         /// </summary>
         private List<String> listWhen;
         /// <summary>
-        /// The list where
+        /// The list of final where annotations of the current article.
         /// </summary>
         private List<String> listWhere;
         /// <summary>
-        /// The string what
+        /// The string containing the final what annotation of the current article.
         /// </summary>
         private String strWhat;
         /// <summary>
-        /// The string why
+        /// The string containing the final why annotation of the current article.
         /// </summary>
         private String strWhy;
         /// <summary>
-        /// The fv position
+        /// The fast vector for POS Tags to be used by WEKA classes.
         /// </summary>
         private FastVector fvPOS;
         /// <summary>
-        /// The who classifier
+        /// The who WEKA classifier.
         /// </summary>
         Classifier whoClassifier;
         /// <summary>
-        /// The when classifier
+        /// The when WEKA classifier.
         /// </summary>
         Classifier whenClassifier;
         /// <summary>
-        /// The where classifier
+        /// The where WEKA classifier.
         /// </summary>
         Classifier whereClassifier;
         /// <summary>
-        /// The why classifier
+        /// The why WEKA classifier.
         /// </summary>
         Classifier whyClassifier;
 
@@ -123,7 +123,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Initializes the annotations.
+        /// Initializes the annotations as empty.
         /// </summary>
         private void initializeAnnotations()
         {
@@ -138,7 +138,7 @@ namespace IE_lib
         /// <summary>
         /// Sets the current article.
         /// </summary>
-        /// <param name="pArticle">The p article.</param>
+        /// <param name="pArticle">The current article.</param>
         public void setCurrentArticle(List<Token> pArticle)
         {
             articleCurrent = pArticle;
@@ -151,7 +151,7 @@ namespace IE_lib
         /// <summary>
         /// Sets the who candidates.
         /// </summary>
-        /// <param name="pCandidates">The p candidates.</param>
+        /// <param name="pCandidates">The current who candidates.</param>
         public void setWhoCandidates(List<Candidate> pCandidates)
         {
             listWhoCandidates = pCandidates;
@@ -160,7 +160,7 @@ namespace IE_lib
         /// <summary>
         /// Sets the when candidates.
         /// </summary>
-        /// <param name="pCandidates">The p candidates.</param>
+        /// <param name="pCandidates">The current when candidates.</param>
         public void setWhenCandidates(List<Candidate> pCandidates)
         {
             listWhenCandidates = pCandidates;
@@ -169,7 +169,7 @@ namespace IE_lib
         /// <summary>
         /// Sets the where candidates.
         /// </summary>
-        /// <param name="pCandidates">The p candidates.</param>
+        /// <param name="pCandidates">The current where candidates.</param>
         public void setWhereCandidates(List<Candidate> pCandidates)
         {
             listWhereCandidates = pCandidates;
@@ -178,7 +178,7 @@ namespace IE_lib
         /// <summary>
         /// Sets the what candidates.
         /// </summary>
-        /// <param name="pCandidates">The p candidates.</param>
+        /// <param name="pCandidates">The current what candidates.</param>
         public void setWhatCandidates(List<List<Token>> pCandidates)
         {
             listWhatCandidates = pCandidates;
@@ -187,7 +187,7 @@ namespace IE_lib
         /// <summary>
         /// Sets the why candidates.
         /// </summary>
-        /// <param name="pCandidates">The p candidates.</param>
+        /// <param name="pCandidates">The current why candidates.</param>
         public void setWhyCandidates(List<List<Token>> pCandidates)
         {
             listWhyCandidates = pCandidates;
@@ -196,7 +196,7 @@ namespace IE_lib
         /// <summary>
         /// Sets the title.
         /// </summary>
-        /// <param name="pTitle">The p title.</param>
+        /// <param name="pTitle">The current article's title.</param>
         public void setTitle(String pTitle)
         {
             titleCurrent = pTitle;
@@ -207,7 +207,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the current article.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The current article.</returns>
         public List<Token> getCurrentArticle()
         {
             return articleCurrent;
@@ -216,7 +216,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the who.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The current who annotations.</returns>
         public List<String> getWho()
         {
             return listWho;
@@ -225,7 +225,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the when.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The current when annotations.</returns>
         public List<String> getWhen()
         {
             return listWhen;
@@ -234,7 +234,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the where.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The current where annotations.</returns>
         public List<String> getWhere()
         {
             return listWhere;
@@ -243,7 +243,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the what.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The current what annotation.</returns>
         public String getWhat()
         {
             return strWhat;
@@ -252,7 +252,7 @@ namespace IE_lib
         /// <summary>
         /// Gets the why.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The current why annotation.</returns>
         public String getWhy()
         {
             return strWhy;
@@ -260,7 +260,7 @@ namespace IE_lib
         #endregion
 
         /// <summary>
-        /// Labels the annotations.
+        /// Calls on all functions to extract and identify the final 5Ws for the article.
         /// </summary>
         public void labelAnnotations()
         {
@@ -274,7 +274,7 @@ namespace IE_lib
 
         #region Labelling Functions
         /// <summary>
-        /// Labels the who.
+        /// Extracts the who.
         /// </summary>
         private void labelWho()
         {
@@ -291,7 +291,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Labels the when.
+        /// Extracts the when.
         /// </summary>
         private void labelWhen()
         {
@@ -308,7 +308,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Labels the where.
+        /// Extracts the where.
         /// </summary>
         private void labelWhere()
         {
@@ -325,7 +325,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Labels the what.
+        /// Extracts the what.
         /// </summary>
         private void labelWhat()
         {
@@ -394,7 +394,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Labels the why.
+        /// Extracts the why.
         /// </summary>
         private void labelWhy()
         {
@@ -524,7 +524,7 @@ namespace IE_lib
         #region Instances Creation
         #region Instance Group Creation
         /// <summary>
-        /// Creates the who instances.
+        /// Creates the who instances for WEKA model compatibility.
         /// </summary>
         /// <returns></returns>
         private Instances createWhoInstances()
@@ -543,7 +543,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Creates the when instances.
+        /// Creates the when instances for WEKA model compatibility.
         /// </summary>
         /// <returns></returns>
         private Instances createWhenInstances()
@@ -562,7 +562,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Creates the where instances.
+        /// Creates the where instances for WEKA model compatibility.
         /// </summary>
         /// <returns></returns>
         private Instances createWhereInstances()
@@ -581,7 +581,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Creates the why instances.
+        /// Creates the why instances for WEKA model compatibility.
         /// </summary>
         /// <returns></returns>
         private Instances createWhyInstances()
@@ -601,41 +601,41 @@ namespace IE_lib
         #endregion
 
         /// <summary>
-        /// The who words before
+        /// Number of neighbouring words before the who candidate.
         /// </summary>
         private const int whoWordsBefore = 10;
         /// <summary>
-        /// The who words after
+        /// Number of neighbouring words after the who candidate.
         /// </summary>
         private const int whoWordsAfter = 10;
         /// <summary>
-        /// The when words before
+        /// Number of neighbouring words before the when candidate.
         /// </summary>
         private const int whenWordsBefore = 3;
         /// <summary>
-        /// The when words after
+        /// Number of neighbouring words after the when candidate.
         /// </summary>
         private const int whenWordsAfter = 3;
         /// <summary>
-        /// The where words before
+        /// Number of neighbouring words before the where candidate.
         /// </summary>
         private const int whereWordsBefore = 10;
         /// <summary>
-        /// The where words after
+        /// Number of neighbouring words after the where candidate.
         /// </summary>
         private const int whereWordsAfter = 10;
         /// <summary>
-        /// The why words before
+        /// Number of neighbouring words before the why candidate.
         /// </summary>
         private const int whyWordsBefore = 10;
         /// <summary>
-        /// The why words after
+        /// Number of neighbouring words after the why candidate.
         /// </summary>
         private const int whyWordsAfter = 10;
 
         #region Single Instance Creation
         /// <summary>
-        /// Creates the single who instance.
+        /// Creates a single who instance for WEKA model compatibility.
         /// </summary>
         /// <param name="fvWho">The fv who.</param>
         /// <param name="candidate">The candidate.</param>
@@ -699,7 +699,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Creates the single when instance.
+        /// Creates a single when instance for WEKA model compatibility.
         /// </summary>
         /// <param name="fvWhen">The fv when.</param>
         /// <param name="candidate">The candidate.</param>
@@ -762,7 +762,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Creates the single where instance.
+        /// Creates a single where instance for WEKA model compatibility.
         /// </summary>
         /// <param name="fvWhere">The fv where.</param>
         /// <param name="candidate">The candidate.</param>
@@ -824,7 +824,7 @@ namespace IE_lib
             return whereCandidate;
         }
         /// <summary>
-        /// Creates the single why instance.
+        /// Creates a single why instance for WEKA model compatibility.
         /// </summary>
         /// <param name="fvWhy">The fv why.</param>
         /// <param name="candidate">The candidate.</param>
@@ -879,7 +879,7 @@ namespace IE_lib
 
         #region Fast Vector Creation
         /// <summary>
-        /// Creates the who fast vector.
+        /// Creates the who fast vector as template for creating WEKA-compatible instances.
         /// </summary>
         /// <returns></returns>
         private FastVector createWhoFastVector()
@@ -915,7 +915,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Creates the when fast vector.
+        /// Creates the when fast vector as template for creating WEKA-compatible instances.
         /// </summary>
         /// <returns></returns>
         private FastVector createWhenFastVector()
@@ -951,7 +951,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Creates the where fast vector.
+        /// Creates the where fast vector as template for creating WEKA-compatible instances.
         /// </summary>
         /// <returns></returns>
         private FastVector createWhereFastVector()
@@ -987,7 +987,7 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Creates the why fast vector.
+        /// Creates the why fast vector as template for creating WEKA-compatible instances.
         /// </summary>
         /// <returns></returns>
         private FastVector createWhyFastVector()
