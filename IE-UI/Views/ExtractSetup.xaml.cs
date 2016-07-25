@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -52,7 +53,7 @@ namespace IE_UI.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void ProceedButton_Click(object sender, RoutedEventArgs e)
         {
-            if (SourceTextBox.Text.Any() && DestinationTextBox.Text.Any())
+            if (SourceTextBox.Text.Any() && DestinationTextBox.Text.Any() && Directory.Exists(System.IO.Path.GetDirectoryName(DestinationTextBox.Text)) && File.Exists(SourceTextBox.Text))
             {
                 this.NavigationService.Navigate(new ExtractProcess(new ExtractConfig()
                 {

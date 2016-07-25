@@ -52,7 +52,7 @@ namespace IE_lib
             #region Preprocess Article 
             //status = "preprocessing articles";
 
-            if (listCurrentArticles != null && listCurrentArticles.Count > 0)
+            if (listCurrentArticles.Count > 0)
             {
                 for (int nI = 0; nI < listCurrentArticles.Count; nI++)
                 {
