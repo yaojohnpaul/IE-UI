@@ -73,7 +73,7 @@ namespace IE_UI.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void ProceedButton_Click(object sender, RoutedEventArgs e)
         {
-            if (SourceTextBox.Text.Any())
+            if (SourceTextBox.Text.Any() && File.Exists(SourceTextBox.Text))
             {
                 this.NavigationService.Navigate(new ViewList(SourceTextBox.Text));
 
