@@ -1,6 +1,7 @@
 ﻿using IE_UI.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,15 +80,37 @@ namespace IE_UI.Views
             {
                 if (item.OperationType == Char.ConvertFromUtf32(0xE7E6))
                 {
-                    this.NavigationService.Navigate(new ExtractProcess(new ExtractConfig()
+                    ExtractConfig config = new ExtractConfig()
                     {
                         SourceFilePath = String.Format("{0}\\{1}.xml", item.SourceFilePath, item.Name),
                         DestinationFilePath = item.DestinationFilePath
-                    }));
+                    };
+
+                    if (Directory.Exists(System.IO.Path.GetDirectoryName(config.DestinationFilePath)) && File.Exists(config.SourceFilePath))
+                    {
+                        this.NavigationService.Navigate(new ExtractProcess(config));
+                    }
+                    else
+                    {
+                        MessageBox.Show(Application.Current.MainWindow,
+                            "Please enter valid file paths.",
+                            "Invalid file paths");
+                    }
                 }
                 else if (item.OperationType == Char.ConvertFromUtf32(0xE8E5))
                 {
-                    this.NavigationService.Navigate(new ViewList(String.Format("{0}\\{1}.xml", item.SourceFilePath, item.Name)));
+                    string sourceFilePath = String.Format("{0}\\{1}.xml", item.SourceFilePath, item.Name);
+
+                    if (File.Exists(sourceFilePath))
+                    {
+                        this.NavigationService.Navigate(new ViewList(sourceFilePath));
+                    }
+                    else
+                    {
+                        MessageBox.Show(Application.Current.MainWindow,
+                            "Please enter valid file path.",
+                            "Invalid file path");
+                    }
                 }
             }
         }
