@@ -50,7 +50,7 @@ namespace IE_UI.Views
         /// <summary>
         /// The criterias
         /// </summary>
-        private String[] Criterias = new String[] { "Sino", "Kailan", "Saan", "Ano", "Bakit" };
+        private String[] Criterias = new String[] { "Who", "When", "Where", "What", "Why" };
         /// <summary>
         /// The types
         /// </summary>
@@ -266,19 +266,19 @@ namespace IE_UI.Views
             {
                 switch (ListCriteriaComboBoxes[i].Text)
                 {
-                    case "Sino":
+                    case "Who":
                         whoIndex.Add(i);
                         break;
-                    case "Kailan":
+                    case "When":
                         whenIndex.Add(i);
                         break;
-                    case "Saan":
+                    case "Where":
                         whereIndex.Add(i);
                         break;
-                    case "Ano":
+                    case "What":
                         whatIndex.Add(i);
                         break;
-                    case "Bakit":
+                    case "Why":
                         whyIndex.Add(i);
                         break;
                     default:
