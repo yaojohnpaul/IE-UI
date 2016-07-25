@@ -12,13 +12,22 @@ using System.Xml;
 namespace IE_UI
 {
     /// <summary>
+    /// Class for inserting inline elements as runs in a text block.
     /// Code from https://stackoverflow.com/questions/5582893/wpf-generate-textblock-inlines/8309907#8309907
     /// </summary>
     public class InlineExpression
     {
+        /// <summary>
+        /// The inline expression property
+        /// </summary>
         public static readonly DependencyProperty InlineExpressionProperty = DependencyProperty.RegisterAttached(
         "InlineExpression", typeof(string), typeof(TextBlock), new FrameworkPropertyMetadata(string.Empty, FrameworkPropertyMetadataOptions.AffectsMeasure));
 
+        /// <summary>
+        /// Sets the inline expression.
+        /// </summary>
+        /// <param name="textBlock">The text block.</param>
+        /// <param name="value">The value.</param>
         public static void SetInlineExpression(TextBlock textBlock, string value)
         {
             textBlock.SetValue(InlineExpressionProperty, value);
@@ -39,30 +48,92 @@ namespace IE_UI
             textBlock.Inlines.AddRange(inlines);
         }
 
+        /// <summary>
+        /// Gets the inline expression.
+        /// </summary>
+        /// <param name="textBlock">The text block.</param>
+        /// <returns>The inline expression.</returns>
         public static string GetInlineExpression(TextBlock textBlock)
         {
             return (string)textBlock.GetValue(InlineExpressionProperty);
         }
 
+        /// <summary>
+        /// Enumeration of inline types
+        /// </summary>
         enum InlineType
         {
+            /// <summary>
+            /// The run
+            /// </summary>
             Run,
+            /// <summary>
+            /// The line break
+            /// </summary>
             LineBreak,
+            /// <summary>
+            /// The span
+            /// </summary>
             Span,
+            /// <summary>
+            /// The bold
+            /// </summary>
             Bold,
+            /// <summary>
+            /// The italic
+            /// </summary>
             Italic,
+            /// <summary>
+            /// The hyperlink
+            /// </summary>
             Hyperlink,
+            /// <summary>
+            /// The underline
+            /// </summary>
             Underline
         }
 
+        /// <summary>
+        /// Class for holding information about the inline.
+        /// </summary>
         class InlineDescription
         {
+            /// <summary>
+            /// Gets or sets the type.
+            /// </summary>
+            /// <value>
+            /// The type.
+            /// </value>
             public InlineType Type { get; set; }
+            /// <summary>
+            /// Gets or sets the text.
+            /// </summary>
+            /// <value>
+            /// The text.
+            /// </value>
             public string Text { get; set; }
+            /// <summary>
+            /// Gets or sets the array of inlines.
+            /// </summary>
+            /// <value>
+            /// The array of inlines.
+            /// </value>
             public InlineDescription[] Inlines { get; set; }
+            /// <summary>
+            /// Gets or sets the name of the style.
+            /// </summary>
+            /// <value>
+            /// The name of the style.
+            /// </value>
             public string StyleName { get; set; }
         }
 
+        /// <summary>
+        /// Gets the inlines.
+        /// </summary>
+        /// <param name="element">The element.</param>
+        /// <param name="inlineDescriptions">The inline descriptions.</param>
+        /// <returns>The array of inlines.</returns>
         private static Inline[] GetInlines(FrameworkElement element, IEnumerable<InlineDescription> inlineDescriptions)
         {
             var inlines = new List<Inline>();
@@ -76,6 +147,13 @@ namespace IE_UI
             return inlines.ToArray();
         }
 
+        /// <summary>
+        /// Gets the inline.
+        /// </summary>
+        /// <param name="element">The element.</param>
+        /// <param name="description">The description.</param>
+        /// <returns>The inline.</returns>
+        /// <exception cref="InvalidOperationException">The style '" + description.StyleName + "' cannot be found</exception>
         private static Inline GetInline(FrameworkElement element, InlineDescription description)
         {
             Style style = null;
@@ -144,6 +222,11 @@ namespace IE_UI
             return inline;
         }
 
+        /// <summary>
+        /// Gets the inline descriptions.
+        /// </summary>
+        /// <param name="inlineExpression">The inline expression.</param>
+        /// <returns>The inline descriptions.</returns>
         private static InlineDescription[] GetInlineDescriptions(string inlineExpression)
         {
             if (inlineExpression == null)
@@ -178,6 +261,11 @@ namespace IE_UI
             return inlineDescriptions.ToArray();
         }
 
+        /// <summary>
+        /// Gets the inline description from a node.
+        /// </summary>
+        /// <param name="node">The node.</param>
+        /// <returns>The inline description</returns>
         private static InlineDescription GetInlineDescription(XmlNode node)
         {
             var element = node as XmlElement;
@@ -189,6 +277,11 @@ namespace IE_UI
             return null;
         }
 
+        /// <summary>
+        /// Gets the inline description from an element.
+        /// </summary>
+        /// <param name="element">The element.</param>
+        /// <returns>The inline description.</returns>
         private static InlineDescription GetInlineDescription(XmlElement element)
         {
             InlineType type;
@@ -255,6 +348,11 @@ namespace IE_UI
             return inlineDescription;
         }
 
+        /// <summary>
+        /// Gets the inline description from a text.
+        /// </summary>
+        /// <param name="text">The text.</param>
+        /// <returns>The inline description.</returns>
         private static InlineDescription GetInlineDescription(XmlText text)
         {
             var value = text.Value;

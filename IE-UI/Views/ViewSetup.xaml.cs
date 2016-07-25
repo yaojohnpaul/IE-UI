@@ -81,7 +81,7 @@ namespace IE_UI.Views
                 {
                     OperationType = Char.ConvertFromUtf32(0xE8E5),
                     Name = System.IO.Path.GetFileNameWithoutExtension(SourceTextBox.Text),
-                    SourcePath = System.IO.Path.GetDirectoryName(SourceTextBox.Text),
+                    SourceFilePath = System.IO.Path.GetDirectoryName(SourceTextBox.Text),
                 });
             }
             else

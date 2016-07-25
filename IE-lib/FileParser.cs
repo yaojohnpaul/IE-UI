@@ -19,7 +19,7 @@ namespace IE_lib
         /// Parses the input XML file.
         /// </summary>
         /// <param name="path">The path of the input XML file.</param>
-        /// <returns></returns>
+        /// <returns>The list of parsed articles.</returns>
         public List<Article> parseFile(String path)
         {
             List<Article> articleList = new List<Article>();
@@ -70,7 +70,7 @@ namespace IE_lib
         /// Parses the annotations from the input XML file if the data is annotated.
         /// </summary>
         /// <param name="path">The path of the input XML file.</param>
-        /// <returns></returns>
+        /// <returns>The list of parsed annotations.</returns>
         public List<Annotation> parseAnnotations(String path)
         {
             List<Annotation> annotationList = new List<Annotation>();

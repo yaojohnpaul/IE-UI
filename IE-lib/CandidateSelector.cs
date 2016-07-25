@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace IE_lib
 {
     /// <summary>
-    /// 
+    /// Class used for selecting the candidates.
     /// </summary>
     class CandidateSelector
     {
@@ -17,7 +17,7 @@ namespace IE_lib
         /// </summary>
         /// <param name="tokenizedArticle">The tokenized article.</param>
         /// <param name="articleTitle">The article title.</param>
-        /// <returns></returns>
+        /// <returns>The list of who candidates.</returns>
         public List<Candidate> performWhoCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             List<Candidate> candidates = new List<Candidate>();
@@ -132,7 +132,7 @@ namespace IE_lib
         /// </summary>
         /// <param name="tokenizedArticle">The tokenized article.</param>
         /// <param name="articleTitle">The article title.</param>
-        /// <returns></returns>
+        /// <returns>The list of when candidates.</returns>
         public List<Candidate> performWhenCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             List<Candidate> candidates = new List<Candidate>();
@@ -225,7 +225,7 @@ namespace IE_lib
         /// </summary>
         /// <param name="tokenizedArticle">The tokenized article.</param>
         /// <param name="articleTitle">The article title.</param>
-        /// <returns></returns>
+        /// <returns>The list of where candidates.</returns>
         public List<Candidate> performWhereCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             List<Candidate> candidates = new List<Candidate>();
@@ -329,7 +329,7 @@ namespace IE_lib
         /// </summary>
         /// <param name="tokenizedArticle">The tokenized article.</param>
         /// <param name="articleTitle">The article title.</param>
-        /// <returns></returns>
+        /// <returns>The list of what candidates.</returns>
         public List<List<Token>> performWhatCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             int maxNumberOfCandidates = 2;
@@ -352,7 +352,7 @@ namespace IE_lib
         /// </summary>
         /// <param name="tokenizedArticle">The tokenized article.</param>
         /// <param name="articleTitle">The article title.</param>
-        /// <returns></returns>
+        /// <returns>The list of why candidates.</returns>
         public List<List<Token>> performWhyCandidateSelection(List<Token> tokenizedArticle, String articleTitle)
         {
             int maxNumberOfCandidates = 6;
@@ -371,13 +371,13 @@ namespace IE_lib
         }
 
         /// <summary>
-        /// Gets the candidate by ner.
+        /// Gets the candidate by NER.
         /// </summary>
-        /// <param name="nerTag">The ner tag.</param>
-        /// <param name="i">The i.</param>
+        /// <param name="nerTag">The NER tag.</param>
+        /// <param name="i">The index.</param>
         /// <param name="candidates">The candidates.</param>
         /// <param name="tokenizedArticle">The tokenized article.</param>
-        /// <returns></returns>
+        /// <returns>The index of the end of the candidate.</returns>
         private int getCandidateByNer(String nerTag, int i, List<Candidate> candidates, List<Token> tokenizedArticle)
         {
             if (tokenizedArticle[i].NamedEntity.Equals(nerTag))
@@ -426,7 +426,7 @@ namespace IE_lib
         /// <param name="enderMarkers">The ender markers.</param>
         /// <param name="enderPOS">The ender position.</param>
         /// <param name="enderPOSType">Type of the ender position.</param>
-        /// <param name="i">The i.</param>
+        /// <param name="i">The index.</param>
         /// <param name="candidates">The candidates.</param>
         /// <param name="tokenizedArticle">The tokenized article.</param>
         /// <param name="isExclusive">if set to <c>true</c> [is exclusive].</param>
@@ -621,7 +621,7 @@ namespace IE_lib
         /// Gets the candidate by gazette.
         /// </summary>
         /// <param name="gazette">The gazette.</param>
-        /// <param name="i">The i.</param>
+        /// <param name="i">The index.</param>
         /// <param name="candidates">The candidates.</param>
         /// <param name="tokenizedArticle">The tokenized article.</param>
         private void getCandidateByGazette(String[] gazette, int i, List<Candidate> candidates, List<Token> tokenizedArticle)

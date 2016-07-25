@@ -7,7 +7,7 @@ using System.Linq;
 namespace IE_UI
 {
     /// <summary>
-    /// 
+    /// Class for managing the recently accessed files.
     /// </summary>
     public class RecentFileManager
     {
@@ -19,8 +19,8 @@ namespace IE_UI
         /// <summary>
         /// Adds the recent file.
         /// </summary>
-        /// <param name="t">The t.</param>
-        public static void AddRecentFile(RecentFile t)
+        /// <param name="file">The file.</param>
+        public static void AddRecentFile(RecentFile file)
         {
             try
             {
@@ -28,14 +28,14 @@ namespace IE_UI
                 {
                     FileStream fs = new FileStream(fileName, FileMode.Append, FileAccess.Write);
                     StreamWriter sw = new StreamWriter(fs);
-                    sw.WriteLine(GetText(t));
+                    sw.WriteLine(GetText(file));
                     sw.Close();
                 }
                 else
                 {
                     FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
                     StreamWriter sw = new StreamWriter(fs);
-                    sw.WriteLine(GetText(t));
+                    sw.WriteLine(GetText(file));
                     sw.Close();
                 }
             }
@@ -48,17 +48,17 @@ namespace IE_UI
         /// <summary>
         /// Gets the text.
         /// </summary>
-        /// <param name="t">The t.</param>
-        /// <returns></returns>
-        private static string GetText(RecentFile t)
+        /// <param name="file">The file.</param>
+        /// <returns>The text</returns>
+        private static string GetText(RecentFile file)
         {
-            if (t.OperationType == Char.ConvertFromUtf32(0xE8E5))
+            if (file.OperationType == Char.ConvertFromUtf32(0xE8E5))
             {
-                return String.Format("{0}|{1}|{2}", "VIEW", t.Name, t.SourcePath);
+                return String.Format("{0}|{1}|{2}", "VIEW", file.Name, file.SourceFilePath);
             }
-            else if (t.OperationType == Char.ConvertFromUtf32(0xE7E6))
+            else if (file.OperationType == Char.ConvertFromUtf32(0xE7E6))
             {
-                return String.Format("{0}|{1}|{2}|{3}", "EXTRACT", t.Name, t.SourcePath, t.DestinationPath);
+                return String.Format("{0}|{1}|{2}|{3}", "EXTRACT", file.Name, file.SourceFilePath, file.DestinationFilePath);
             }
 
             return "";
@@ -67,7 +67,7 @@ namespace IE_UI
         /// <summary>
         /// Gets the recent files list.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The recent files list.</returns>
         public static List<RecentFile> GetRecentFilesList()
         {
             List<RecentFile> recentFilesList = new List<RecentFile>();
@@ -86,11 +86,11 @@ namespace IE_UI
                         {
                             OperationType = Char.ConvertFromUtf32(0xE7E6),
                             Name = splitLine[1],
-                            SourcePath = splitLine[2],
-                            DestinationPath = splitLine[3]
+                            SourceFilePath = splitLine[2],
+                            DestinationFilePath = splitLine[3]
                         };
 
-                        if(File.Exists(Path.Combine(newRecentFile.SourcePath, newRecentFile.Name + ".xml")))
+                        if(File.Exists(Path.Combine(newRecentFile.SourceFilePath, newRecentFile.Name + ".xml")))
                         {
                             recentFilesList.Add(newRecentFile);
                         }
@@ -101,10 +101,10 @@ namespace IE_UI
                         {
                             OperationType = Char.ConvertFromUtf32(0xE8E5),
                             Name = splitLine[1],
-                            SourcePath = splitLine[2]
+                            SourceFilePath = splitLine[2]
                         };
                         
-                        if (File.Exists(Path.Combine(newRecentFile.SourcePath, newRecentFile.Name + ".xml")))
+                        if (File.Exists(Path.Combine(newRecentFile.SourceFilePath, newRecentFile.Name + ".xml")))
                         {
                             recentFilesList.Add(newRecentFile);
                         }

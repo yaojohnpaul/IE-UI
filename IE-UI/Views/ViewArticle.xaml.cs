@@ -431,7 +431,7 @@ namespace IE_UI.Views
     }
 
     /// <summary>
-    /// 
+    /// Class for containing the indices of a feature in the body of the article.
     /// </summary>
     public class BodySegment
     {
@@ -460,10 +460,10 @@ namespace IE_UI.Views
         public string Label { get; set; }
 
         /// <summary>
-        /// Intersectses the specified bs.
+        /// Checks if this body segment intersects the specified body segment.
         /// </summary>
-        /// <param name="bs">The bs.</param>
-        /// <returns></returns>
+        /// <param name="bs">The body segment.</param>
+        /// <returns><c>true</c> if they intersect; otherwise, <c>false</c>.</returns>
         public bool Intersects(BodySegment bs)
         {
             if (this.StartIndex <= bs.EndIndex)

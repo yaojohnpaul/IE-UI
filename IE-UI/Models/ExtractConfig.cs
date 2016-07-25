@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace IE_UI.Models
 {
     /// <summary>
-    /// 
+    /// Class for holding information about the source and destination paths for extraction.
     /// </summary>
     public class ExtractConfig
     {

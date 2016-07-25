@@ -81,13 +81,13 @@ namespace IE_UI.Views
                 {
                     this.NavigationService.Navigate(new ExtractProcess(new ExtractConfig()
                     {
-                        SourceFilePath = String.Format("{0}\\{1}.xml", item.SourcePath, item.Name),
-                        DestinationFilePath = item.DestinationPath
+                        SourceFilePath = String.Format("{0}\\{1}.xml", item.SourceFilePath, item.Name),
+                        DestinationFilePath = item.DestinationFilePath
                     }));
                 }
                 else if (item.OperationType == Char.ConvertFromUtf32(0xE8E5))
                 {
-                    this.NavigationService.Navigate(new ViewList(String.Format("{0}\\{1}.xml", item.SourcePath, item.Name)));
+                    this.NavigationService.Navigate(new ViewList(String.Format("{0}\\{1}.xml", item.SourceFilePath, item.Name)));
                 }
             }
         }

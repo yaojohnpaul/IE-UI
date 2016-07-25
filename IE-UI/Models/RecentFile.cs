@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace IE_UI.Models
 {
     /// <summary>
-    /// 
+    /// Class for holding information about a recently accessed file.
     /// </summary>
     public class RecentFile
     {
@@ -23,7 +23,7 @@ namespace IE_UI.Models
         /// Gets or sets the name.
         /// </summary>
         /// <value>
-        /// The name.
+        /// The name of the file.
         /// </value>
         public string Name { get; set; }
 
@@ -31,16 +31,16 @@ namespace IE_UI.Models
         /// Gets or sets the source path.
         /// </summary>
         /// <value>
-        /// The source path.
+        /// The source file path.
         /// </value>
-        public string SourcePath { get; set; }
+        public string SourceFilePath { get; set; }
 
         /// <summary>
         /// Gets or sets the destination path.
         /// </summary>
         /// <value>
-        /// The destination path.
+        /// The destination file path.
         /// </value>
-        public string DestinationPath { get; set; }
+        public string DestinationFilePath { get; set; }
     }
 }

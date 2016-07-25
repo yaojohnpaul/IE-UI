@@ -637,9 +637,9 @@ namespace IE_lib
         /// <summary>
         /// Creates a single who instance for WEKA model compatibility.
         /// </summary>
-        /// <param name="fvWho">The fv who.</param>
+        /// <param name="fvWho">The fast vector for who.</param>
         /// <param name="candidate">The candidate.</param>
-        /// <returns></returns>
+        /// <returns>The who instance.</returns>
         private Instance createSingleWhoInstance(FastVector fvWho, Token candidate)
         {
             //first word-n attribute number
@@ -701,9 +701,9 @@ namespace IE_lib
         /// <summary>
         /// Creates a single when instance for WEKA model compatibility.
         /// </summary>
-        /// <param name="fvWhen">The fv when.</param>
+        /// <param name="fvWhen">The fast vector for when.</param>
         /// <param name="candidate">The candidate.</param>
-        /// <returns></returns>
+        /// <returns>The when instance.</returns>
         private Instance createSingleWhenInstance(FastVector fvWhen, Token candidate)
         {
             //first word-n attribute number
@@ -764,9 +764,9 @@ namespace IE_lib
         /// <summary>
         /// Creates a single where instance for WEKA model compatibility.
         /// </summary>
-        /// <param name="fvWhere">The fv where.</param>
+        /// <param name="fvWhere">The fast vector for where.</param>
         /// <param name="candidate">The candidate.</param>
-        /// <returns></returns>
+        /// <returns>The where instance</returns>
         private Instance createSingleWhereInstance(FastVector fvWhere, Token candidate)
         {
             //first word-n attribute number
@@ -826,9 +826,9 @@ namespace IE_lib
         /// <summary>
         /// Creates a single why instance for WEKA model compatibility.
         /// </summary>
-        /// <param name="fvWhy">The fv why.</param>
+        /// <param name="fvWhy">The fast vector why.</param>
         /// <param name="candidate">The candidate.</param>
-        /// <returns></returns>
+        /// <returns>The why instance</returns>
         private Instance createSingleWhyInstance(FastVector fvWhy, Token candidate)
         {
             //first word-n attribute number
@@ -881,7 +881,7 @@ namespace IE_lib
         /// <summary>
         /// Creates the who fast vector as template for creating WEKA-compatible instances.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The fast vector.</returns>
         private FastVector createWhoFastVector()
         {
             FastVector fvWho = new FastVector(7 + whoWordsBefore * 2 + whoWordsAfter * 2);
@@ -917,7 +917,7 @@ namespace IE_lib
         /// <summary>
         /// Creates the when fast vector as template for creating WEKA-compatible instances.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The fast vector.</returns>
         private FastVector createWhenFastVector()
         {
             FastVector fvWhen = new FastVector(5 + whenWordsBefore * 2 + whenWordsAfter * 2);
@@ -953,7 +953,7 @@ namespace IE_lib
         /// <summary>
         /// Creates the where fast vector as template for creating WEKA-compatible instances.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The fast vector.</returns>
         private FastVector createWhereFastVector()
         {
             FastVector fvWhere = new FastVector(5 + whereWordsBefore * 2 + whereWordsAfter * 2);
@@ -989,7 +989,7 @@ namespace IE_lib
         /// <summary>
         /// Creates the why fast vector as template for creating WEKA-compatible instances.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The fast vector.</returns>
         private FastVector createWhyFastVector()
         {
             FastVector fvWhy = new FastVector(8 + whyWordsBefore * 2 + whyWordsAfter * 2);

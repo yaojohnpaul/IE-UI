@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace IE_UI.Models
 {
     /// <summary>
-    /// 
+    /// Class for holding information about a single article appearing in the search list.
     /// </summary>
     public class ListArticle
     {

@@ -85,7 +85,7 @@
                                        VerticalAlignment="Center"
                                        Margin="8, 8, 8, 0"/>
                                     <!--File Path-->
-                                    <TextBlock Text="{Binding SourcePath}"
+                                    <TextBlock Text="{Binding SourceFilePath}"
                                        FontSize="15"
                                        VerticalAlignment="Center"
                                        Margin="8, 0, 8, 8"/>

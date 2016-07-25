@@ -10,7 +10,7 @@ using System.Xml;
 namespace IE_lib
 {
     /// <summary>
-    /// 
+    /// The main class.
     /// </summary>
     public class Main
     {
@@ -19,7 +19,7 @@ namespace IE_lib
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="destination">The destination.</param>
-        /// <returns></returns>
+        /// <returns>Boolean that denotes if the extraction succeeded.</returns>
         public static bool Extract(string source, string destination)
         {
             FileParser fileParser = new FileParser();
@@ -120,7 +120,7 @@ namespace IE_lib
         /// Views the specified path.
         /// </summary>
         /// <param name="path">The path.</param>
-        /// <returns></returns>
+        /// <returns>Parsed results to be used for viewing</returns>
         public static ParsedResults View(string path)
         {
             if (path.Contains("_inverted_index"))

@@ -31,7 +31,7 @@ namespace IE_lib.Models
         /// Gets or sets the dictionary of extracted who strings to its corresponding article indices.
         /// </summary>
         /// <value>
-        /// The dictionary of extracted who strings to its corresponding article indices.
+        /// The dictionary of extracted who annotations to its corresponding article indices.
         /// </value>
         public Dictionary<string, List<int>> WhoReverseIndex { get; set; }
 
@@ -39,7 +39,7 @@ namespace IE_lib.Models
         /// Gets or sets the dictionary of extracted when strings to its corresponding article indices.
         /// </summary>
         /// <value>
-        /// The dictionary of extracted when strings to its corresponding article indices.
+        /// The dictionary of extracted when annotations to its corresponding article indices.
         /// </value>
         public Dictionary<string, List<int>> WhenReverseIndex { get; set; }
 
@@ -47,7 +47,7 @@ namespace IE_lib.Models
         /// Gets or sets the dictionary of extracted where strings to its corresponding article indices.
         /// </summary>
         /// <value>
-        /// The dictionary of extracted where strings to its corresponding article indices.
+        /// The dictionary of extracted where annotations to its corresponding article indices.
         /// </value>
         public Dictionary<string, List<int>> WhereReverseIndex { get; set; }
 
@@ -55,7 +55,7 @@ namespace IE_lib.Models
         /// Gets or sets the dictionary of extracted what strings to its corresponding article indices.
         /// </summary>
         /// <value>
-        /// The dictionary of extracted what strings to its corresponding article indices.
+        /// The dictionary of extracted what annotations to its corresponding article indices.
         /// </value>
         public Dictionary<string, List<int>> WhatReverseIndex { get; set; }
 
@@ -63,7 +63,7 @@ namespace IE_lib.Models
         /// Gets or sets the dictionary of extracted why strings to its corresponding article indices.
         /// </summary>
         /// <value>
-        /// The dictionary of extracted why strings to its corresponding article indices.
+        /// The dictionary of extracted why annotations to its corresponding article indices.
         /// </value>
         public Dictionary<string, List<int>> WhyReverseIndex { get; set; }
     }

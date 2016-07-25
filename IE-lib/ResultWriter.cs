@@ -182,7 +182,7 @@ namespace IE_lib
         /// Generates the inverted index internal data.
         /// </summary>
         /// <param name="feature">Who, When, Where, What, or Why</param>
-        /// <returns></returns>
+        /// <returns>The dictionary for the inverted index of a feature.</returns>
         public Dictionary<string, List<string>> generateInvertedIndex (string feature)
         {
             List<Article> articleList = new List<Article>();
