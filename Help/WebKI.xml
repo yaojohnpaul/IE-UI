@@ -1,0 +1,826 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title=".defaultInstance field" Url="html/F-IE_UI.Properties.Settings.defaultInstance.htm" />
+  <HelpKINode Title=".getCandidateByGazette method" Url="html/M-IE_lib.CandidateSelector.getCandidateByGazette.htm" />
+  <HelpKINode Title=".getCandidateByMarkers method" Url="html/M-IE_lib.CandidateSelector.getCandidateByMarkers.htm" />
+  <HelpKINode Title=".getCandidateByNer method" Url="html/M-IE_lib.CandidateSelector.getCandidateByNer.htm" />
+  <HelpKINode Title=".getCandidateByPos method" Url="html/M-IE_lib.CandidateSelector.getCandidateByPos.htm" />
+  <HelpKINode Title="addArticleToXML method" Url="html/M-IE_lib.ResultWriter.addArticleToXML.htm" />
+  <HelpKINode Title="addArticleToXMLFormatWhen method" Url="html/M-IE_lib.ResultWriter.addArticleToXMLFormatWhen.htm" />
+  <HelpKINode Title="addFeatureToXML method" Url="html/M-IE_lib.ResultWriter.addFeatureToXML.htm" />
+  <HelpKINode Title="AddRecentFile method" Url="html/M-IE_UI.RecentFileManager.AddRecentFile.htm" />
+  <HelpKINode Title="AdvancedSearchButton_Click method" Url="html/M-IE_UI.Views.ViewList.AdvancedSearchButton_Click.htm" />
+  <HelpKINode Title="AdvancedSearchToggle_Click method" Url="html/M-IE_UI.Views.ViewList.AdvancedSearchToggle_Click.htm" />
+  <HelpKINode Title="Annotation class">
+    <HelpKINode Title="Annotation Class" Url="html/T-IE_lib.Models.Annotation.htm" />
+    <HelpKINode Title="Annotation Members" Url="html/AllMembers.T-IE_lib.Models.Annotation.htm" />
+    <HelpKINode Title="about Annotation class" Url="html/T-IE_lib.Models.Annotation.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.Models.Annotation.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.Models.Annotation.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_lib.Models.Annotation.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Annotation property" Url="html/P-IE_lib.Models.DisplayArticle.Annotation.htm" />
+  <HelpKINode Title="Annotation.FormattedWhen property" Url="html/P-IE_lib.Models.Annotation.FormattedWhen.htm" />
+  <HelpKINode Title="Annotation.Index property" Url="html/P-IE_lib.Models.Annotation.Index.htm" />
+  <HelpKINode Title="Annotation.What property" Url="html/P-IE_lib.Models.Annotation.What.htm" />
+  <HelpKINode Title="Annotation.When property" Url="html/P-IE_lib.Models.Annotation.When.htm" />
+  <HelpKINode Title="Annotation.Where property" Url="html/P-IE_lib.Models.Annotation.Where.htm" />
+  <HelpKINode Title="Annotation.Who property" Url="html/P-IE_lib.Models.Annotation.Who.htm" />
+  <HelpKINode Title="Annotation.Why property" Url="html/P-IE_lib.Models.Annotation.Why.htm" />
+  <HelpKINode Title="App class">
+    <HelpKINode Title="App Class" Url="html/T-IE_UI.App.htm" />
+    <HelpKINode Title="App Members" Url="html/AllMembers.T-IE_UI.App.htm" />
+    <HelpKINode Title="about App class" Url="html/T-IE_UI.App.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.App.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-IE_UI.App.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.App.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.App.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Article class">
+    <HelpKINode Title="Article Class" Url="html/T-IE_lib.Models.Article.htm" />
+    <HelpKINode Title="Article Members" Url="html/AllMembers.T-IE_lib.Models.Article.htm" />
+    <HelpKINode Title="about Article class" Url="html/T-IE_lib.Models.Article.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.Models.Article.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.Models.Article.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_lib.Models.Article.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Article field" Url="html/F-IE_UI.Views.ViewArticle.Article.htm" />
+  <HelpKINode Title="Article property" Url="html/P-IE_lib.Models.DisplayArticle.Article.htm" />
+  <HelpKINode Title="Article.Author property" Url="html/P-IE_lib.Models.Article.Author.htm" />
+  <HelpKINode Title="Article.Body property" Url="html/P-IE_lib.Models.Article.Body.htm" />
+  <HelpKINode Title="Article.Date property" Url="html/P-IE_lib.Models.Article.Date.htm" />
+  <HelpKINode Title="Article.Link property" Url="html/P-IE_lib.Models.Article.Link.htm" />
+  <HelpKINode Title="Article.Title property" Url="html/P-IE_lib.Models.Article.Title.htm" />
+  <HelpKINode Title="articleCurrent field">
+    <HelpKINode Title="articleCurrent Field" Url="html/F-IE_lib.Identifier.articleCurrent.htm" />
+    <HelpKINode Title="articleCurrent Field" Url="html/F-IE_lib.Preprocessor.articleCurrent.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ArticleListView_PreviewMouseLeftButtonDown method" Url="html/M-IE_UI.Views.ViewList.ArticleListView_PreviewMouseLeftButtonDown.htm" />
+  <HelpKINode Title="Author property" Url="html/P-IE_lib.Models.Article.Author.htm" />
+  <HelpKINode Title="BackButton_Click method">
+    <HelpKINode Title="BackButton_Click Method " Url="html/M-IE_UI.Views.ViewSetup.BackButton_Click.htm" />
+    <HelpKINode Title="BackButton_Click Method " Url="html/M-IE_UI.Views.ExtractSetup.BackButton_Click.htm" />
+    <HelpKINode Title="BackButton_Click Method " Url="html/M-IE_UI.Views.ViewList.BackButton_Click.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BasicSearchTextBox_TextChanged method" Url="html/M-IE_UI.Views.ViewList.BasicSearchTextBox_TextChanged.htm" />
+  <HelpKINode Title="Body property" Url="html/P-IE_lib.Models.Article.Body.htm" />
+  <HelpKINode Title="BodySegment class">
+    <HelpKINode Title="BodySegment Class" Url="html/T-IE_UI.Views.BodySegment.htm" />
+    <HelpKINode Title="BodySegment Members" Url="html/AllMembers.T-IE_UI.Views.BodySegment.htm" />
+    <HelpKINode Title="about BodySegment class" Url="html/T-IE_UI.Views.BodySegment.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Views.BodySegment.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Views.BodySegment.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Views.BodySegment.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BodySegment.EndIndex property" Url="html/P-IE_UI.Views.BodySegment.EndIndex.htm" />
+  <HelpKINode Title="BodySegment.Intersects method" Url="html/M-IE_UI.Views.BodySegment.Intersects.htm" />
+  <HelpKINode Title="BodySegment.Label property" Url="html/P-IE_UI.Views.BodySegment.Label.htm" />
+  <HelpKINode Title="BodySegment.StartIndex property" Url="html/P-IE_UI.Views.BodySegment.StartIndex.htm" />
+  <HelpKINode Title="Bold enumeration member" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+  <HelpKINode Title="Bold field" Url="html/F-IE_UI.InlineExpression.InlineType.Bold.htm" />
+  <HelpKINode Title="Candidate class">
+    <HelpKINode Title="Candidate Class" Url="html/T-IE_lib.Models.Candidate.htm" />
+    <HelpKINode Title="Candidate Members" Url="html/AllMembers.T-IE_lib.Models.Candidate.htm" />
+    <HelpKINode Title="about Candidate class" Url="html/T-IE_lib.Models.Candidate.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.Models.Candidate.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_lib.Models.Candidate.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.Models.Candidate.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_lib.Models.Candidate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Candidate.Candidate constructor" Url="html/M-IE_lib.Models.Candidate.-ctor.htm" />
+  <HelpKINode Title="Candidate.Length property" Url="html/P-IE_lib.Models.Candidate.Length.htm" />
+  <HelpKINode Title="Config field" Url="html/F-IE_UI.Views.ExtractProcess.Config.htm" />
+  <HelpKINode Title="createSingleWhenInstance method" Url="html/M-IE_lib.Identifier.createSingleWhenInstance.htm" />
+  <HelpKINode Title="createSingleWhereInstance method" Url="html/M-IE_lib.Identifier.createSingleWhereInstance.htm" />
+  <HelpKINode Title="createSingleWhoInstance method" Url="html/M-IE_lib.Identifier.createSingleWhoInstance.htm" />
+  <HelpKINode Title="createSingleWhyInstance method" Url="html/M-IE_lib.Identifier.createSingleWhyInstance.htm" />
+  <HelpKINode Title="createWhenFastVector method" Url="html/M-IE_lib.Identifier.createWhenFastVector.htm" />
+  <HelpKINode Title="createWhenInstances method" Url="html/M-IE_lib.Identifier.createWhenInstances.htm" />
+  <HelpKINode Title="createWhereFastVector method" Url="html/M-IE_lib.Identifier.createWhereFastVector.htm" />
+  <HelpKINode Title="createWhereInstances method" Url="html/M-IE_lib.Identifier.createWhereInstances.htm" />
+  <HelpKINode Title="createWhoFastVector method" Url="html/M-IE_lib.Identifier.createWhoFastVector.htm" />
+  <HelpKINode Title="createWhoInstances method" Url="html/M-IE_lib.Identifier.createWhoInstances.htm" />
+  <HelpKINode Title="createWhyFastVector method" Url="html/M-IE_lib.Identifier.createWhyFastVector.htm" />
+  <HelpKINode Title="createWhyInstances method" Url="html/M-IE_lib.Identifier.createWhyInstances.htm" />
+  <HelpKINode Title="CriteriaAddButton_Click method" Url="html/M-IE_UI.Views.ViewList.CriteriaAddButton_Click.htm" />
+  <HelpKINode Title="Criterias field" Url="html/F-IE_UI.Views.ViewList.Criterias.htm" />
+  <HelpKINode Title="Date property" Url="html/P-IE_lib.Models.Article.Date.htm" />
+  <HelpKINode Title="defaultInstance field" Url="html/F-IE_UI.Properties.Settings.defaultInstance.htm" />
+  <HelpKINode Title="DestinationBrowseButton_Click method" Url="html/M-IE_UI.Views.ExtractSetup.DestinationBrowseButton_Click.htm" />
+  <HelpKINode Title="DestinationFilePath property">
+    <HelpKINode Title="DestinationFilePath Property " Url="html/P-IE_UI.Models.ExtractConfig.DestinationFilePath.htm" />
+    <HelpKINode Title="DestinationFilePath Property " Url="html/P-IE_UI.Models.RecentFile.DestinationFilePath.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DisplayArticle class">
+    <HelpKINode Title="DisplayArticle Class" Url="html/T-IE_lib.Models.DisplayArticle.htm" />
+    <HelpKINode Title="DisplayArticle Members" Url="html/AllMembers.T-IE_lib.Models.DisplayArticle.htm" />
+    <HelpKINode Title="about DisplayArticle class" Url="html/T-IE_lib.Models.DisplayArticle.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.Models.DisplayArticle.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.Models.DisplayArticle.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_lib.Models.DisplayArticle.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DisplayArticle property" Url="html/P-IE_UI.Models.ListArticle.DisplayArticle.htm" />
+  <HelpKINode Title="DisplayArticle.Annotation property" Url="html/P-IE_lib.Models.DisplayArticle.Annotation.htm" />
+  <HelpKINode Title="DisplayArticle.Article property" Url="html/P-IE_lib.Models.DisplayArticle.Article.htm" />
+  <HelpKINode Title="DisplayArticles method" Url="html/M-IE_UI.Views.ViewList.DisplayArticles.htm" />
+  <HelpKINode Title="EditButton_Click method" Url="html/M-IE_UI.Views.ViewArticle.EditButton_Click.htm" />
+  <HelpKINode Title="EndIndex property" Url="html/P-IE_UI.Views.BodySegment.EndIndex.htm" />
+  <HelpKINode Title="EndProcess method" Url="html/M-IE_UI.Views.ExtractProcess.EndProcess.htm" />
+  <HelpKINode Title="Extract method" Url="html/M-IE_lib.Main.Extract.htm" />
+  <HelpKINode Title="ExtractButton_Click method" Url="html/M-IE_UI.Views.Home.ExtractButton_Click.htm" />
+  <HelpKINode Title="ExtractConfig class">
+    <HelpKINode Title="ExtractConfig Class" Url="html/T-IE_UI.Models.ExtractConfig.htm" />
+    <HelpKINode Title="ExtractConfig Members" Url="html/AllMembers.T-IE_UI.Models.ExtractConfig.htm" />
+    <HelpKINode Title="about ExtractConfig class" Url="html/T-IE_UI.Models.ExtractConfig.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Models.ExtractConfig.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Models.ExtractConfig.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Models.ExtractConfig.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExtractConfig.DestinationFilePath property" Url="html/P-IE_UI.Models.ExtractConfig.DestinationFilePath.htm" />
+  <HelpKINode Title="ExtractConfig.SourceFilePath property" Url="html/P-IE_UI.Models.ExtractConfig.SourceFilePath.htm" />
+  <HelpKINode Title="ExtractProcess class">
+    <HelpKINode Title="ExtractProcess Class" Url="html/T-IE_UI.Views.ExtractProcess.htm" />
+    <HelpKINode Title="ExtractProcess Members" Url="html/AllMembers.T-IE_UI.Views.ExtractProcess.htm" />
+    <HelpKINode Title="about ExtractProcess class" Url="html/T-IE_UI.Views.ExtractProcess.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Views.ExtractProcess.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_UI.Views.ExtractProcess.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-IE_UI.Views.ExtractProcess.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-IE_UI.Views.ExtractProcess.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Views.ExtractProcess.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Views.ExtractProcess.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExtractProcess.Config field" Url="html/F-IE_UI.Views.ExtractProcess.Config.htm" />
+  <HelpKINode Title="ExtractProcess.EndProcess method" Url="html/M-IE_UI.Views.ExtractProcess.EndProcess.htm" />
+  <HelpKINode Title="ExtractProcess.ExtractProcess constructor" Url="html/M-IE_UI.Views.ExtractProcess.-ctor.htm" />
+  <HelpKINode Title="ExtractProcess.Page_Loaded method" Url="html/M-IE_UI.Views.ExtractProcess.Page_Loaded.htm" />
+  <HelpKINode Title="ExtractProcess.ProgressRing field" Url="html/F-IE_UI.Views.ExtractProcess.ProgressRing.htm" />
+  <HelpKINode Title="ExtractProcess.RepeatButton_Click method" Url="html/M-IE_UI.Views.ExtractProcess.RepeatButton_Click.htm" />
+  <HelpKINode Title="ExtractProcess.StartProcess method" Url="html/M-IE_UI.Views.ExtractProcess.StartProcess.htm" />
+  <HelpKINode Title="ExtractProcess.Worker field" Url="html/F-IE_UI.Views.ExtractProcess.Worker.htm" />
+  <HelpKINode Title="ExtractSetup class">
+    <HelpKINode Title="ExtractSetup Class" Url="html/T-IE_UI.Views.ExtractSetup.htm" />
+    <HelpKINode Title="ExtractSetup Members" Url="html/AllMembers.T-IE_UI.Views.ExtractSetup.htm" />
+    <HelpKINode Title="about ExtractSetup class" Url="html/T-IE_UI.Views.ExtractSetup.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Views.ExtractSetup.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_UI.Views.ExtractSetup.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-IE_UI.Views.ExtractSetup.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Views.ExtractSetup.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Views.ExtractSetup.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExtractSetup.BackButton_Click method" Url="html/M-IE_UI.Views.ExtractSetup.BackButton_Click.htm" />
+  <HelpKINode Title="ExtractSetup.DestinationBrowseButton_Click method" Url="html/M-IE_UI.Views.ExtractSetup.DestinationBrowseButton_Click.htm" />
+  <HelpKINode Title="ExtractSetup.ExtractSetup constructor" Url="html/M-IE_UI.Views.ExtractSetup.-ctor.htm" />
+  <HelpKINode Title="ExtractSetup.ProceedButton_Click method" Url="html/M-IE_UI.Views.ExtractSetup.ProceedButton_Click.htm" />
+  <HelpKINode Title="ExtractSetup.SourceBrowseButton_Click method" Url="html/M-IE_UI.Views.ExtractSetup.SourceBrowseButton_Click.htm" />
+  <HelpKINode Title="fileName field" Url="html/F-IE_UI.RecentFileManager.fileName.htm" />
+  <HelpKINode Title="FilePath field" Url="html/F-IE_UI.Views.ViewArticle.FilePath.htm" />
+  <HelpKINode Title="FilePath property" Url="html/P-IE_lib.Models.ParsedResults.FilePath.htm" />
+  <HelpKINode Title="formatDateDstPath field" Url="html/F-IE_lib.ResultWriter.formatDateDstPath.htm" />
+  <HelpKINode Title="FormattedWhen property" Url="html/P-IE_lib.Models.Annotation.FormattedWhen.htm" />
+  <HelpKINode Title="Frequency property" Url="html/P-IE_lib.Models.Token.Frequency.htm" />
+  <HelpKINode Title="fvPOS field" Url="html/F-IE_lib.Identifier.fvPOS.htm" />
+  <HelpKINode Title="generateInvertedIndex method" Url="html/M-IE_lib.ResultWriter.generateInvertedIndex.htm" />
+  <HelpKINode Title="generateInvertedIndexOutput method" Url="html/M-IE_lib.ResultWriter.generateInvertedIndexOutput.htm" />
+  <HelpKINode Title="generateOutput method" Url="html/M-IE_lib.ResultWriter.generateOutput.htm" />
+  <HelpKINode Title="generateOutputFormatDate method" Url="html/M-IE_lib.ResultWriter.generateOutputFormatDate.htm" />
+  <HelpKINode Title="getCandidateByGazette method" Url="html/M-IE_lib.CandidateSelector.getCandidateByGazette.htm" />
+  <HelpKINode Title="getCandidateByMarkers method" Url="html/M-IE_lib.CandidateSelector.getCandidateByMarkers.htm" />
+  <HelpKINode Title="getCandidateByNer method" Url="html/M-IE_lib.CandidateSelector.getCandidateByNer.htm" />
+  <HelpKINode Title="getCandidateByPos method" Url="html/M-IE_lib.CandidateSelector.getCandidateByPos.htm" />
+  <HelpKINode Title="getCurrentArticle method">
+    <HelpKINode Title="getCurrentArticle Method " Url="html/M-IE_lib.Preprocessor.getCurrentArticle.htm" />
+    <HelpKINode Title="getCurrentArticle Method " Url="html/M-IE_lib.Identifier.getCurrentArticle.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetInline method" Url="html/M-IE_UI.InlineExpression.GetInline.htm" />
+  <HelpKINode Title="GetInlineDescription method" Url="html/Overload-IE_UI.InlineExpression.GetInlineDescription.htm" />
+  <HelpKINode Title="GetInlineDescriptions method" Url="html/M-IE_UI.InlineExpression.GetInlineDescriptions.htm" />
+  <HelpKINode Title="GetInlineExpression method" Url="html/M-IE_UI.InlineExpression.GetInlineExpression.htm" />
+  <HelpKINode Title="GetInlines method" Url="html/M-IE_UI.InlineExpression.GetInlines.htm" />
+  <HelpKINode Title="getLatestTokenizedArticle method" Url="html/M-IE_lib.Preprocessor.getLatestTokenizedArticle.htm" />
+  <HelpKINode Title="GetRecentFilesList method" Url="html/M-IE_UI.RecentFileManager.GetRecentFilesList.htm" />
+  <HelpKINode Title="GetText method" Url="html/M-IE_UI.RecentFileManager.GetText.htm" />
+  <HelpKINode Title="getWhat method" Url="html/M-IE_lib.Identifier.getWhat.htm" />
+  <HelpKINode Title="getWhatCandidates method" Url="html/M-IE_lib.Preprocessor.getWhatCandidates.htm" />
+  <HelpKINode Title="getWhen method" Url="html/M-IE_lib.Identifier.getWhen.htm" />
+  <HelpKINode Title="getWhenCandidates method" Url="html/M-IE_lib.Preprocessor.getWhenCandidates.htm" />
+  <HelpKINode Title="getWhere method" Url="html/M-IE_lib.Identifier.getWhere.htm" />
+  <HelpKINode Title="getWhereCandidates method" Url="html/M-IE_lib.Preprocessor.getWhereCandidates.htm" />
+  <HelpKINode Title="getWho method" Url="html/M-IE_lib.Identifier.getWho.htm" />
+  <HelpKINode Title="getWhoCandidates method" Url="html/M-IE_lib.Preprocessor.getWhoCandidates.htm" />
+  <HelpKINode Title="getWhy method" Url="html/M-IE_lib.Identifier.getWhy.htm" />
+  <HelpKINode Title="getWhyCandidates method" Url="html/M-IE_lib.Preprocessor.getWhyCandidates.htm" />
+  <HelpKINode Title="Home class">
+    <HelpKINode Title="Home Class" Url="html/T-IE_UI.Views.Home.htm" />
+    <HelpKINode Title="Home Members" Url="html/AllMembers.T-IE_UI.Views.Home.htm" />
+    <HelpKINode Title="about Home class" Url="html/T-IE_UI.Views.Home.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Views.Home.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_UI.Views.Home.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-IE_UI.Views.Home.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Views.Home.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Views.Home.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Home.ExtractButton_Click method" Url="html/M-IE_UI.Views.Home.ExtractButton_Click.htm" />
+  <HelpKINode Title="Home.Home constructor" Url="html/M-IE_UI.Views.Home.-ctor.htm" />
+  <HelpKINode Title="Home.RecentFilesListView_PreviewMouseLeftButtonDown method" Url="html/M-IE_UI.Views.Home.RecentFilesListView_PreviewMouseLeftButtonDown.htm" />
+  <HelpKINode Title="Home.ViewButton_Click method" Url="html/M-IE_UI.Views.Home.ViewButton_Click.htm" />
+  <HelpKINode Title="Hyperlink enumeration member" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+  <HelpKINode Title="Hyperlink field" Url="html/F-IE_UI.InlineExpression.InlineType.Hyperlink.htm" />
+  <HelpKINode Title="Hyperlink_RequestNavigate method" Url="html/M-IE_UI.Views.ViewArticle.Hyperlink_RequestNavigate.htm" />
+  <HelpKINode Title="Identifier class">
+    <HelpKINode Title="Identifier Class" Url="html/T-IE_lib.Identifier.htm" />
+    <HelpKINode Title="Identifier Members" Url="html/AllMembers.T-IE_lib.Identifier.htm" />
+    <HelpKINode Title="about Identifier class" Url="html/T-IE_lib.Identifier.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.Identifier.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_lib.Identifier.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-IE_lib.Identifier.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.Identifier.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Identifier.articleCurrent field" Url="html/F-IE_lib.Identifier.articleCurrent.htm" />
+  <HelpKINode Title="Identifier.createSingleWhenInstance method" Url="html/M-IE_lib.Identifier.createSingleWhenInstance.htm" />
+  <HelpKINode Title="Identifier.createSingleWhereInstance method" Url="html/M-IE_lib.Identifier.createSingleWhereInstance.htm" />
+  <HelpKINode Title="Identifier.createSingleWhoInstance method" Url="html/M-IE_lib.Identifier.createSingleWhoInstance.htm" />
+  <HelpKINode Title="Identifier.createSingleWhyInstance method" Url="html/M-IE_lib.Identifier.createSingleWhyInstance.htm" />
+  <HelpKINode Title="Identifier.createWhenFastVector method" Url="html/M-IE_lib.Identifier.createWhenFastVector.htm" />
+  <HelpKINode Title="Identifier.createWhenInstances method" Url="html/M-IE_lib.Identifier.createWhenInstances.htm" />
+  <HelpKINode Title="Identifier.createWhereFastVector method" Url="html/M-IE_lib.Identifier.createWhereFastVector.htm" />
+  <HelpKINode Title="Identifier.createWhereInstances method" Url="html/M-IE_lib.Identifier.createWhereInstances.htm" />
+  <HelpKINode Title="Identifier.createWhoFastVector method" Url="html/M-IE_lib.Identifier.createWhoFastVector.htm" />
+  <HelpKINode Title="Identifier.createWhoInstances method" Url="html/M-IE_lib.Identifier.createWhoInstances.htm" />
+  <HelpKINode Title="Identifier.createWhyFastVector method" Url="html/M-IE_lib.Identifier.createWhyFastVector.htm" />
+  <HelpKINode Title="Identifier.createWhyInstances method" Url="html/M-IE_lib.Identifier.createWhyInstances.htm" />
+  <HelpKINode Title="Identifier.fvPOS field" Url="html/F-IE_lib.Identifier.fvPOS.htm" />
+  <HelpKINode Title="Identifier.getCurrentArticle method" Url="html/M-IE_lib.Identifier.getCurrentArticle.htm" />
+  <HelpKINode Title="Identifier.getWhat method" Url="html/M-IE_lib.Identifier.getWhat.htm" />
+  <HelpKINode Title="Identifier.getWhen method" Url="html/M-IE_lib.Identifier.getWhen.htm" />
+  <HelpKINode Title="Identifier.getWhere method" Url="html/M-IE_lib.Identifier.getWhere.htm" />
+  <HelpKINode Title="Identifier.getWho method" Url="html/M-IE_lib.Identifier.getWho.htm" />
+  <HelpKINode Title="Identifier.getWhy method" Url="html/M-IE_lib.Identifier.getWhy.htm" />
+  <HelpKINode Title="Identifier.Identifier constructor" Url="html/M-IE_lib.Identifier.-ctor.htm" />
+  <HelpKINode Title="Identifier.initializeAnnotations method" Url="html/M-IE_lib.Identifier.initializeAnnotations.htm" />
+  <HelpKINode Title="Identifier.labelAnnotations method" Url="html/M-IE_lib.Identifier.labelAnnotations.htm" />
+  <HelpKINode Title="Identifier.labelWhat method" Url="html/M-IE_lib.Identifier.labelWhat.htm" />
+  <HelpKINode Title="Identifier.labelWhen method" Url="html/M-IE_lib.Identifier.labelWhen.htm" />
+  <HelpKINode Title="Identifier.labelWhere method" Url="html/M-IE_lib.Identifier.labelWhere.htm" />
+  <HelpKINode Title="Identifier.labelWho method" Url="html/M-IE_lib.Identifier.labelWho.htm" />
+  <HelpKINode Title="Identifier.labelWhy method" Url="html/M-IE_lib.Identifier.labelWhy.htm" />
+  <HelpKINode Title="Identifier.listSecondaryWhyCandidates field" Url="html/F-IE_lib.Identifier.listSecondaryWhyCandidates.htm" />
+  <HelpKINode Title="Identifier.listWhatCandidates field" Url="html/F-IE_lib.Identifier.listWhatCandidates.htm" />
+  <HelpKINode Title="Identifier.listWhen field" Url="html/F-IE_lib.Identifier.listWhen.htm" />
+  <HelpKINode Title="Identifier.listWhenCandidates field" Url="html/F-IE_lib.Identifier.listWhenCandidates.htm" />
+  <HelpKINode Title="Identifier.listWhere field" Url="html/F-IE_lib.Identifier.listWhere.htm" />
+  <HelpKINode Title="Identifier.listWhereCandidates field" Url="html/F-IE_lib.Identifier.listWhereCandidates.htm" />
+  <HelpKINode Title="Identifier.listWho field" Url="html/F-IE_lib.Identifier.listWho.htm" />
+  <HelpKINode Title="Identifier.listWhoCandidates field" Url="html/F-IE_lib.Identifier.listWhoCandidates.htm" />
+  <HelpKINode Title="Identifier.listWhyCandidates field" Url="html/F-IE_lib.Identifier.listWhyCandidates.htm" />
+  <HelpKINode Title="Identifier.segregatedArticleCurrent field" Url="html/F-IE_lib.Identifier.segregatedArticleCurrent.htm" />
+  <HelpKINode Title="Identifier.setCurrentArticle method" Url="html/M-IE_lib.Identifier.setCurrentArticle.htm" />
+  <HelpKINode Title="Identifier.setTitle method" Url="html/M-IE_lib.Identifier.setTitle.htm" />
+  <HelpKINode Title="Identifier.setWhatCandidates method" Url="html/M-IE_lib.Identifier.setWhatCandidates.htm" />
+  <HelpKINode Title="Identifier.setWhenCandidates method" Url="html/M-IE_lib.Identifier.setWhenCandidates.htm" />
+  <HelpKINode Title="Identifier.setWhereCandidates method" Url="html/M-IE_lib.Identifier.setWhereCandidates.htm" />
+  <HelpKINode Title="Identifier.setWhoCandidates method" Url="html/M-IE_lib.Identifier.setWhoCandidates.htm" />
+  <HelpKINode Title="Identifier.setWhyCandidates method" Url="html/M-IE_lib.Identifier.setWhyCandidates.htm" />
+  <HelpKINode Title="Identifier.strWhat field" Url="html/F-IE_lib.Identifier.strWhat.htm" />
+  <HelpKINode Title="Identifier.strWhy field" Url="html/F-IE_lib.Identifier.strWhy.htm" />
+  <HelpKINode Title="Identifier.titleCurrent field" Url="html/F-IE_lib.Identifier.titleCurrent.htm" />
+  <HelpKINode Title="Identifier.whenClassifier field" Url="html/F-IE_lib.Identifier.whenClassifier.htm" />
+  <HelpKINode Title="Identifier.whenWordsAfter field" Url="html/F-IE_lib.Identifier.whenWordsAfter.htm" />
+  <HelpKINode Title="Identifier.whenWordsBefore field" Url="html/F-IE_lib.Identifier.whenWordsBefore.htm" />
+  <HelpKINode Title="Identifier.whereClassifier field" Url="html/F-IE_lib.Identifier.whereClassifier.htm" />
+  <HelpKINode Title="Identifier.whereWordsAfter field" Url="html/F-IE_lib.Identifier.whereWordsAfter.htm" />
+  <HelpKINode Title="Identifier.whereWordsBefore field" Url="html/F-IE_lib.Identifier.whereWordsBefore.htm" />
+  <HelpKINode Title="Identifier.whoClassifier field" Url="html/F-IE_lib.Identifier.whoClassifier.htm" />
+  <HelpKINode Title="Identifier.whoWordsAfter field" Url="html/F-IE_lib.Identifier.whoWordsAfter.htm" />
+  <HelpKINode Title="Identifier.whoWordsBefore field" Url="html/F-IE_lib.Identifier.whoWordsBefore.htm" />
+  <HelpKINode Title="Identifier.whyClassifier field" Url="html/F-IE_lib.Identifier.whyClassifier.htm" />
+  <HelpKINode Title="Identifier.whyWordsAfter field" Url="html/F-IE_lib.Identifier.whyWordsAfter.htm" />
+  <HelpKINode Title="Identifier.whyWordsBefore field" Url="html/F-IE_lib.Identifier.whyWordsBefore.htm" />
+  <HelpKINode Title="IE_lib namespace" Url="html/N-IE_lib.htm" />
+  <HelpKINode Title="IE_lib.Identifier class">
+    <HelpKINode Title="Identifier Class" Url="html/T-IE_lib.Identifier.htm" />
+    <HelpKINode Title="Identifier Members" Url="html/AllMembers.T-IE_lib.Identifier.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_lib.Main class">
+    <HelpKINode Title="Main Class" Url="html/T-IE_lib.Main.htm" />
+    <HelpKINode Title="Main Members" Url="html/AllMembers.T-IE_lib.Main.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_lib.Models namespace" Url="html/N-IE_lib.Models.htm" />
+  <HelpKINode Title="IE_lib.Models.Annotation class">
+    <HelpKINode Title="Annotation Class" Url="html/T-IE_lib.Models.Annotation.htm" />
+    <HelpKINode Title="Annotation Members" Url="html/AllMembers.T-IE_lib.Models.Annotation.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_lib.Models.Article class">
+    <HelpKINode Title="Article Class" Url="html/T-IE_lib.Models.Article.htm" />
+    <HelpKINode Title="Article Members" Url="html/AllMembers.T-IE_lib.Models.Article.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_lib.Models.Candidate class">
+    <HelpKINode Title="Candidate Class" Url="html/T-IE_lib.Models.Candidate.htm" />
+    <HelpKINode Title="Candidate Members" Url="html/AllMembers.T-IE_lib.Models.Candidate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_lib.Models.DisplayArticle class">
+    <HelpKINode Title="DisplayArticle Class" Url="html/T-IE_lib.Models.DisplayArticle.htm" />
+    <HelpKINode Title="DisplayArticle Members" Url="html/AllMembers.T-IE_lib.Models.DisplayArticle.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_lib.Models.ParsedResults class">
+    <HelpKINode Title="ParsedResults Class" Url="html/T-IE_lib.Models.ParsedResults.htm" />
+    <HelpKINode Title="ParsedResults Members" Url="html/AllMembers.T-IE_lib.Models.ParsedResults.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_lib.Models.Token class">
+    <HelpKINode Title="Token Class" Url="html/T-IE_lib.Models.Token.htm" />
+    <HelpKINode Title="Token Members" Url="html/AllMembers.T-IE_lib.Models.Token.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_lib.Preprocessor class">
+    <HelpKINode Title="Preprocessor Class" Url="html/T-IE_lib.Preprocessor.htm" />
+    <HelpKINode Title="Preprocessor Members" Url="html/AllMembers.T-IE_lib.Preprocessor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_lib.ResultWriter class">
+    <HelpKINode Title="ResultWriter Class" Url="html/T-IE_lib.ResultWriter.htm" />
+    <HelpKINode Title="ResultWriter Members" Url="html/AllMembers.T-IE_lib.ResultWriter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI namespace" Url="html/N-IE_UI.htm" />
+  <HelpKINode Title="IE_UI.App class">
+    <HelpKINode Title="App Class" Url="html/T-IE_UI.App.htm" />
+    <HelpKINode Title="App Members" Url="html/AllMembers.T-IE_UI.App.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.InlineExpression class">
+    <HelpKINode Title="InlineExpression Class" Url="html/T-IE_UI.InlineExpression.htm" />
+    <HelpKINode Title="InlineExpression Members" Url="html/AllMembers.T-IE_UI.InlineExpression.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.InlineExpression.InlineDescription class">
+    <HelpKINode Title="InlineExpression.InlineDescription Class" Url="html/T-IE_UI.InlineExpression.InlineDescription.htm" />
+    <HelpKINode Title="InlineExpression.InlineDescription Members" Url="html/AllMembers.T-IE_UI.InlineExpression.InlineDescription.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.InlineExpression.InlineType enumeration" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+  <HelpKINode Title="IE_UI.Models namespace" Url="html/N-IE_UI.Models.htm" />
+  <HelpKINode Title="IE_UI.Models.ExtractConfig class">
+    <HelpKINode Title="ExtractConfig Class" Url="html/T-IE_UI.Models.ExtractConfig.htm" />
+    <HelpKINode Title="ExtractConfig Members" Url="html/AllMembers.T-IE_UI.Models.ExtractConfig.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Models.ListArticle class">
+    <HelpKINode Title="ListArticle Class" Url="html/T-IE_UI.Models.ListArticle.htm" />
+    <HelpKINode Title="ListArticle Members" Url="html/AllMembers.T-IE_UI.Models.ListArticle.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Models.RecentFile class">
+    <HelpKINode Title="RecentFile Class" Url="html/T-IE_UI.Models.RecentFile.htm" />
+    <HelpKINode Title="RecentFile Members" Url="html/AllMembers.T-IE_UI.Models.RecentFile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.RecentFileManager class">
+    <HelpKINode Title="RecentFileManager Class" Url="html/T-IE_UI.RecentFileManager.htm" />
+    <HelpKINode Title="RecentFileManager Members" Url="html/AllMembers.T-IE_UI.RecentFileManager.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Views namespace" Url="html/N-IE_UI.Views.htm" />
+  <HelpKINode Title="IE_UI.Views.BodySegment class">
+    <HelpKINode Title="BodySegment Class" Url="html/T-IE_UI.Views.BodySegment.htm" />
+    <HelpKINode Title="BodySegment Members" Url="html/AllMembers.T-IE_UI.Views.BodySegment.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Views.ExtractProcess class">
+    <HelpKINode Title="ExtractProcess Class" Url="html/T-IE_UI.Views.ExtractProcess.htm" />
+    <HelpKINode Title="ExtractProcess Members" Url="html/AllMembers.T-IE_UI.Views.ExtractProcess.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Views.ExtractSetup class">
+    <HelpKINode Title="ExtractSetup Class" Url="html/T-IE_UI.Views.ExtractSetup.htm" />
+    <HelpKINode Title="ExtractSetup Members" Url="html/AllMembers.T-IE_UI.Views.ExtractSetup.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Views.Home class">
+    <HelpKINode Title="Home Class" Url="html/T-IE_UI.Views.Home.htm" />
+    <HelpKINode Title="Home Members" Url="html/AllMembers.T-IE_UI.Views.Home.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Views.MainWindow class">
+    <HelpKINode Title="MainWindow Class" Url="html/T-IE_UI.Views.MainWindow.htm" />
+    <HelpKINode Title="MainWindow Members" Url="html/AllMembers.T-IE_UI.Views.MainWindow.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Views.ViewArticle class">
+    <HelpKINode Title="ViewArticle Class" Url="html/T-IE_UI.Views.ViewArticle.htm" />
+    <HelpKINode Title="ViewArticle Members" Url="html/AllMembers.T-IE_UI.Views.ViewArticle.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Views.ViewList class">
+    <HelpKINode Title="ViewList Class" Url="html/T-IE_UI.Views.ViewList.htm" />
+    <HelpKINode Title="ViewList Members" Url="html/AllMembers.T-IE_UI.Views.ViewList.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IE_UI.Views.ViewSetup class">
+    <HelpKINode Title="ViewSetup Class" Url="html/T-IE_UI.Views.ViewSetup.htm" />
+    <HelpKINode Title="ViewSetup Members" Url="html/AllMembers.T-IE_UI.Views.ViewSetup.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Index property" Url="html/P-IE_lib.Models.Annotation.Index.htm" />
+  <HelpKINode Title="initializeAnnotations method" Url="html/M-IE_lib.Identifier.initializeAnnotations.htm" />
+  <HelpKINode Title="InlineDescription.Inlines property" Url="html/P-IE_UI.InlineExpression.InlineDescription.Inlines.htm" />
+  <HelpKINode Title="InlineDescription.StyleName property" Url="html/P-IE_UI.InlineExpression.InlineDescription.StyleName.htm" />
+  <HelpKINode Title="InlineDescription.Text property" Url="html/P-IE_UI.InlineExpression.InlineDescription.Text.htm" />
+  <HelpKINode Title="InlineDescription.Type property" Url="html/P-IE_UI.InlineExpression.InlineDescription.Type.htm" />
+  <HelpKINode Title="InlineExpression class">
+    <HelpKINode Title="InlineExpression Class" Url="html/T-IE_UI.InlineExpression.htm" />
+    <HelpKINode Title="InlineExpression Members" Url="html/AllMembers.T-IE_UI.InlineExpression.htm" />
+    <HelpKINode Title="about InlineExpression class" Url="html/T-IE_UI.InlineExpression.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.InlineExpression.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-IE_UI.InlineExpression.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.InlineExpression.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InlineExpression.GetInline method" Url="html/M-IE_UI.InlineExpression.GetInline.htm" />
+  <HelpKINode Title="InlineExpression.GetInlineDescription method" Url="html/Overload-IE_UI.InlineExpression.GetInlineDescription.htm" />
+  <HelpKINode Title="InlineExpression.GetInlineDescriptions method" Url="html/M-IE_UI.InlineExpression.GetInlineDescriptions.htm" />
+  <HelpKINode Title="InlineExpression.GetInlineExpression method" Url="html/M-IE_UI.InlineExpression.GetInlineExpression.htm" />
+  <HelpKINode Title="InlineExpression.GetInlines method" Url="html/M-IE_UI.InlineExpression.GetInlines.htm" />
+  <HelpKINode Title="InlineExpression.InlineDescription class">
+    <HelpKINode Title="InlineExpression.InlineDescription Class" Url="html/T-IE_UI.InlineExpression.InlineDescription.htm" />
+    <HelpKINode Title="InlineExpression.InlineDescription Members" Url="html/AllMembers.T-IE_UI.InlineExpression.InlineDescription.htm" />
+    <HelpKINode Title="about InlineExpression.InlineDescription class" Url="html/T-IE_UI.InlineExpression.InlineDescription.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.InlineExpression.InlineDescription.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.InlineExpression.InlineDescription.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.InlineExpression.InlineDescription.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InlineExpression.InlineExpressionProperty field" Url="html/F-IE_UI.InlineExpression.InlineExpressionProperty.htm" />
+  <HelpKINode Title="InlineExpression.InlineType enumeration" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+  <HelpKINode Title="InlineExpression.SetInlineExpression method" Url="html/M-IE_UI.InlineExpression.SetInlineExpression.htm" />
+  <HelpKINode Title="InlineExpressionProperty field" Url="html/F-IE_UI.InlineExpression.InlineExpressionProperty.htm" />
+  <HelpKINode Title="Inlines property" Url="html/P-IE_UI.InlineExpression.InlineDescription.Inlines.htm" />
+  <HelpKINode Title="InlineType.Bold field" Url="html/F-IE_UI.InlineExpression.InlineType.Bold.htm" />
+  <HelpKINode Title="InlineType.Hyperlink field" Url="html/F-IE_UI.InlineExpression.InlineType.Hyperlink.htm" />
+  <HelpKINode Title="InlineType.Italic field" Url="html/F-IE_UI.InlineExpression.InlineType.Italic.htm" />
+  <HelpKINode Title="InlineType.LineBreak field" Url="html/F-IE_UI.InlineExpression.InlineType.LineBreak.htm" />
+  <HelpKINode Title="InlineType.Run field" Url="html/F-IE_UI.InlineExpression.InlineType.Run.htm" />
+  <HelpKINode Title="InlineType.Span field" Url="html/F-IE_UI.InlineExpression.InlineType.Span.htm" />
+  <HelpKINode Title="InlineType.Underline field" Url="html/F-IE_UI.InlineExpression.InlineType.Underline.htm" />
+  <HelpKINode Title="Intersects method" Url="html/M-IE_UI.Views.BodySegment.Intersects.htm" />
+  <HelpKINode Title="invertedIndexDstPath field" Url="html/F-IE_lib.ResultWriter.invertedIndexDstPath.htm" />
+  <HelpKINode Title="IsAdvanced field" Url="html/F-IE_UI.Views.ViewList.IsAdvanced.htm" />
+  <HelpKINode Title="IsWhat property" Url="html/P-IE_lib.Models.Token.IsWhat.htm" />
+  <HelpKINode Title="IsWhen property" Url="html/P-IE_lib.Models.Token.IsWhen.htm" />
+  <HelpKINode Title="IsWhere property" Url="html/P-IE_lib.Models.Token.IsWhere.htm" />
+  <HelpKINode Title="IsWho property" Url="html/P-IE_lib.Models.Token.IsWho.htm" />
+  <HelpKINode Title="IsWhy property" Url="html/P-IE_lib.Models.Token.IsWhy.htm" />
+  <HelpKINode Title="Italic enumeration member" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+  <HelpKINode Title="Italic field" Url="html/F-IE_UI.InlineExpression.InlineType.Italic.htm" />
+  <HelpKINode Title="Label property" Url="html/P-IE_UI.Views.BodySegment.Label.htm" />
+  <HelpKINode Title="labelAnnotations method" Url="html/M-IE_lib.Identifier.labelAnnotations.htm" />
+  <HelpKINode Title="labelWhat method" Url="html/M-IE_lib.Identifier.labelWhat.htm" />
+  <HelpKINode Title="labelWhen method" Url="html/M-IE_lib.Identifier.labelWhen.htm" />
+  <HelpKINode Title="labelWhere method" Url="html/M-IE_lib.Identifier.labelWhere.htm" />
+  <HelpKINode Title="labelWho method" Url="html/M-IE_lib.Identifier.labelWho.htm" />
+  <HelpKINode Title="labelWhy method" Url="html/M-IE_lib.Identifier.labelWhy.htm" />
+  <HelpKINode Title="Length property" Url="html/P-IE_lib.Models.Candidate.Length.htm" />
+  <HelpKINode Title="LineBreak enumeration member" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+  <HelpKINode Title="LineBreak field" Url="html/F-IE_UI.InlineExpression.InlineType.LineBreak.htm" />
+  <HelpKINode Title="Link property" Url="html/P-IE_lib.Models.Article.Link.htm" />
+  <HelpKINode Title="listAllArticles field" Url="html/F-IE_lib.ResultWriter.listAllArticles.htm" />
+  <HelpKINode Title="listAllWhatAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhatAnnotations.htm" />
+  <HelpKINode Title="listAllWhenAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhenAnnotations.htm" />
+  <HelpKINode Title="listAllWhereAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhereAnnotations.htm" />
+  <HelpKINode Title="listAllWhoAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhoAnnotations.htm" />
+  <HelpKINode Title="listAllWhyAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhyAnnotations.htm" />
+  <HelpKINode Title="ListArticle class">
+    <HelpKINode Title="ListArticle Class" Url="html/T-IE_UI.Models.ListArticle.htm" />
+    <HelpKINode Title="ListArticle Members" Url="html/AllMembers.T-IE_UI.Models.ListArticle.htm" />
+    <HelpKINode Title="about ListArticle class" Url="html/T-IE_UI.Models.ListArticle.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Models.ListArticle.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Models.ListArticle.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Models.ListArticle.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ListArticle.DisplayArticle property" Url="html/P-IE_UI.Models.ListArticle.DisplayArticle.htm" />
+  <HelpKINode Title="ListArticle.MatchedString property" Url="html/P-IE_UI.Models.ListArticle.MatchedString.htm" />
+  <HelpKINode Title="ListCriteriaComboBoxes field" Url="html/F-IE_UI.Views.ViewList.ListCriteriaComboBoxes.htm" />
+  <HelpKINode Title="ListDisplayArticles property" Url="html/P-IE_lib.Models.ParsedResults.ListDisplayArticles.htm" />
+  <HelpKINode Title="listLatestTokenizedArticle field" Url="html/F-IE_lib.Preprocessor.listLatestTokenizedArticle.htm" />
+  <HelpKINode Title="ListQueryTextBoxes field" Url="html/F-IE_UI.Views.ViewList.ListQueryTextBoxes.htm" />
+  <HelpKINode Title="ListRawListArticles field" Url="html/F-IE_UI.Views.ViewList.ListRawListArticles.htm" />
+  <HelpKINode Title="listSecondaryWhyCandidates field" Url="html/F-IE_lib.Identifier.listSecondaryWhyCandidates.htm" />
+  <HelpKINode Title="ListTypeComboBoxes field" Url="html/F-IE_UI.Views.ViewList.ListTypeComboBoxes.htm" />
+  <HelpKINode Title="listWhatCandidates field">
+    <HelpKINode Title="listWhatCandidates Field" Url="html/F-IE_lib.Identifier.listWhatCandidates.htm" />
+    <HelpKINode Title="listWhatCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhatCandidates.htm" />
+  </HelpKINode>
+  <HelpKINode Title="listWhen field" Url="html/F-IE_lib.Identifier.listWhen.htm" />
+  <HelpKINode Title="listWhenCandidates field">
+    <HelpKINode Title="listWhenCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhenCandidates.htm" />
+    <HelpKINode Title="listWhenCandidates Field" Url="html/F-IE_lib.Identifier.listWhenCandidates.htm" />
+  </HelpKINode>
+  <HelpKINode Title="listWhere field" Url="html/F-IE_lib.Identifier.listWhere.htm" />
+  <HelpKINode Title="listWhereCandidates field">
+    <HelpKINode Title="listWhereCandidates Field" Url="html/F-IE_lib.Identifier.listWhereCandidates.htm" />
+    <HelpKINode Title="listWhereCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhereCandidates.htm" />
+  </HelpKINode>
+  <HelpKINode Title="listWho field" Url="html/F-IE_lib.Identifier.listWho.htm" />
+  <HelpKINode Title="listWhoCandidates field">
+    <HelpKINode Title="listWhoCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhoCandidates.htm" />
+    <HelpKINode Title="listWhoCandidates Field" Url="html/F-IE_lib.Identifier.listWhoCandidates.htm" />
+  </HelpKINode>
+  <HelpKINode Title="listWhyCandidates field">
+    <HelpKINode Title="listWhyCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhyCandidates.htm" />
+    <HelpKINode Title="listWhyCandidates Field" Url="html/F-IE_lib.Identifier.listWhyCandidates.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoadArticles method" Url="html/M-IE_UI.Views.ViewList.LoadArticles.htm" />
+  <HelpKINode Title="Main class">
+    <HelpKINode Title="Main Class" Url="html/T-IE_lib.Main.htm" />
+    <HelpKINode Title="Main Members" Url="html/AllMembers.T-IE_lib.Main.htm" />
+    <HelpKINode Title="about Main class" Url="html/T-IE_lib.Main.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.Main.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.Main.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Main.Extract method" Url="html/M-IE_lib.Main.Extract.htm" />
+  <HelpKINode Title="Main.View method" Url="html/M-IE_lib.Main.View.htm" />
+  <HelpKINode Title="MainWindow class">
+    <HelpKINode Title="MainWindow Class" Url="html/T-IE_UI.Views.MainWindow.htm" />
+    <HelpKINode Title="MainWindow Members" Url="html/AllMembers.T-IE_UI.Views.MainWindow.htm" />
+    <HelpKINode Title="about MainWindow class" Url="html/T-IE_UI.Views.MainWindow.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Views.MainWindow.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_UI.Views.MainWindow.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-IE_UI.Views.MainWindow.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Views.MainWindow.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Views.MainWindow.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MainWindow.MainWindow constructor" Url="html/M-IE_UI.Views.MainWindow.-ctor.htm" />
+  <HelpKINode Title="MatchedString property" Url="html/P-IE_UI.Models.ListArticle.MatchedString.htm" />
+  <HelpKINode Title="Name property" Url="html/P-IE_UI.Models.RecentFile.Name.htm" />
+  <HelpKINode Title="NamedEntity property" Url="html/P-IE_lib.Models.Token.NamedEntity.htm" />
+  <HelpKINode Title="NamedEntityTags field" Url="html/F-IE_lib.Models.Token.NamedEntityTags.htm" />
+  <HelpKINode Title="nerClassifier field" Url="html/F-IE_lib.Preprocessor.nerClassifier.htm" />
+  <HelpKINode Title="nerModelPath field" Url="html/F-IE_lib.Preprocessor.nerModelPath.htm" />
+  <HelpKINode Title="NumWhen property" Url="html/P-IE_lib.Models.Token.NumWhen.htm" />
+  <HelpKINode Title="NumWhere property" Url="html/P-IE_lib.Models.Token.NumWhere.htm" />
+  <HelpKINode Title="NumWho property" Url="html/P-IE_lib.Models.Token.NumWho.htm" />
+  <HelpKINode Title="OperationType property" Url="html/P-IE_UI.Models.RecentFile.OperationType.htm" />
+  <HelpKINode Title="Page_Loaded method" Url="html/M-IE_UI.Views.ExtractProcess.Page_Loaded.htm" />
+  <HelpKINode Title="ParsedResults class">
+    <HelpKINode Title="ParsedResults Class" Url="html/T-IE_lib.Models.ParsedResults.htm" />
+    <HelpKINode Title="ParsedResults Members" Url="html/AllMembers.T-IE_lib.Models.ParsedResults.htm" />
+    <HelpKINode Title="about ParsedResults class" Url="html/T-IE_lib.Models.ParsedResults.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.Models.ParsedResults.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.Models.ParsedResults.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_lib.Models.ParsedResults.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ParsedResults.FilePath property" Url="html/P-IE_lib.Models.ParsedResults.FilePath.htm" />
+  <HelpKINode Title="ParsedResults.ListDisplayArticles property" Url="html/P-IE_lib.Models.ParsedResults.ListDisplayArticles.htm" />
+  <HelpKINode Title="ParsedResults.WhatReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhatReverseIndex.htm" />
+  <HelpKINode Title="ParsedResults.WhenReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhenReverseIndex.htm" />
+  <HelpKINode Title="ParsedResults.WhereReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhereReverseIndex.htm" />
+  <HelpKINode Title="ParsedResults.WhoReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhoReverseIndex.htm" />
+  <HelpKINode Title="ParsedResults.WhyReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhyReverseIndex.htm" />
+  <HelpKINode Title="PartOfSpeech property" Url="html/P-IE_lib.Models.Token.PartOfSpeech.htm" />
+  <HelpKINode Title="PartOfSpeechTags field" Url="html/F-IE_lib.Models.Token.PartOfSpeechTags.htm" />
+  <HelpKINode Title="Path field" Url="html/F-IE_UI.Views.ViewList.Path.htm" />
+  <HelpKINode Title="performCandidateSelection method" Url="html/M-IE_lib.Preprocessor.performCandidateSelection.htm" />
+  <HelpKINode Title="performNER method" Url="html/M-IE_lib.Preprocessor.performNER.htm" />
+  <HelpKINode Title="performPOST method" Url="html/M-IE_lib.Preprocessor.performPOST.htm" />
+  <HelpKINode Title="performTokenizationAndSS method" Url="html/Overload-IE_lib.Preprocessor.performTokenizationAndSS.htm" />
+  <HelpKINode Title="performWS method" Url="html/M-IE_lib.Preprocessor.performWS.htm" />
+  <HelpKINode Title="Position property" Url="html/P-IE_lib.Models.Token.Position.htm" />
+  <HelpKINode Title="posModelPath field" Url="html/F-IE_lib.Preprocessor.posModelPath.htm" />
+  <HelpKINode Title="posTagger field" Url="html/F-IE_lib.Preprocessor.posTagger.htm" />
+  <HelpKINode Title="preprocess method" Url="html/M-IE_lib.Preprocessor.preprocess.htm" />
+  <HelpKINode Title="Preprocessor class">
+    <HelpKINode Title="Preprocessor Class" Url="html/T-IE_lib.Preprocessor.htm" />
+    <HelpKINode Title="Preprocessor Members" Url="html/AllMembers.T-IE_lib.Preprocessor.htm" />
+    <HelpKINode Title="about Preprocessor class" Url="html/T-IE_lib.Preprocessor.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.Preprocessor.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_lib.Preprocessor.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-IE_lib.Preprocessor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.Preprocessor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Preprocessor.articleCurrent field" Url="html/F-IE_lib.Preprocessor.articleCurrent.htm" />
+  <HelpKINode Title="Preprocessor.getCurrentArticle method" Url="html/M-IE_lib.Preprocessor.getCurrentArticle.htm" />
+  <HelpKINode Title="Preprocessor.getLatestTokenizedArticle method" Url="html/M-IE_lib.Preprocessor.getLatestTokenizedArticle.htm" />
+  <HelpKINode Title="Preprocessor.getWhatCandidates method" Url="html/M-IE_lib.Preprocessor.getWhatCandidates.htm" />
+  <HelpKINode Title="Preprocessor.getWhenCandidates method" Url="html/M-IE_lib.Preprocessor.getWhenCandidates.htm" />
+  <HelpKINode Title="Preprocessor.getWhereCandidates method" Url="html/M-IE_lib.Preprocessor.getWhereCandidates.htm" />
+  <HelpKINode Title="Preprocessor.getWhoCandidates method" Url="html/M-IE_lib.Preprocessor.getWhoCandidates.htm" />
+  <HelpKINode Title="Preprocessor.getWhyCandidates method" Url="html/M-IE_lib.Preprocessor.getWhyCandidates.htm" />
+  <HelpKINode Title="Preprocessor.listLatestTokenizedArticle field" Url="html/F-IE_lib.Preprocessor.listLatestTokenizedArticle.htm" />
+  <HelpKINode Title="Preprocessor.listWhatCandidates field" Url="html/F-IE_lib.Preprocessor.listWhatCandidates.htm" />
+  <HelpKINode Title="Preprocessor.listWhenCandidates field" Url="html/F-IE_lib.Preprocessor.listWhenCandidates.htm" />
+  <HelpKINode Title="Preprocessor.listWhereCandidates field" Url="html/F-IE_lib.Preprocessor.listWhereCandidates.htm" />
+  <HelpKINode Title="Preprocessor.listWhoCandidates field" Url="html/F-IE_lib.Preprocessor.listWhoCandidates.htm" />
+  <HelpKINode Title="Preprocessor.listWhyCandidates field" Url="html/F-IE_lib.Preprocessor.listWhyCandidates.htm" />
+  <HelpKINode Title="Preprocessor.nerClassifier field" Url="html/F-IE_lib.Preprocessor.nerClassifier.htm" />
+  <HelpKINode Title="Preprocessor.nerModelPath field" Url="html/F-IE_lib.Preprocessor.nerModelPath.htm" />
+  <HelpKINode Title="Preprocessor.performCandidateSelection method" Url="html/M-IE_lib.Preprocessor.performCandidateSelection.htm" />
+  <HelpKINode Title="Preprocessor.performNER method" Url="html/M-IE_lib.Preprocessor.performNER.htm" />
+  <HelpKINode Title="Preprocessor.performPOST method" Url="html/M-IE_lib.Preprocessor.performPOST.htm" />
+  <HelpKINode Title="Preprocessor.performTokenizationAndSS method" Url="html/Overload-IE_lib.Preprocessor.performTokenizationAndSS.htm" />
+  <HelpKINode Title="Preprocessor.performWS method" Url="html/M-IE_lib.Preprocessor.performWS.htm" />
+  <HelpKINode Title="Preprocessor.posModelPath field" Url="html/F-IE_lib.Preprocessor.posModelPath.htm" />
+  <HelpKINode Title="Preprocessor.posTagger field" Url="html/F-IE_lib.Preprocessor.posTagger.htm" />
+  <HelpKINode Title="Preprocessor.preprocess method" Url="html/M-IE_lib.Preprocessor.preprocess.htm" />
+  <HelpKINode Title="Preprocessor.Preprocessor constructor" Url="html/M-IE_lib.Preprocessor.-ctor.htm" />
+  <HelpKINode Title="Preprocessor.setCurrentArticle method" Url="html/M-IE_lib.Preprocessor.setCurrentArticle.htm" />
+  <HelpKINode Title="ProceedButton_Click method">
+    <HelpKINode Title="ProceedButton_Click Method " Url="html/M-IE_UI.Views.ViewSetup.ProceedButton_Click.htm" />
+    <HelpKINode Title="ProceedButton_Click Method " Url="html/M-IE_UI.Views.ExtractSetup.ProceedButton_Click.htm" />
+  </HelpKINode>
+  <HelpKINode Title="processWhen method" Url="html/M-IE_lib.ResultWriter.processWhen.htm" />
+  <HelpKINode Title="ProgressRing field" Url="html/F-IE_UI.Views.ExtractProcess.ProgressRing.htm" />
+  <HelpKINode Title="RecentFile class">
+    <HelpKINode Title="RecentFile Class" Url="html/T-IE_UI.Models.RecentFile.htm" />
+    <HelpKINode Title="RecentFile Members" Url="html/AllMembers.T-IE_UI.Models.RecentFile.htm" />
+    <HelpKINode Title="about RecentFile class" Url="html/T-IE_UI.Models.RecentFile.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Models.RecentFile.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Models.RecentFile.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Models.RecentFile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RecentFile.DestinationFilePath property" Url="html/P-IE_UI.Models.RecentFile.DestinationFilePath.htm" />
+  <HelpKINode Title="RecentFile.Name property" Url="html/P-IE_UI.Models.RecentFile.Name.htm" />
+  <HelpKINode Title="RecentFile.OperationType property" Url="html/P-IE_UI.Models.RecentFile.OperationType.htm" />
+  <HelpKINode Title="RecentFile.SourceFilePath property" Url="html/P-IE_UI.Models.RecentFile.SourceFilePath.htm" />
+  <HelpKINode Title="RecentFileManager class">
+    <HelpKINode Title="RecentFileManager Class" Url="html/T-IE_UI.RecentFileManager.htm" />
+    <HelpKINode Title="RecentFileManager Members" Url="html/AllMembers.T-IE_UI.RecentFileManager.htm" />
+    <HelpKINode Title="about RecentFileManager class" Url="html/T-IE_UI.RecentFileManager.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.RecentFileManager.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-IE_UI.RecentFileManager.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.RecentFileManager.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RecentFileManager.AddRecentFile method" Url="html/M-IE_UI.RecentFileManager.AddRecentFile.htm" />
+  <HelpKINode Title="RecentFileManager.fileName field" Url="html/F-IE_UI.RecentFileManager.fileName.htm" />
+  <HelpKINode Title="RecentFileManager.GetRecentFilesList method" Url="html/M-IE_UI.RecentFileManager.GetRecentFilesList.htm" />
+  <HelpKINode Title="RecentFileManager.GetText method" Url="html/M-IE_UI.RecentFileManager.GetText.htm" />
+  <HelpKINode Title="RecentFilesListView_PreviewMouseLeftButtonDown method" Url="html/M-IE_UI.Views.Home.RecentFilesListView_PreviewMouseLeftButtonDown.htm" />
+  <HelpKINode Title="RepeatButton_Click method" Url="html/M-IE_UI.Views.ExtractProcess.RepeatButton_Click.htm" />
+  <HelpKINode Title="Results field" Url="html/F-IE_UI.Views.ViewList.Results.htm" />
+  <HelpKINode Title="ResultWriter class">
+    <HelpKINode Title="ResultWriter Class" Url="html/T-IE_lib.ResultWriter.htm" />
+    <HelpKINode Title="ResultWriter Members" Url="html/AllMembers.T-IE_lib.ResultWriter.htm" />
+    <HelpKINode Title="about ResultWriter class" Url="html/T-IE_lib.ResultWriter.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.ResultWriter.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_lib.ResultWriter.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-IE_lib.ResultWriter.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.ResultWriter.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ResultWriter.addArticleToXML method" Url="html/M-IE_lib.ResultWriter.addArticleToXML.htm" />
+  <HelpKINode Title="ResultWriter.addArticleToXMLFormatWhen method" Url="html/M-IE_lib.ResultWriter.addArticleToXMLFormatWhen.htm" />
+  <HelpKINode Title="ResultWriter.addFeatureToXML method" Url="html/M-IE_lib.ResultWriter.addFeatureToXML.htm" />
+  <HelpKINode Title="ResultWriter.formatDateDstPath field" Url="html/F-IE_lib.ResultWriter.formatDateDstPath.htm" />
+  <HelpKINode Title="ResultWriter.generateInvertedIndex method" Url="html/M-IE_lib.ResultWriter.generateInvertedIndex.htm" />
+  <HelpKINode Title="ResultWriter.generateInvertedIndexOutput method" Url="html/M-IE_lib.ResultWriter.generateInvertedIndexOutput.htm" />
+  <HelpKINode Title="ResultWriter.generateOutput method" Url="html/M-IE_lib.ResultWriter.generateOutput.htm" />
+  <HelpKINode Title="ResultWriter.generateOutputFormatDate method" Url="html/M-IE_lib.ResultWriter.generateOutputFormatDate.htm" />
+  <HelpKINode Title="ResultWriter.invertedIndexDstPath field" Url="html/F-IE_lib.ResultWriter.invertedIndexDstPath.htm" />
+  <HelpKINode Title="ResultWriter.listAllArticles field" Url="html/F-IE_lib.ResultWriter.listAllArticles.htm" />
+  <HelpKINode Title="ResultWriter.listAllWhatAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhatAnnotations.htm" />
+  <HelpKINode Title="ResultWriter.listAllWhenAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhenAnnotations.htm" />
+  <HelpKINode Title="ResultWriter.listAllWhereAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhereAnnotations.htm" />
+  <HelpKINode Title="ResultWriter.listAllWhoAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhoAnnotations.htm" />
+  <HelpKINode Title="ResultWriter.listAllWhyAnnotations field" Url="html/F-IE_lib.ResultWriter.listAllWhyAnnotations.htm" />
+  <HelpKINode Title="ResultWriter.processWhen method" Url="html/M-IE_lib.ResultWriter.processWhen.htm" />
+  <HelpKINode Title="ResultWriter.ResultWriter constructor" Url="html/M-IE_lib.ResultWriter.-ctor.htm" />
+  <HelpKINode Title="ResultWriter.strPath field" Url="html/F-IE_lib.ResultWriter.strPath.htm" />
+  <HelpKINode Title="Run enumeration member" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+  <HelpKINode Title="Run field" Url="html/F-IE_UI.InlineExpression.InlineType.Run.htm" />
+  <HelpKINode Title="Score property" Url="html/P-IE_lib.Models.Token.Score.htm" />
+  <HelpKINode Title="ScrollViewer_PreviewMouseWheel method" Url="html/M-IE_UI.Views.ViewList.ScrollViewer_PreviewMouseWheel.htm" />
+  <HelpKINode Title="segregatedArticleCurrent field" Url="html/F-IE_lib.Identifier.segregatedArticleCurrent.htm" />
+  <HelpKINode Title="Sentence property" Url="html/P-IE_lib.Models.Token.Sentence.htm" />
+  <HelpKINode Title="SetBodyTextBlock method" Url="html/M-IE_UI.Views.ViewArticle.SetBodyTextBlock.htm" />
+  <HelpKINode Title="setCurrentArticle method">
+    <HelpKINode Title="setCurrentArticle Method " Url="html/M-IE_lib.Identifier.setCurrentArticle.htm" />
+    <HelpKINode Title="setCurrentArticle Method " Url="html/M-IE_lib.Preprocessor.setCurrentArticle.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetInlineExpression method" Url="html/M-IE_UI.InlineExpression.SetInlineExpression.htm" />
+  <HelpKINode Title="SetTextBoxesIsReadOnly method" Url="html/M-IE_UI.Views.ViewArticle.SetTextBoxesIsReadOnly.htm" />
+  <HelpKINode Title="setTitle method" Url="html/M-IE_lib.Identifier.setTitle.htm" />
+  <HelpKINode Title="setWhatCandidates method" Url="html/M-IE_lib.Identifier.setWhatCandidates.htm" />
+  <HelpKINode Title="setWhenCandidates method" Url="html/M-IE_lib.Identifier.setWhenCandidates.htm" />
+  <HelpKINode Title="setWhereCandidates method" Url="html/M-IE_lib.Identifier.setWhereCandidates.htm" />
+  <HelpKINode Title="setWhoCandidates method" Url="html/M-IE_lib.Identifier.setWhoCandidates.htm" />
+  <HelpKINode Title="setWhyCandidates method" Url="html/M-IE_lib.Identifier.setWhyCandidates.htm" />
+  <HelpKINode Title="SourceBrowseButton_Click method">
+    <HelpKINode Title="SourceBrowseButton_Click Method " Url="html/M-IE_UI.Views.ExtractSetup.SourceBrowseButton_Click.htm" />
+    <HelpKINode Title="SourceBrowseButton_Click Method " Url="html/M-IE_UI.Views.ViewSetup.SourceBrowseButton_Click.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SourceFilePath property">
+    <HelpKINode Title="SourceFilePath Property " Url="html/P-IE_UI.Models.RecentFile.SourceFilePath.htm" />
+    <HelpKINode Title="SourceFilePath Property " Url="html/P-IE_UI.Models.ExtractConfig.SourceFilePath.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Span enumeration member" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+  <HelpKINode Title="Span field" Url="html/F-IE_UI.InlineExpression.InlineType.Span.htm" />
+  <HelpKINode Title="StartIndex property" Url="html/P-IE_UI.Views.BodySegment.StartIndex.htm" />
+  <HelpKINode Title="StartProcess method" Url="html/M-IE_UI.Views.ExtractProcess.StartProcess.htm" />
+  <HelpKINode Title="strPath field" Url="html/F-IE_lib.ResultWriter.strPath.htm" />
+  <HelpKINode Title="strWhat field" Url="html/F-IE_lib.Identifier.strWhat.htm" />
+  <HelpKINode Title="strWhy field" Url="html/F-IE_lib.Identifier.strWhy.htm" />
+  <HelpKINode Title="StyleName property" Url="html/P-IE_UI.InlineExpression.InlineDescription.StyleName.htm" />
+  <HelpKINode Title="Text property" Url="html/P-IE_UI.InlineExpression.InlineDescription.Text.htm" />
+  <HelpKINode Title="TextBoxes field" Url="html/F-IE_UI.Views.ViewArticle.TextBoxes.htm" />
+  <HelpKINode Title="Title property" Url="html/P-IE_lib.Models.Article.Title.htm" />
+  <HelpKINode Title="titleCurrent field" Url="html/F-IE_lib.Identifier.titleCurrent.htm" />
+  <HelpKINode Title="Token class">
+    <HelpKINode Title="Token Class" Url="html/T-IE_lib.Models.Token.htm" />
+    <HelpKINode Title="Token Members" Url="html/AllMembers.T-IE_lib.Models.Token.htm" />
+    <HelpKINode Title="about Token class" Url="html/T-IE_lib.Models.Token.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_lib.Models.Token.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_lib.Models.Token.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-IE_lib.Models.Token.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_lib.Models.Token.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_lib.Models.Token.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Token.Frequency property" Url="html/P-IE_lib.Models.Token.Frequency.htm" />
+  <HelpKINode Title="Token.IsWhat property" Url="html/P-IE_lib.Models.Token.IsWhat.htm" />
+  <HelpKINode Title="Token.IsWhen property" Url="html/P-IE_lib.Models.Token.IsWhen.htm" />
+  <HelpKINode Title="Token.IsWhere property" Url="html/P-IE_lib.Models.Token.IsWhere.htm" />
+  <HelpKINode Title="Token.IsWho property" Url="html/P-IE_lib.Models.Token.IsWho.htm" />
+  <HelpKINode Title="Token.IsWhy property" Url="html/P-IE_lib.Models.Token.IsWhy.htm" />
+  <HelpKINode Title="Token.NamedEntity property" Url="html/P-IE_lib.Models.Token.NamedEntity.htm" />
+  <HelpKINode Title="Token.NamedEntityTags field" Url="html/F-IE_lib.Models.Token.NamedEntityTags.htm" />
+  <HelpKINode Title="Token.NumWhen property" Url="html/P-IE_lib.Models.Token.NumWhen.htm" />
+  <HelpKINode Title="Token.NumWhere property" Url="html/P-IE_lib.Models.Token.NumWhere.htm" />
+  <HelpKINode Title="Token.NumWho property" Url="html/P-IE_lib.Models.Token.NumWho.htm" />
+  <HelpKINode Title="Token.PartOfSpeech property" Url="html/P-IE_lib.Models.Token.PartOfSpeech.htm" />
+  <HelpKINode Title="Token.PartOfSpeechTags field" Url="html/F-IE_lib.Models.Token.PartOfSpeechTags.htm" />
+  <HelpKINode Title="Token.Position property" Url="html/P-IE_lib.Models.Token.Position.htm" />
+  <HelpKINode Title="Token.Score property" Url="html/P-IE_lib.Models.Token.Score.htm" />
+  <HelpKINode Title="Token.Sentence property" Url="html/P-IE_lib.Models.Token.Sentence.htm" />
+  <HelpKINode Title="Token.Token constructor" Url="html/M-IE_lib.Models.Token.-ctor.htm" />
+  <HelpKINode Title="Token.Value property" Url="html/P-IE_lib.Models.Token.Value.htm" />
+  <HelpKINode Title="Type property" Url="html/P-IE_UI.InlineExpression.InlineDescription.Type.htm" />
+  <HelpKINode Title="Types field" Url="html/F-IE_UI.Views.ViewList.Types.htm" />
+  <HelpKINode Title="Underline enumeration member" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+  <HelpKINode Title="Underline field" Url="html/F-IE_UI.InlineExpression.InlineType.Underline.htm" />
+  <HelpKINode Title="UpdateInvertedIndexFile method" Url="html/M-IE_UI.Views.ViewArticle.UpdateInvertedIndexFile.htm" />
+  <HelpKINode Title="Value property" Url="html/P-IE_lib.Models.Token.Value.htm" />
+  <HelpKINode Title="View method" Url="html/M-IE_lib.Main.View.htm" />
+  <HelpKINode Title="ViewArticle class">
+    <HelpKINode Title="ViewArticle Class" Url="html/T-IE_UI.Views.ViewArticle.htm" />
+    <HelpKINode Title="ViewArticle Members" Url="html/AllMembers.T-IE_UI.Views.ViewArticle.htm" />
+    <HelpKINode Title="about ViewArticle class" Url="html/T-IE_UI.Views.ViewArticle.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Views.ViewArticle.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_UI.Views.ViewArticle.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-IE_UI.Views.ViewArticle.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-IE_UI.Views.ViewArticle.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Views.ViewArticle.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Views.ViewArticle.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ViewArticle.Article field" Url="html/F-IE_UI.Views.ViewArticle.Article.htm" />
+  <HelpKINode Title="ViewArticle.EditButton_Click method" Url="html/M-IE_UI.Views.ViewArticle.EditButton_Click.htm" />
+  <HelpKINode Title="ViewArticle.FilePath field" Url="html/F-IE_UI.Views.ViewArticle.FilePath.htm" />
+  <HelpKINode Title="ViewArticle.Hyperlink_RequestNavigate method" Url="html/M-IE_UI.Views.ViewArticle.Hyperlink_RequestNavigate.htm" />
+  <HelpKINode Title="ViewArticle.SetBodyTextBlock method" Url="html/M-IE_UI.Views.ViewArticle.SetBodyTextBlock.htm" />
+  <HelpKINode Title="ViewArticle.SetTextBoxesIsReadOnly method" Url="html/M-IE_UI.Views.ViewArticle.SetTextBoxesIsReadOnly.htm" />
+  <HelpKINode Title="ViewArticle.TextBoxes field" Url="html/F-IE_UI.Views.ViewArticle.TextBoxes.htm" />
+  <HelpKINode Title="ViewArticle.UpdateInvertedIndexFile method" Url="html/M-IE_UI.Views.ViewArticle.UpdateInvertedIndexFile.htm" />
+  <HelpKINode Title="ViewArticle.ViewArticle constructor" Url="html/M-IE_UI.Views.ViewArticle.-ctor.htm" />
+  <HelpKINode Title="ViewButton_Click method" Url="html/M-IE_UI.Views.Home.ViewButton_Click.htm" />
+  <HelpKINode Title="ViewList class">
+    <HelpKINode Title="ViewList Class" Url="html/T-IE_UI.Views.ViewList.htm" />
+    <HelpKINode Title="ViewList Members" Url="html/AllMembers.T-IE_UI.Views.ViewList.htm" />
+    <HelpKINode Title="about ViewList class" Url="html/T-IE_UI.Views.ViewList.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Views.ViewList.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_UI.Views.ViewList.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-IE_UI.Views.ViewList.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-IE_UI.Views.ViewList.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Views.ViewList.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Views.ViewList.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ViewList.AdvancedSearchButton_Click method" Url="html/M-IE_UI.Views.ViewList.AdvancedSearchButton_Click.htm" />
+  <HelpKINode Title="ViewList.AdvancedSearchToggle_Click method" Url="html/M-IE_UI.Views.ViewList.AdvancedSearchToggle_Click.htm" />
+  <HelpKINode Title="ViewList.ArticleListView_PreviewMouseLeftButtonDown method" Url="html/M-IE_UI.Views.ViewList.ArticleListView_PreviewMouseLeftButtonDown.htm" />
+  <HelpKINode Title="ViewList.BackButton_Click method" Url="html/M-IE_UI.Views.ViewList.BackButton_Click.htm" />
+  <HelpKINode Title="ViewList.BasicSearchTextBox_TextChanged method" Url="html/M-IE_UI.Views.ViewList.BasicSearchTextBox_TextChanged.htm" />
+  <HelpKINode Title="ViewList.CriteriaAddButton_Click method" Url="html/M-IE_UI.Views.ViewList.CriteriaAddButton_Click.htm" />
+  <HelpKINode Title="ViewList.Criterias field" Url="html/F-IE_UI.Views.ViewList.Criterias.htm" />
+  <HelpKINode Title="ViewList.DisplayArticles method" Url="html/M-IE_UI.Views.ViewList.DisplayArticles.htm" />
+  <HelpKINode Title="ViewList.IsAdvanced field" Url="html/F-IE_UI.Views.ViewList.IsAdvanced.htm" />
+  <HelpKINode Title="ViewList.ListCriteriaComboBoxes field" Url="html/F-IE_UI.Views.ViewList.ListCriteriaComboBoxes.htm" />
+  <HelpKINode Title="ViewList.ListQueryTextBoxes field" Url="html/F-IE_UI.Views.ViewList.ListQueryTextBoxes.htm" />
+  <HelpKINode Title="ViewList.ListRawListArticles field" Url="html/F-IE_UI.Views.ViewList.ListRawListArticles.htm" />
+  <HelpKINode Title="ViewList.ListTypeComboBoxes field" Url="html/F-IE_UI.Views.ViewList.ListTypeComboBoxes.htm" />
+  <HelpKINode Title="ViewList.LoadArticles method" Url="html/M-IE_UI.Views.ViewList.LoadArticles.htm" />
+  <HelpKINode Title="ViewList.Path field" Url="html/F-IE_UI.Views.ViewList.Path.htm" />
+  <HelpKINode Title="ViewList.Results field" Url="html/F-IE_UI.Views.ViewList.Results.htm" />
+  <HelpKINode Title="ViewList.ScrollViewer_PreviewMouseWheel method" Url="html/M-IE_UI.Views.ViewList.ScrollViewer_PreviewMouseWheel.htm" />
+  <HelpKINode Title="ViewList.Types field" Url="html/F-IE_UI.Views.ViewList.Types.htm" />
+  <HelpKINode Title="ViewList.ViewList constructor" Url="html/M-IE_UI.Views.ViewList.-ctor.htm" />
+  <HelpKINode Title="ViewSetup class">
+    <HelpKINode Title="ViewSetup Class" Url="html/T-IE_UI.Views.ViewSetup.htm" />
+    <HelpKINode Title="ViewSetup Members" Url="html/AllMembers.T-IE_UI.Views.ViewSetup.htm" />
+    <HelpKINode Title="about ViewSetup class" Url="html/T-IE_UI.Views.ViewSetup.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-IE_UI.Views.ViewSetup.htm" />
+    <HelpKINode Title="constructor" Url="html/M-IE_UI.Views.ViewSetup.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-IE_UI.Views.ViewSetup.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-IE_UI.Views.ViewSetup.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-IE_UI.Views.ViewSetup.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ViewSetup.BackButton_Click method" Url="html/M-IE_UI.Views.ViewSetup.BackButton_Click.htm" />
+  <HelpKINode Title="ViewSetup.ProceedButton_Click method" Url="html/M-IE_UI.Views.ViewSetup.ProceedButton_Click.htm" />
+  <HelpKINode Title="ViewSetup.SourceBrowseButton_Click method" Url="html/M-IE_UI.Views.ViewSetup.SourceBrowseButton_Click.htm" />
+  <HelpKINode Title="ViewSetup.ViewSetup constructor" Url="html/M-IE_UI.Views.ViewSetup.-ctor.htm" />
+  <HelpKINode Title="What property" Url="html/P-IE_lib.Models.Annotation.What.htm" />
+  <HelpKINode Title="WhatReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhatReverseIndex.htm" />
+  <HelpKINode Title="When property" Url="html/P-IE_lib.Models.Annotation.When.htm" />
+  <HelpKINode Title="whenClassifier field" Url="html/F-IE_lib.Identifier.whenClassifier.htm" />
+  <HelpKINode Title="WhenReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhenReverseIndex.htm" />
+  <HelpKINode Title="whenWordsAfter field" Url="html/F-IE_lib.Identifier.whenWordsAfter.htm" />
+  <HelpKINode Title="whenWordsBefore field" Url="html/F-IE_lib.Identifier.whenWordsBefore.htm" />
+  <HelpKINode Title="Where property" Url="html/P-IE_lib.Models.Annotation.Where.htm" />
+  <HelpKINode Title="whereClassifier field" Url="html/F-IE_lib.Identifier.whereClassifier.htm" />
+  <HelpKINode Title="WhereReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhereReverseIndex.htm" />
+  <HelpKINode Title="whereWordsAfter field" Url="html/F-IE_lib.Identifier.whereWordsAfter.htm" />
+  <HelpKINode Title="whereWordsBefore field" Url="html/F-IE_lib.Identifier.whereWordsBefore.htm" />
+  <HelpKINode Title="Who property" Url="html/P-IE_lib.Models.Annotation.Who.htm" />
+  <HelpKINode Title="whoClassifier field" Url="html/F-IE_lib.Identifier.whoClassifier.htm" />
+  <HelpKINode Title="WhoReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhoReverseIndex.htm" />
+  <HelpKINode Title="whoWordsAfter field" Url="html/F-IE_lib.Identifier.whoWordsAfter.htm" />
+  <HelpKINode Title="whoWordsBefore field" Url="html/F-IE_lib.Identifier.whoWordsBefore.htm" />
+  <HelpKINode Title="Why property" Url="html/P-IE_lib.Models.Annotation.Why.htm" />
+  <HelpKINode Title="whyClassifier field" Url="html/F-IE_lib.Identifier.whyClassifier.htm" />
+  <HelpKINode Title="WhyReverseIndex property" Url="html/P-IE_lib.Models.ParsedResults.WhyReverseIndex.htm" />
+  <HelpKINode Title="whyWordsAfter field" Url="html/F-IE_lib.Identifier.whyWordsAfter.htm" />
+  <HelpKINode Title="whyWordsBefore field" Url="html/F-IE_lib.Identifier.whyWordsBefore.htm" />
+  <HelpKINode Title="Worker field" Url="html/F-IE_UI.Views.ExtractProcess.Worker.htm" />
+</HelpKI>

@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="bd30bbf3-1ead-4f54-96a9-048d1596eccf" Title="IE_lib Namespace" Url="html/N-IE_lib.htm">
+    <HelpTOCNode Id="f1975fd1-8fb8-4d0e-9b41-45580894825d" Title="Identifier Class" Url="html/T-IE_lib.Identifier.htm">
+      <HelpTOCNode Title="Identifier Members" Url="html/AllMembers.T-IE_lib.Identifier.htm" />
+      <HelpTOCNode Title="Identifier Constructor " Url="html/M-IE_lib.Identifier.-ctor.htm" />
+      <HelpTOCNode Id="2e19d37e-f3c9-4c78-921f-10f8ce7621f3" Title="Identifier Fields" Url="html/Fields.T-IE_lib.Identifier.htm">
+        <HelpTOCNode Title="articleCurrent Field" Url="html/F-IE_lib.Identifier.articleCurrent.htm" />
+        <HelpTOCNode Title="fvPOS Field" Url="html/F-IE_lib.Identifier.fvPOS.htm" />
+        <HelpTOCNode Title="listSecondaryWhyCandidates Field" Url="html/F-IE_lib.Identifier.listSecondaryWhyCandidates.htm" />
+        <HelpTOCNode Title="listWhatCandidates Field" Url="html/F-IE_lib.Identifier.listWhatCandidates.htm" />
+        <HelpTOCNode Title="listWhen Field" Url="html/F-IE_lib.Identifier.listWhen.htm" />
+        <HelpTOCNode Title="listWhenCandidates Field" Url="html/F-IE_lib.Identifier.listWhenCandidates.htm" />
+        <HelpTOCNode Title="listWhere Field" Url="html/F-IE_lib.Identifier.listWhere.htm" />
+        <HelpTOCNode Title="listWhereCandidates Field" Url="html/F-IE_lib.Identifier.listWhereCandidates.htm" />
+        <HelpTOCNode Title="listWho Field" Url="html/F-IE_lib.Identifier.listWho.htm" />
+        <HelpTOCNode Title="listWhoCandidates Field" Url="html/F-IE_lib.Identifier.listWhoCandidates.htm" />
+        <HelpTOCNode Title="listWhyCandidates Field" Url="html/F-IE_lib.Identifier.listWhyCandidates.htm" />
+        <HelpTOCNode Title="segregatedArticleCurrent Field" Url="html/F-IE_lib.Identifier.segregatedArticleCurrent.htm" />
+        <HelpTOCNode Title="strWhat Field" Url="html/F-IE_lib.Identifier.strWhat.htm" />
+        <HelpTOCNode Title="strWhy Field" Url="html/F-IE_lib.Identifier.strWhy.htm" />
+        <HelpTOCNode Title="titleCurrent Field" Url="html/F-IE_lib.Identifier.titleCurrent.htm" />
+        <HelpTOCNode Title="whenClassifier Field" Url="html/F-IE_lib.Identifier.whenClassifier.htm" />
+        <HelpTOCNode Title="whenWordsAfter Field" Url="html/F-IE_lib.Identifier.whenWordsAfter.htm" />
+        <HelpTOCNode Title="whenWordsBefore Field" Url="html/F-IE_lib.Identifier.whenWordsBefore.htm" />
+        <HelpTOCNode Title="whereClassifier Field" Url="html/F-IE_lib.Identifier.whereClassifier.htm" />
+        <HelpTOCNode Title="whereWordsAfter Field" Url="html/F-IE_lib.Identifier.whereWordsAfter.htm" />
+        <HelpTOCNode Title="whereWordsBefore Field" Url="html/F-IE_lib.Identifier.whereWordsBefore.htm" />
+        <HelpTOCNode Title="whoClassifier Field" Url="html/F-IE_lib.Identifier.whoClassifier.htm" />
+        <HelpTOCNode Title="whoWordsAfter Field" Url="html/F-IE_lib.Identifier.whoWordsAfter.htm" />
+        <HelpTOCNode Title="whoWordsBefore Field" Url="html/F-IE_lib.Identifier.whoWordsBefore.htm" />
+        <HelpTOCNode Title="whyClassifier Field" Url="html/F-IE_lib.Identifier.whyClassifier.htm" />
+        <HelpTOCNode Title="whyWordsAfter Field" Url="html/F-IE_lib.Identifier.whyWordsAfter.htm" />
+        <HelpTOCNode Title="whyWordsBefore Field" Url="html/F-IE_lib.Identifier.whyWordsBefore.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="bed1ec36-b413-41f4-9c5e-606ad1095530" Title="Identifier Methods" Url="html/Methods.T-IE_lib.Identifier.htm">
+        <HelpTOCNode Title="createSingleWhenInstance Method " Url="html/M-IE_lib.Identifier.createSingleWhenInstance.htm" />
+        <HelpTOCNode Title="createSingleWhereInstance Method " Url="html/M-IE_lib.Identifier.createSingleWhereInstance.htm" />
+        <HelpTOCNode Title="createSingleWhoInstance Method " Url="html/M-IE_lib.Identifier.createSingleWhoInstance.htm" />
+        <HelpTOCNode Title="createSingleWhyInstance Method " Url="html/M-IE_lib.Identifier.createSingleWhyInstance.htm" />
+        <HelpTOCNode Title="createWhenFastVector Method " Url="html/M-IE_lib.Identifier.createWhenFastVector.htm" />
+        <HelpTOCNode Title="createWhenInstances Method " Url="html/M-IE_lib.Identifier.createWhenInstances.htm" />
+        <HelpTOCNode Title="createWhereFastVector Method " Url="html/M-IE_lib.Identifier.createWhereFastVector.htm" />
+        <HelpTOCNode Title="createWhereInstances Method " Url="html/M-IE_lib.Identifier.createWhereInstances.htm" />
+        <HelpTOCNode Title="createWhoFastVector Method " Url="html/M-IE_lib.Identifier.createWhoFastVector.htm" />
+        <HelpTOCNode Title="createWhoInstances Method " Url="html/M-IE_lib.Identifier.createWhoInstances.htm" />
+        <HelpTOCNode Title="createWhyFastVector Method " Url="html/M-IE_lib.Identifier.createWhyFastVector.htm" />
+        <HelpTOCNode Title="createWhyInstances Method " Url="html/M-IE_lib.Identifier.createWhyInstances.htm" />
+        <HelpTOCNode Title="getCurrentArticle Method " Url="html/M-IE_lib.Identifier.getCurrentArticle.htm" />
+        <HelpTOCNode Title="getWhat Method " Url="html/M-IE_lib.Identifier.getWhat.htm" />
+        <HelpTOCNode Title="getWhen Method " Url="html/M-IE_lib.Identifier.getWhen.htm" />
+        <HelpTOCNode Title="getWhere Method " Url="html/M-IE_lib.Identifier.getWhere.htm" />
+        <HelpTOCNode Title="getWho Method " Url="html/M-IE_lib.Identifier.getWho.htm" />
+        <HelpTOCNode Title="getWhy Method " Url="html/M-IE_lib.Identifier.getWhy.htm" />
+        <HelpTOCNode Title="initializeAnnotations Method " Url="html/M-IE_lib.Identifier.initializeAnnotations.htm" />
+        <HelpTOCNode Title="labelAnnotations Method " Url="html/M-IE_lib.Identifier.labelAnnotations.htm" />
+        <HelpTOCNode Title="labelWhat Method " Url="html/M-IE_lib.Identifier.labelWhat.htm" />
+        <HelpTOCNode Title="labelWhen Method " Url="html/M-IE_lib.Identifier.labelWhen.htm" />
+        <HelpTOCNode Title="labelWhere Method " Url="html/M-IE_lib.Identifier.labelWhere.htm" />
+        <HelpTOCNode Title="labelWho Method " Url="html/M-IE_lib.Identifier.labelWho.htm" />
+        <HelpTOCNode Title="labelWhy Method " Url="html/M-IE_lib.Identifier.labelWhy.htm" />
+        <HelpTOCNode Title="setCurrentArticle Method " Url="html/M-IE_lib.Identifier.setCurrentArticle.htm" />
+        <HelpTOCNode Title="setTitle Method " Url="html/M-IE_lib.Identifier.setTitle.htm" />
+        <HelpTOCNode Title="setWhatCandidates Method " Url="html/M-IE_lib.Identifier.setWhatCandidates.htm" />
+        <HelpTOCNode Title="setWhenCandidates Method " Url="html/M-IE_lib.Identifier.setWhenCandidates.htm" />
+        <HelpTOCNode Title="setWhereCandidates Method " Url="html/M-IE_lib.Identifier.setWhereCandidates.htm" />
+        <HelpTOCNode Title="setWhoCandidates Method " Url="html/M-IE_lib.Identifier.setWhoCandidates.htm" />
+        <HelpTOCNode Title="setWhyCandidates Method " Url="html/M-IE_lib.Identifier.setWhyCandidates.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="835d94c8-4a81-4fa0-84e8-bfe91d853a81" Title="Main Class" Url="html/T-IE_lib.Main.htm">
+      <HelpTOCNode Title="Main Members" Url="html/AllMembers.T-IE_lib.Main.htm" />
+      <HelpTOCNode Id="4933ba2b-8891-4510-b1ee-cecec1ba849f" Title="Main Methods" Url="html/Methods.T-IE_lib.Main.htm">
+        <HelpTOCNode Title="Extract Method " Url="html/M-IE_lib.Main.Extract.htm" />
+        <HelpTOCNode Title="View Method " Url="html/M-IE_lib.Main.View.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0a08fb2b-9e04-4283-ad0f-6a80edc6f339" Title="Preprocessor Class" Url="html/T-IE_lib.Preprocessor.htm">
+      <HelpTOCNode Title="Preprocessor Members" Url="html/AllMembers.T-IE_lib.Preprocessor.htm" />
+      <HelpTOCNode Title="Preprocessor Constructor " Url="html/M-IE_lib.Preprocessor.-ctor.htm" />
+      <HelpTOCNode Id="b371c9bd-9e09-404f-8476-136ce6fb012c" Title="Preprocessor Fields" Url="html/Fields.T-IE_lib.Preprocessor.htm">
+        <HelpTOCNode Title="articleCurrent Field" Url="html/F-IE_lib.Preprocessor.articleCurrent.htm" />
+        <HelpTOCNode Title="listLatestTokenizedArticle Field" Url="html/F-IE_lib.Preprocessor.listLatestTokenizedArticle.htm" />
+        <HelpTOCNode Title="listWhatCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhatCandidates.htm" />
+        <HelpTOCNode Title="listWhenCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhenCandidates.htm" />
+        <HelpTOCNode Title="listWhereCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhereCandidates.htm" />
+        <HelpTOCNode Title="listWhoCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhoCandidates.htm" />
+        <HelpTOCNode Title="listWhyCandidates Field" Url="html/F-IE_lib.Preprocessor.listWhyCandidates.htm" />
+        <HelpTOCNode Title="nerClassifier Field" Url="html/F-IE_lib.Preprocessor.nerClassifier.htm" />
+        <HelpTOCNode Title="nerModelPath Field" Url="html/F-IE_lib.Preprocessor.nerModelPath.htm" />
+        <HelpTOCNode Title="posModelPath Field" Url="html/F-IE_lib.Preprocessor.posModelPath.htm" />
+        <HelpTOCNode Title="posTagger Field" Url="html/F-IE_lib.Preprocessor.posTagger.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="f0d07c7b-d9ca-4735-81c7-52ecbad8c8aa" Title="Preprocessor Methods" Url="html/Methods.T-IE_lib.Preprocessor.htm">
+        <HelpTOCNode Title="getCurrentArticle Method " Url="html/M-IE_lib.Preprocessor.getCurrentArticle.htm" />
+        <HelpTOCNode Title="getLatestTokenizedArticle Method " Url="html/M-IE_lib.Preprocessor.getLatestTokenizedArticle.htm" />
+        <HelpTOCNode Title="getWhatCandidates Method " Url="html/M-IE_lib.Preprocessor.getWhatCandidates.htm" />
+        <HelpTOCNode Title="getWhenCandidates Method " Url="html/M-IE_lib.Preprocessor.getWhenCandidates.htm" />
+        <HelpTOCNode Title="getWhereCandidates Method " Url="html/M-IE_lib.Preprocessor.getWhereCandidates.htm" />
+        <HelpTOCNode Title="getWhoCandidates Method " Url="html/M-IE_lib.Preprocessor.getWhoCandidates.htm" />
+        <HelpTOCNode Title="getWhyCandidates Method " Url="html/M-IE_lib.Preprocessor.getWhyCandidates.htm" />
+        <HelpTOCNode Title="performCandidateSelection Method " Url="html/M-IE_lib.Preprocessor.performCandidateSelection.htm" />
+        <HelpTOCNode Title="performNER Method " Url="html/M-IE_lib.Preprocessor.performNER.htm" />
+        <HelpTOCNode Title="performPOST Method " Url="html/M-IE_lib.Preprocessor.performPOST.htm" />
+        <HelpTOCNode Id="72c4035c-9057-4417-8b96-f4aa72fadc11" Title="performTokenizationAndSS Method " Url="html/Overload-IE_lib.Preprocessor.performTokenizationAndSS.htm">
+          <HelpTOCNode Title="performTokenizationAndSS Method " Url="html/M-IE_lib.Preprocessor.performTokenizationAndSS.htm" />
+          <HelpTOCNode Title="performTokenizationAndSS Method (String)" Url="html/M-IE_lib.Preprocessor.performTokenizationAndSS_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="performWS Method " Url="html/M-IE_lib.Preprocessor.performWS.htm" />
+        <HelpTOCNode Title="preprocess Method " Url="html/M-IE_lib.Preprocessor.preprocess.htm" />
+        <HelpTOCNode Title="setCurrentArticle Method " Url="html/M-IE_lib.Preprocessor.setCurrentArticle.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="17b95c23-14eb-4b14-a0ae-8d81b9b5fdaa" Title="ResultWriter Class" Url="html/T-IE_lib.ResultWriter.htm">
+      <HelpTOCNode Title="ResultWriter Members" Url="html/AllMembers.T-IE_lib.ResultWriter.htm" />
+      <HelpTOCNode Title="ResultWriter Constructor " Url="html/M-IE_lib.ResultWriter.-ctor.htm" />
+      <HelpTOCNode Id="b9f19a57-d2e6-4f9e-9155-79b0b75a3dd7" Title="ResultWriter Fields" Url="html/Fields.T-IE_lib.ResultWriter.htm">
+        <HelpTOCNode Title="formatDateDstPath Field" Url="html/F-IE_lib.ResultWriter.formatDateDstPath.htm" />
+        <HelpTOCNode Title="invertedIndexDstPath Field" Url="html/F-IE_lib.ResultWriter.invertedIndexDstPath.htm" />
+        <HelpTOCNode Title="listAllArticles Field" Url="html/F-IE_lib.ResultWriter.listAllArticles.htm" />
+        <HelpTOCNode Title="listAllWhatAnnotations Field" Url="html/F-IE_lib.ResultWriter.listAllWhatAnnotations.htm" />
+        <HelpTOCNode Title="listAllWhenAnnotations Field" Url="html/F-IE_lib.ResultWriter.listAllWhenAnnotations.htm" />
+        <HelpTOCNode Title="listAllWhereAnnotations Field" Url="html/F-IE_lib.ResultWriter.listAllWhereAnnotations.htm" />
+        <HelpTOCNode Title="listAllWhoAnnotations Field" Url="html/F-IE_lib.ResultWriter.listAllWhoAnnotations.htm" />
+        <HelpTOCNode Title="listAllWhyAnnotations Field" Url="html/F-IE_lib.ResultWriter.listAllWhyAnnotations.htm" />
+        <HelpTOCNode Title="strPath Field" Url="html/F-IE_lib.ResultWriter.strPath.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="478f0a69-810f-44d1-b8c5-07d88dd51d9b" Title="ResultWriter Methods" Url="html/Methods.T-IE_lib.ResultWriter.htm">
+        <HelpTOCNode Title="addArticleToXML Method " Url="html/M-IE_lib.ResultWriter.addArticleToXML.htm" />
+        <HelpTOCNode Title="addArticleToXMLFormatWhen Method " Url="html/M-IE_lib.ResultWriter.addArticleToXMLFormatWhen.htm" />
+        <HelpTOCNode Title="addFeatureToXML Method " Url="html/M-IE_lib.ResultWriter.addFeatureToXML.htm" />
+        <HelpTOCNode Title="generateInvertedIndex Method " Url="html/M-IE_lib.ResultWriter.generateInvertedIndex.htm" />
+        <HelpTOCNode Title="generateInvertedIndexOutput Method " Url="html/M-IE_lib.ResultWriter.generateInvertedIndexOutput.htm" />
+        <HelpTOCNode Title="generateOutput Method " Url="html/M-IE_lib.ResultWriter.generateOutput.htm" />
+        <HelpTOCNode Title="generateOutputFormatDate Method " Url="html/M-IE_lib.ResultWriter.generateOutputFormatDate.htm" />
+        <HelpTOCNode Title="processWhen Method " Url="html/M-IE_lib.ResultWriter.processWhen.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="f30e768c-a183-460f-a5d4-082899b79ce1" Title="IE_lib.Models Namespace" Url="html/N-IE_lib.Models.htm">
+    <HelpTOCNode Id="56ab7d47-e4c4-48b8-9c81-829adaa6ced7" Title="Annotation Class" Url="html/T-IE_lib.Models.Annotation.htm">
+      <HelpTOCNode Title="Annotation Members" Url="html/AllMembers.T-IE_lib.Models.Annotation.htm" />
+      <HelpTOCNode Title="Annotation Methods" Url="html/Methods.T-IE_lib.Models.Annotation.htm" />
+      <HelpTOCNode Id="c31da516-3f96-4f01-8443-c2bec5472c91" Title="Annotation Properties" Url="html/Properties.T-IE_lib.Models.Annotation.htm">
+        <HelpTOCNode Title="FormattedWhen Property " Url="html/P-IE_lib.Models.Annotation.FormattedWhen.htm" />
+        <HelpTOCNode Title="Index Property " Url="html/P-IE_lib.Models.Annotation.Index.htm" />
+        <HelpTOCNode Title="What Property " Url="html/P-IE_lib.Models.Annotation.What.htm" />
+        <HelpTOCNode Title="When Property " Url="html/P-IE_lib.Models.Annotation.When.htm" />
+        <HelpTOCNode Title="Where Property " Url="html/P-IE_lib.Models.Annotation.Where.htm" />
+        <HelpTOCNode Title="Who Property " Url="html/P-IE_lib.Models.Annotation.Who.htm" />
+        <HelpTOCNode Title="Why Property " Url="html/P-IE_lib.Models.Annotation.Why.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ebb50bc5-ffac-4491-9678-f1447f65b248" Title="Article Class" Url="html/T-IE_lib.Models.Article.htm">
+      <HelpTOCNode Title="Article Members" Url="html/AllMembers.T-IE_lib.Models.Article.htm" />
+      <HelpTOCNode Title="Article Methods" Url="html/Methods.T-IE_lib.Models.Article.htm" />
+      <HelpTOCNode Id="b82c0f2a-0ac2-46b0-93fa-4f3d0c33f090" Title="Article Properties" Url="html/Properties.T-IE_lib.Models.Article.htm">
+        <HelpTOCNode Title="Author Property " Url="html/P-IE_lib.Models.Article.Author.htm" />
+        <HelpTOCNode Title="Body Property " Url="html/P-IE_lib.Models.Article.Body.htm" />
+        <HelpTOCNode Title="Date Property " Url="html/P-IE_lib.Models.Article.Date.htm" />
+        <HelpTOCNode Title="Link Property " Url="html/P-IE_lib.Models.Article.Link.htm" />
+        <HelpTOCNode Title="Title Property " Url="html/P-IE_lib.Models.Article.Title.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5c8d818e-85db-4923-984c-5fd836e6e160" Title="Candidate Class" Url="html/T-IE_lib.Models.Candidate.htm">
+      <HelpTOCNode Title="Candidate Members" Url="html/AllMembers.T-IE_lib.Models.Candidate.htm" />
+      <HelpTOCNode Title="Candidate Constructor " Url="html/M-IE_lib.Models.Candidate.-ctor.htm" />
+      <HelpTOCNode Title="Candidate Methods" Url="html/Methods.T-IE_lib.Models.Candidate.htm" />
+      <HelpTOCNode Id="d2eeda8f-a34c-42f2-8a44-8a1b1e71f52d" Title="Candidate Properties" Url="html/Properties.T-IE_lib.Models.Candidate.htm">
+        <HelpTOCNode Title="Length Property " Url="html/P-IE_lib.Models.Candidate.Length.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6eb620ab-882a-428d-b64d-00f591fb1cc5" Title="DisplayArticle Class" Url="html/T-IE_lib.Models.DisplayArticle.htm">
+      <HelpTOCNode Title="DisplayArticle Members" Url="html/AllMembers.T-IE_lib.Models.DisplayArticle.htm" />
+      <HelpTOCNode Title="DisplayArticle Methods" Url="html/Methods.T-IE_lib.Models.DisplayArticle.htm" />
+      <HelpTOCNode Id="607556da-5089-4f50-a1f3-84f4d5e8dfca" Title="DisplayArticle Properties" Url="html/Properties.T-IE_lib.Models.DisplayArticle.htm">
+        <HelpTOCNode Title="Annotation Property " Url="html/P-IE_lib.Models.DisplayArticle.Annotation.htm" />
+        <HelpTOCNode Title="Article Property " Url="html/P-IE_lib.Models.DisplayArticle.Article.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d03045ba-4991-44b5-b20a-47b47f694981" Title="ParsedResults Class" Url="html/T-IE_lib.Models.ParsedResults.htm">
+      <HelpTOCNode Title="ParsedResults Members" Url="html/AllMembers.T-IE_lib.Models.ParsedResults.htm" />
+      <HelpTOCNode Title="ParsedResults Methods" Url="html/Methods.T-IE_lib.Models.ParsedResults.htm" />
+      <HelpTOCNode Id="a535aa43-0f8a-4bdc-b61f-2efbf8ed0503" Title="ParsedResults Properties" Url="html/Properties.T-IE_lib.Models.ParsedResults.htm">
+        <HelpTOCNode Title="FilePath Property " Url="html/P-IE_lib.Models.ParsedResults.FilePath.htm" />
+        <HelpTOCNode Title="ListDisplayArticles Property " Url="html/P-IE_lib.Models.ParsedResults.ListDisplayArticles.htm" />
+        <HelpTOCNode Title="WhatReverseIndex Property " Url="html/P-IE_lib.Models.ParsedResults.WhatReverseIndex.htm" />
+        <HelpTOCNode Title="WhenReverseIndex Property " Url="html/P-IE_lib.Models.ParsedResults.WhenReverseIndex.htm" />
+        <HelpTOCNode Title="WhereReverseIndex Property " Url="html/P-IE_lib.Models.ParsedResults.WhereReverseIndex.htm" />
+        <HelpTOCNode Title="WhoReverseIndex Property " Url="html/P-IE_lib.Models.ParsedResults.WhoReverseIndex.htm" />
+        <HelpTOCNode Title="WhyReverseIndex Property " Url="html/P-IE_lib.Models.ParsedResults.WhyReverseIndex.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a7751da4-f831-49a2-8fd6-9eaa703c6802" Title="Token Class" Url="html/T-IE_lib.Models.Token.htm">
+      <HelpTOCNode Title="Token Members" Url="html/AllMembers.T-IE_lib.Models.Token.htm" />
+      <HelpTOCNode Title="Token Constructor " Url="html/M-IE_lib.Models.Token.-ctor.htm" />
+      <HelpTOCNode Id="a91815dd-e319-48b8-83d1-1b65141ce588" Title="Token Fields" Url="html/Fields.T-IE_lib.Models.Token.htm">
+        <HelpTOCNode Title="NamedEntityTags Field" Url="html/F-IE_lib.Models.Token.NamedEntityTags.htm" />
+        <HelpTOCNode Title="PartOfSpeechTags Field" Url="html/F-IE_lib.Models.Token.PartOfSpeechTags.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Token Methods" Url="html/Methods.T-IE_lib.Models.Token.htm" />
+      <HelpTOCNode Id="8dcfb5d2-9db6-4767-9bb6-34c13f8519cc" Title="Token Properties" Url="html/Properties.T-IE_lib.Models.Token.htm">
+        <HelpTOCNode Title="Frequency Property " Url="html/P-IE_lib.Models.Token.Frequency.htm" />
+        <HelpTOCNode Title="IsWhat Property " Url="html/P-IE_lib.Models.Token.IsWhat.htm" />
+        <HelpTOCNode Title="IsWhen Property " Url="html/P-IE_lib.Models.Token.IsWhen.htm" />
+        <HelpTOCNode Title="IsWhere Property " Url="html/P-IE_lib.Models.Token.IsWhere.htm" />
+        <HelpTOCNode Title="IsWho Property " Url="html/P-IE_lib.Models.Token.IsWho.htm" />
+        <HelpTOCNode Title="IsWhy Property " Url="html/P-IE_lib.Models.Token.IsWhy.htm" />
+        <HelpTOCNode Title="NamedEntity Property " Url="html/P-IE_lib.Models.Token.NamedEntity.htm" />
+        <HelpTOCNode Title="NumWhen Property " Url="html/P-IE_lib.Models.Token.NumWhen.htm" />
+        <HelpTOCNode Title="NumWhere Property " Url="html/P-IE_lib.Models.Token.NumWhere.htm" />
+        <HelpTOCNode Title="NumWho Property " Url="html/P-IE_lib.Models.Token.NumWho.htm" />
+        <HelpTOCNode Title="PartOfSpeech Property " Url="html/P-IE_lib.Models.Token.PartOfSpeech.htm" />
+        <HelpTOCNode Title="Position Property " Url="html/P-IE_lib.Models.Token.Position.htm" />
+        <HelpTOCNode Title="Score Property " Url="html/P-IE_lib.Models.Token.Score.htm" />
+        <HelpTOCNode Title="Sentence Property " Url="html/P-IE_lib.Models.Token.Sentence.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/P-IE_lib.Models.Token.Value.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="2f33f04b-a9ce-484c-b9d4-3df17dfe08af" Title="IE_UI Namespace" Url="html/N-IE_UI.htm">
+    <HelpTOCNode Id="6cc53dbf-8632-4e0b-8a7b-4be611eea2c4" Title="App Class" Url="html/T-IE_UI.App.htm">
+      <HelpTOCNode Title="App Methods" Url="html/Methods.T-IE_UI.App.htm" />
+      <HelpTOCNode Title="App Properties" Url="html/Properties.T-IE_UI.App.htm" />
+      <HelpTOCNode Title="App Events" Url="html/Events.T-IE_UI.App.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="4ea4e835-d234-4a67-a5f8-9628c0d52f64" Title="InlineExpression Class" Url="html/T-IE_UI.InlineExpression.htm">
+      <HelpTOCNode Title="InlineExpression Members" Url="html/AllMembers.T-IE_UI.InlineExpression.htm" />
+      <HelpTOCNode Id="1ccd9960-0b55-4438-a737-52b03d166965" Title="InlineExpression Fields" Url="html/Fields.T-IE_UI.InlineExpression.htm">
+        <HelpTOCNode Title="InlineExpressionProperty Field" Url="html/F-IE_UI.InlineExpression.InlineExpressionProperty.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="f8e4cc95-ad77-4ff3-856f-28d85ee5a21f" Title="InlineExpression Methods" Url="html/Methods.T-IE_UI.InlineExpression.htm">
+        <HelpTOCNode Title="GetInline Method " Url="html/M-IE_UI.InlineExpression.GetInline.htm" />
+        <HelpTOCNode Id="51179fab-02ef-491d-af66-2a47ec611751" Title="GetInlineDescription Method " Url="html/Overload-IE_UI.InlineExpression.GetInlineDescription.htm">
+          <HelpTOCNode Title="GetInlineDescription Method (XmlNode)" Url="html/M-IE_UI.InlineExpression.GetInlineDescription.htm" />
+          <HelpTOCNode Title="GetInlineDescription Method (XmlElement)" Url="html/M-IE_UI.InlineExpression.GetInlineDescription_1.htm" />
+          <HelpTOCNode Title="GetInlineDescription Method (XmlText)" Url="html/M-IE_UI.InlineExpression.GetInlineDescription_2.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetInlineDescriptions Method " Url="html/M-IE_UI.InlineExpression.GetInlineDescriptions.htm" />
+        <HelpTOCNode Title="GetInlineExpression Method " Url="html/M-IE_UI.InlineExpression.GetInlineExpression.htm" />
+        <HelpTOCNode Title="GetInlines Method " Url="html/M-IE_UI.InlineExpression.GetInlines.htm" />
+        <HelpTOCNode Title="SetInlineExpression Method " Url="html/M-IE_UI.InlineExpression.SetInlineExpression.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d2773902-4984-4e67-ad5e-ce5a6c3cd860" Title="InlineExpression.InlineDescription Class" Url="html/T-IE_UI.InlineExpression.InlineDescription.htm">
+      <HelpTOCNode Title="InlineExpression.InlineDescription Members" Url="html/AllMembers.T-IE_UI.InlineExpression.InlineDescription.htm" />
+      <HelpTOCNode Title="InlineExpression.InlineDescription Methods" Url="html/Methods.T-IE_UI.InlineExpression.InlineDescription.htm" />
+      <HelpTOCNode Id="2fc73e33-03ab-431a-94e3-95fd632b4c5d" Title="InlineExpression.InlineDescription Properties" Url="html/Properties.T-IE_UI.InlineExpression.InlineDescription.htm">
+        <HelpTOCNode Title="Inlines Property " Url="html/P-IE_UI.InlineExpression.InlineDescription.Inlines.htm" />
+        <HelpTOCNode Title="StyleName Property " Url="html/P-IE_UI.InlineExpression.InlineDescription.StyleName.htm" />
+        <HelpTOCNode Title="Text Property " Url="html/P-IE_UI.InlineExpression.InlineDescription.Text.htm" />
+        <HelpTOCNode Title="Type Property " Url="html/P-IE_UI.InlineExpression.InlineDescription.Type.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="InlineExpression.InlineType Enumeration" Url="html/T-IE_UI.InlineExpression.InlineType.htm" />
+    <HelpTOCNode Id="884df6a9-bfcd-445b-95e7-e599bcfdf0c6" Title="RecentFileManager Class" Url="html/T-IE_UI.RecentFileManager.htm">
+      <HelpTOCNode Title="RecentFileManager Members" Url="html/AllMembers.T-IE_UI.RecentFileManager.htm" />
+      <HelpTOCNode Id="a15d7ef9-3104-4303-b7b0-ce09ef0512df" Title="RecentFileManager Fields" Url="html/Fields.T-IE_UI.RecentFileManager.htm">
+        <HelpTOCNode Title="fileName Field" Url="html/F-IE_UI.RecentFileManager.fileName.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="00e65356-78ab-4b25-af5e-647295d94c29" Title="RecentFileManager Methods" Url="html/Methods.T-IE_UI.RecentFileManager.htm">
+        <HelpTOCNode Title="AddRecentFile Method " Url="html/M-IE_UI.RecentFileManager.AddRecentFile.htm" />
+        <HelpTOCNode Title="GetRecentFilesList Method " Url="html/M-IE_UI.RecentFileManager.GetRecentFilesList.htm" />
+        <HelpTOCNode Title="GetText Method " Url="html/M-IE_UI.RecentFileManager.GetText.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="5ff749f9-fde1-4a2f-84b6-80a0a656b988" Title="IE_UI.Models Namespace" Url="html/N-IE_UI.Models.htm">
+    <HelpTOCNode Id="cb756287-0862-4795-b5a4-7f35929879a7" Title="ExtractConfig Class" Url="html/T-IE_UI.Models.ExtractConfig.htm">
+      <HelpTOCNode Title="ExtractConfig Members" Url="html/AllMembers.T-IE_UI.Models.ExtractConfig.htm" />
+      <HelpTOCNode Title="ExtractConfig Methods" Url="html/Methods.T-IE_UI.Models.ExtractConfig.htm" />
+      <HelpTOCNode Id="29610ceb-d321-4d96-bc24-f9ebc19172d6" Title="ExtractConfig Properties" Url="html/Properties.T-IE_UI.Models.ExtractConfig.htm">
+        <HelpTOCNode Title="DestinationFilePath Property " Url="html/P-IE_UI.Models.ExtractConfig.DestinationFilePath.htm" />
+        <HelpTOCNode Title="SourceFilePath Property " Url="html/P-IE_UI.Models.ExtractConfig.SourceFilePath.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cfb0a52a-4cd2-4226-a5cd-2aa1dc0864e0" Title="ListArticle Class" Url="html/T-IE_UI.Models.ListArticle.htm">
+      <HelpTOCNode Title="ListArticle Members" Url="html/AllMembers.T-IE_UI.Models.ListArticle.htm" />
+      <HelpTOCNode Title="ListArticle Methods" Url="html/Methods.T-IE_UI.Models.ListArticle.htm" />
+      <HelpTOCNode Id="3bcd924f-cc14-42a2-8ce8-e474682056f2" Title="ListArticle Properties" Url="html/Properties.T-IE_UI.Models.ListArticle.htm">
+        <HelpTOCNode Title="DisplayArticle Property " Url="html/P-IE_UI.Models.ListArticle.DisplayArticle.htm" />
+        <HelpTOCNode Title="MatchedString Property " Url="html/P-IE_UI.Models.ListArticle.MatchedString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c667838e-1cb2-4eee-aa9f-083f9e44ff46" Title="RecentFile Class" Url="html/T-IE_UI.Models.RecentFile.htm">
+      <HelpTOCNode Title="RecentFile Members" Url="html/AllMembers.T-IE_UI.Models.RecentFile.htm" />
+      <HelpTOCNode Title="RecentFile Methods" Url="html/Methods.T-IE_UI.Models.RecentFile.htm" />
+      <HelpTOCNode Id="d5f12231-dc2f-4198-995c-939f0c80b2f1" Title="RecentFile Properties" Url="html/Properties.T-IE_UI.Models.RecentFile.htm">
+        <HelpTOCNode Title="DestinationFilePath Property " Url="html/P-IE_UI.Models.RecentFile.DestinationFilePath.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/P-IE_UI.Models.RecentFile.Name.htm" />
+        <HelpTOCNode Title="OperationType Property " Url="html/P-IE_UI.Models.RecentFile.OperationType.htm" />
+        <HelpTOCNode Title="SourceFilePath Property " Url="html/P-IE_UI.Models.RecentFile.SourceFilePath.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="7950a621-8a9b-4d66-bf7a-ec5e1b201f9f" Title="IE_UI.Views Namespace" Url="html/N-IE_UI.Views.htm">
+    <HelpTOCNode Id="ad37f0a5-d86e-4023-81c9-59f84be41550" Title="BodySegment Class" Url="html/T-IE_UI.Views.BodySegment.htm">
+      <HelpTOCNode Title="BodySegment Members" Url="html/AllMembers.T-IE_UI.Views.BodySegment.htm" />
+      <HelpTOCNode Id="811e3e4a-af47-4f51-8397-7668eaeb0c68" Title="BodySegment Methods" Url="html/Methods.T-IE_UI.Views.BodySegment.htm">
+        <HelpTOCNode Title="Intersects Method " Url="html/M-IE_UI.Views.BodySegment.Intersects.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0df3036e-4a6e-4723-82b4-6ab8c9c79a9f" Title="BodySegment Properties" Url="html/Properties.T-IE_UI.Views.BodySegment.htm">
+        <HelpTOCNode Title="EndIndex Property " Url="html/P-IE_UI.Views.BodySegment.EndIndex.htm" />
+        <HelpTOCNode Title="Label Property " Url="html/P-IE_UI.Views.BodySegment.Label.htm" />
+        <HelpTOCNode Title="StartIndex Property " Url="html/P-IE_UI.Views.BodySegment.StartIndex.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a5645a78-e843-4834-835f-bef7225d315d" Title="ExtractProcess Class" Url="html/T-IE_UI.Views.ExtractProcess.htm">
+      <HelpTOCNode Title="ExtractProcess Members" Url="html/AllMembers.T-IE_UI.Views.ExtractProcess.htm" />
+      <HelpTOCNode Title="ExtractProcess Constructor " Url="html/M-IE_UI.Views.ExtractProcess.-ctor.htm" />
+      <HelpTOCNode Id="7bb9b171-26fe-4606-82fa-429c414bc3da" Title="ExtractProcess Fields" Url="html/Fields.T-IE_UI.Views.ExtractProcess.htm">
+        <HelpTOCNode Title="Config Field" Url="html/F-IE_UI.Views.ExtractProcess.Config.htm" />
+        <HelpTOCNode Title="ProgressRing Field" Url="html/F-IE_UI.Views.ExtractProcess.ProgressRing.htm" />
+        <HelpTOCNode Title="Worker Field" Url="html/F-IE_UI.Views.ExtractProcess.Worker.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7be372b0-649f-4326-bd33-0107784c07dd" Title="ExtractProcess Methods" Url="html/Methods.T-IE_UI.Views.ExtractProcess.htm">
+        <HelpTOCNode Title="EndProcess Method " Url="html/M-IE_UI.Views.ExtractProcess.EndProcess.htm" />
+        <HelpTOCNode Title="Page_Loaded Method " Url="html/M-IE_UI.Views.ExtractProcess.Page_Loaded.htm" />
+        <HelpTOCNode Title="RepeatButton_Click Method " Url="html/M-IE_UI.Views.ExtractProcess.RepeatButton_Click.htm" />
+        <HelpTOCNode Title="StartProcess Method " Url="html/M-IE_UI.Views.ExtractProcess.StartProcess.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ExtractProcess Properties" Url="html/Properties.T-IE_UI.Views.ExtractProcess.htm" />
+      <HelpTOCNode Title="ExtractProcess Events" Url="html/Events.T-IE_UI.Views.ExtractProcess.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="81050245-d6c2-44bf-b1b4-efc6d0e9b775" Title="ExtractSetup Class" Url="html/T-IE_UI.Views.ExtractSetup.htm">
+      <HelpTOCNode Title="ExtractSetup Members" Url="html/AllMembers.T-IE_UI.Views.ExtractSetup.htm" />
+      <HelpTOCNode Title="ExtractSetup Constructor " Url="html/M-IE_UI.Views.ExtractSetup.-ctor.htm" />
+      <HelpTOCNode Id="96f06e95-b16f-446a-939a-ed4a1a297d3a" Title="ExtractSetup Methods" Url="html/Methods.T-IE_UI.Views.ExtractSetup.htm">
+        <HelpTOCNode Title="BackButton_Click Method " Url="html/M-IE_UI.Views.ExtractSetup.BackButton_Click.htm" />
+        <HelpTOCNode Title="DestinationBrowseButton_Click Method " Url="html/M-IE_UI.Views.ExtractSetup.DestinationBrowseButton_Click.htm" />
+        <HelpTOCNode Title="ProceedButton_Click Method " Url="html/M-IE_UI.Views.ExtractSetup.ProceedButton_Click.htm" />
+        <HelpTOCNode Title="SourceBrowseButton_Click Method " Url="html/M-IE_UI.Views.ExtractSetup.SourceBrowseButton_Click.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ExtractSetup Properties" Url="html/Properties.T-IE_UI.Views.ExtractSetup.htm" />
+      <HelpTOCNode Title="ExtractSetup Events" Url="html/Events.T-IE_UI.Views.ExtractSetup.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="79439e98-ee7b-4853-9009-1ab0b340c980" Title="Home Class" Url="html/T-IE_UI.Views.Home.htm">
+      <HelpTOCNode Title="Home Members" Url="html/AllMembers.T-IE_UI.Views.Home.htm" />
+      <HelpTOCNode Title="Home Constructor " Url="html/M-IE_UI.Views.Home.-ctor.htm" />
+      <HelpTOCNode Id="7be9fb68-0efa-4b9b-9446-96755245ad09" Title="Home Methods" Url="html/Methods.T-IE_UI.Views.Home.htm">
+        <HelpTOCNode Title="ExtractButton_Click Method " Url="html/M-IE_UI.Views.Home.ExtractButton_Click.htm" />
+        <HelpTOCNode Title="RecentFilesListView_PreviewMouseLeftButtonDown Method " Url="html/M-IE_UI.Views.Home.RecentFilesListView_PreviewMouseLeftButtonDown.htm" />
+        <HelpTOCNode Title="ViewButton_Click Method " Url="html/M-IE_UI.Views.Home.ViewButton_Click.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Home Properties" Url="html/Properties.T-IE_UI.Views.Home.htm" />
+      <HelpTOCNode Title="Home Events" Url="html/Events.T-IE_UI.Views.Home.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="ab3fabe2-e567-4823-9d43-88b44aa61baa" Title="MainWindow Class" Url="html/T-IE_UI.Views.MainWindow.htm">
+      <HelpTOCNode Title="MainWindow Members" Url="html/AllMembers.T-IE_UI.Views.MainWindow.htm" />
+      <HelpTOCNode Title="MainWindow Constructor " Url="html/M-IE_UI.Views.MainWindow.-ctor.htm" />
+      <HelpTOCNode Title="MainWindow Methods" Url="html/Methods.T-IE_UI.Views.MainWindow.htm" />
+      <HelpTOCNode Title="MainWindow Properties" Url="html/Properties.T-IE_UI.Views.MainWindow.htm" />
+      <HelpTOCNode Title="MainWindow Events" Url="html/Events.T-IE_UI.Views.MainWindow.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="485f2078-09eb-4e2c-a1bd-146794a0fb80" Title="ViewArticle Class" Url="html/T-IE_UI.Views.ViewArticle.htm">
+      <HelpTOCNode Title="ViewArticle Members" Url="html/AllMembers.T-IE_UI.Views.ViewArticle.htm" />
+      <HelpTOCNode Title="ViewArticle Constructor " Url="html/M-IE_UI.Views.ViewArticle.-ctor.htm" />
+      <HelpTOCNode Id="8ecd7be2-3a72-4414-b5f3-d9bb8db4f9f6" Title="ViewArticle Fields" Url="html/Fields.T-IE_UI.Views.ViewArticle.htm">
+        <HelpTOCNode Title="Article Field" Url="html/F-IE_UI.Views.ViewArticle.Article.htm" />
+        <HelpTOCNode Title="FilePath Field" Url="html/F-IE_UI.Views.ViewArticle.FilePath.htm" />
+        <HelpTOCNode Title="TextBoxes Field" Url="html/F-IE_UI.Views.ViewArticle.TextBoxes.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c10f9b40-b3d4-49b2-b3e9-a1a4d1e53fb3" Title="ViewArticle Methods" Url="html/Methods.T-IE_UI.Views.ViewArticle.htm">
+        <HelpTOCNode Title="EditButton_Click Method " Url="html/M-IE_UI.Views.ViewArticle.EditButton_Click.htm" />
+        <HelpTOCNode Title="Hyperlink_RequestNavigate Method " Url="html/M-IE_UI.Views.ViewArticle.Hyperlink_RequestNavigate.htm" />
+        <HelpTOCNode Title="SetBodyTextBlock Method " Url="html/M-IE_UI.Views.ViewArticle.SetBodyTextBlock.htm" />
+        <HelpTOCNode Title="SetTextBoxesIsReadOnly Method " Url="html/M-IE_UI.Views.ViewArticle.SetTextBoxesIsReadOnly.htm" />
+        <HelpTOCNode Title="UpdateInvertedIndexFile Method " Url="html/M-IE_UI.Views.ViewArticle.UpdateInvertedIndexFile.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ViewArticle Properties" Url="html/Properties.T-IE_UI.Views.ViewArticle.htm" />
+      <HelpTOCNode Title="ViewArticle Events" Url="html/Events.T-IE_UI.Views.ViewArticle.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="df6d08c6-99ce-45c0-a88c-6d7f95ebf6b7" Title="ViewList Class" Url="html/T-IE_UI.Views.ViewList.htm">
+      <HelpTOCNode Title="ViewList Members" Url="html/AllMembers.T-IE_UI.Views.ViewList.htm" />
+      <HelpTOCNode Title="ViewList Constructor " Url="html/M-IE_UI.Views.ViewList.-ctor.htm" />
+      <HelpTOCNode Id="da6549c9-f85b-45b7-a4d1-efa8a6e1bf65" Title="ViewList Fields" Url="html/Fields.T-IE_UI.Views.ViewList.htm">
+        <HelpTOCNode Title="Criterias Field" Url="html/F-IE_UI.Views.ViewList.Criterias.htm" />
+        <HelpTOCNode Title="IsAdvanced Field" Url="html/F-IE_UI.Views.ViewList.IsAdvanced.htm" />
+        <HelpTOCNode Title="ListCriteriaComboBoxes Field" Url="html/F-IE_UI.Views.ViewList.ListCriteriaComboBoxes.htm" />
+        <HelpTOCNode Title="ListQueryTextBoxes Field" Url="html/F-IE_UI.Views.ViewList.ListQueryTextBoxes.htm" />
+        <HelpTOCNode Title="ListRawListArticles Field" Url="html/F-IE_UI.Views.ViewList.ListRawListArticles.htm" />
+        <HelpTOCNode Title="ListTypeComboBoxes Field" Url="html/F-IE_UI.Views.ViewList.ListTypeComboBoxes.htm" />
+        <HelpTOCNode Title="Path Field" Url="html/F-IE_UI.Views.ViewList.Path.htm" />
+        <HelpTOCNode Title="Results Field" Url="html/F-IE_UI.Views.ViewList.Results.htm" />
+        <HelpTOCNode Title="Types Field" Url="html/F-IE_UI.Views.ViewList.Types.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="96491b6c-4150-4293-afbf-e48c1be0f318" Title="ViewList Methods" Url="html/Methods.T-IE_UI.Views.ViewList.htm">
+        <HelpTOCNode Title="AdvancedSearchButton_Click Method " Url="html/M-IE_UI.Views.ViewList.AdvancedSearchButton_Click.htm" />
+        <HelpTOCNode Title="AdvancedSearchToggle_Click Method " Url="html/M-IE_UI.Views.ViewList.AdvancedSearchToggle_Click.htm" />
+        <HelpTOCNode Title="ArticleListView_PreviewMouseLeftButtonDown Method " Url="html/M-IE_UI.Views.ViewList.ArticleListView_PreviewMouseLeftButtonDown.htm" />
+        <HelpTOCNode Title="BackButton_Click Method " Url="html/M-IE_UI.Views.ViewList.BackButton_Click.htm" />
+        <HelpTOCNode Title="BasicSearchTextBox_TextChanged Method " Url="html/M-IE_UI.Views.ViewList.BasicSearchTextBox_TextChanged.htm" />
+        <HelpTOCNode Title="CriteriaAddButton_Click Method " Url="html/M-IE_UI.Views.ViewList.CriteriaAddButton_Click.htm" />
+        <HelpTOCNode Title="DisplayArticles Method " Url="html/M-IE_UI.Views.ViewList.DisplayArticles.htm" />
+        <HelpTOCNode Title="LoadArticles Method " Url="html/M-IE_UI.Views.ViewList.LoadArticles.htm" />
+        <HelpTOCNode Title="ScrollViewer_PreviewMouseWheel Method " Url="html/M-IE_UI.Views.ViewList.ScrollViewer_PreviewMouseWheel.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ViewList Properties" Url="html/Properties.T-IE_UI.Views.ViewList.htm" />
+      <HelpTOCNode Title="ViewList Events" Url="html/Events.T-IE_UI.Views.ViewList.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="d40ec028-a07e-4d9e-b0b3-1a493e539149" Title="ViewSetup Class" Url="html/T-IE_UI.Views.ViewSetup.htm">
+      <HelpTOCNode Title="ViewSetup Members" Url="html/AllMembers.T-IE_UI.Views.ViewSetup.htm" />
+      <HelpTOCNode Title="ViewSetup Constructor " Url="html/M-IE_UI.Views.ViewSetup.-ctor.htm" />
+      <HelpTOCNode Id="d52f5944-0290-40e8-8589-36aea2f9997f" Title="ViewSetup Methods" Url="html/Methods.T-IE_UI.Views.ViewSetup.htm">
+        <HelpTOCNode Title="BackButton_Click Method " Url="html/M-IE_UI.Views.ViewSetup.BackButton_Click.htm" />
+        <HelpTOCNode Title="ProceedButton_Click Method " Url="html/M-IE_UI.Views.ViewSetup.ProceedButton_Click.htm" />
+        <HelpTOCNode Title="SourceBrowseButton_Click Method " Url="html/M-IE_UI.Views.ViewSetup.SourceBrowseButton_Click.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="ViewSetup Properties" Url="html/Properties.T-IE_UI.Views.ViewSetup.htm" />
+      <HelpTOCNode Title="ViewSetup Events" Url="html/Events.T-IE_UI.Views.ViewSetup.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

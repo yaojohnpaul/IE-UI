@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="save" content="history" />
+    <title>getCandidateByMarkers Method </title>
+    <link rel="stylesheet" type="text/css" href="../styles/lightweight.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <link rel="stylesheet" type="text/css" href="../styles/lw-code.css" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <script type="text/javascript" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" src="../scripts/languageSelector.js"> </script>
+    <meta name="container" content="IE_lib" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="file" content="M-IE_lib.CandidateSelector.getCandidateByMarkers" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <meta name="guid" content="M-IE_lib.CandidateSelector.getCandidateByMarkers" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt" />
+    <xml xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <MSHelp:Attr Name="AssetID" Value="M:IE_lib.CandidateSelector.getCandidateByMarkers(String[],String[],String[][],String[][],String[][],String[][],System.Int32,List{Candidate},List{Token},Boolean)" />
+      <MSHelp:TOCTitle Title="getCandidateByMarkers Method " />
+      <MSHelp:RLTitle Title="CandidateSelector.getCandidateByMarkers Method  (IE_lib)" />
+      <MSHelp:Keyword Index="A" Term="M:IE_lib.CandidateSelector.getCandidateByMarkers(String[],String[],String[][],String[][],String[][],String[][],System.Int32,List{Candidate},List{Token},Boolean)" />
+      <MSHelp:Keyword Index="A" Term="frlrfIE_libClassgetCandidateByMarkersTopic" />
+      <MSHelp:Keyword Index="K" Term="getCandidateByMarkers method" />
+      <MSHelp:Keyword Index="K" Term=".getCandidateByMarkers method" />
+      <MSHelp:Keyword Index="F" Term="IE_lib..getCandidateByMarkers" />
+      <MSHelp:Attr Name="APIType" Value="Managed" />
+      <MSHelp:Attr Name="APILocation" Value="IE-lib.dll" />
+      <MSHelp:Attr Name="APIName" Value="IE_lib..getCandidateByMarkers" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="Abstract" Value="Gets the candidate by markers." />
+      <MSHelp:Attr Name="AssemblyVersion" Value="" />
+    </xml>
+  </head>
+  <body>
+    <div class="header" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <table class="headerBar cl_lightweight_topnav_slice" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td class="leftSection cl_lightweight_header_leftSection_wave leftSectionImageClusterOverride" />
+            <td class="rightSection cl_lightweight_header_rightSection_wave rightSectionImageClusterOverride">
+              <div class="tabContainer">filNXT+</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="contentPlaceHolder" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+      <div class="content">
+        <div class="topicContainer">
+          <div class="topic">
+            <p class="majorTitle" />
+            <h1 class="title">CandidateSelector<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>getCandidateByMarkers Method </h1>
+            <div id="mainSection">
+              <div id="mainBody">
+                <div class="summary">
+   Gets the candidate by markers.
+   </div>
+                <p />
+    <b>Namespace:</b> 
+   <a href="N-IE_lib.htm">IE_lib</a><br />
+    <b>Assembly:</b>
+   <span sdata="assembly">IE-lib</span> (in IE-lib.dll)<div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">Syntax</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="syntaxSection"><!----></a><div class="CodeSnippetContainer"><div class="CodeSnippetContainerTabs"><div class="CodeSnippetContainerTabLeft"><!----></div><div class="CodeSnippetContainerTabFirst CSharpTab" id="CSharpTabId" style="background:white;border-bottom-color:white"><a href="javascript:setActiveTab('CodeSnippetContainerCode','CSharpCode','CSharpTabId');" title="C#">C#</a></div><div class="CodeSnippetContainerTab VisualBasicTab" id="VisualBasicTabId"><a href="javascript:setActiveTab('CodeSnippetContainerCode','VisualBasicCode','VisualBasicTabId');" title="Visual Basic">VB</a></div><div class="CodeSnippetContainerTab ManagedCPlusPlusTab" id="ManagedCPlusPlusTabId"><a href="javascript:setActiveTab('CodeSnippetContainerCode','ManagedCPlusPlusCode','ManagedCPlusPlusTabId');" title="Visual C++">C++</a></div><div class="CodeSnippetContainerTabRight"><!----></div></div><div class="CodeSnippetContainerCodeCollection"><div class="CodeSnippetToolBar"><div class="CodeSnippetToolBarText" /></div><div class="CodeSnippetContainerCode CSharpCode"><pre xml:space="preserve" class="libCScode"><span class="keyword">private</span> <span class="keyword">void</span> <span class="identifier">getCandidateByMarkers</span>(
+	<span class="nolink">String</span>[] <span class="parameter">generalStopWords</span>,
+	<span class="nolink">String</span>[] <span class="parameter">startMarkers</span>,
+	<span class="nolink">String</span>[][] <span class="parameter">endMarkers</span>,
+	<span class="nolink">String</span>[][] <span class="parameter">enderMarkers</span>,
+	<span class="nolink">String</span>[][] <span class="parameter">enderPOS</span>,
+	<span class="nolink">String</span>[][] <span class="parameter">enderPOSType</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/system.int32.aspx" target="_blank">int</a> <span class="parameter">i</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>&lt;<a href="T-IE_lib.Models.Candidate.htm">Candidate</a>&gt; <span class="parameter">candidates</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>&lt;<a href="T-IE_lib.Models.Token.htm">Token</a>&gt; <span class="parameter">tokenizedArticle</span>,
+	<a href="http://msdn.microsoft.com/en-us/library/system.boolean.aspx" target="_blank">bool</a> <span class="parameter">isExclusive</span>
+)</pre></div><div class="CodeSnippetContainerCode VisualBasicCode"><pre xml:space="preserve" class="libCScode"><span class="keyword">Private</span> <span class="keyword">Sub</span> <span class="identifier">getCandidateByMarkers</span> ( _
+	<span class="parameter">generalStopWords</span> <span class="keyword">As</span> <span class="nolink">String</span>(), _
+	<span class="parameter">startMarkers</span> <span class="keyword">As</span> <span class="nolink">String</span>(), _
+	<span class="parameter">endMarkers</span> <span class="keyword">As</span> <span class="nolink">String</span>()(), _
+	<span class="parameter">enderMarkers</span> <span class="keyword">As</span> <span class="nolink">String</span>()(), _
+	<span class="parameter">enderPOS</span> <span class="keyword">As</span> <span class="nolink">String</span>()(), _
+	<span class="parameter">enderPOSType</span> <span class="keyword">As</span> <span class="nolink">String</span>()(), _
+	<span class="parameter">i</span> <span class="keyword">As</span> <a href="http://msdn.microsoft.com/en-us/library/system.int32.aspx" target="_blank">Integer</a>, _
+	<span class="parameter">candidates</span> <span class="keyword">As</span> <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>(<span class="keyword">Of</span> <a href="T-IE_lib.Models.Candidate.htm">Candidate</a>), _
+	<span class="parameter">tokenizedArticle</span> <span class="keyword">As</span> <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>(<span class="keyword">Of</span> <a href="T-IE_lib.Models.Token.htm">Token</a>), _
+	<span class="parameter">isExclusive</span> <span class="keyword">As</span> <a href="http://msdn.microsoft.com/en-us/library/system.boolean.aspx" target="_blank">Boolean</a> _
+)</pre></div><div class="CodeSnippetContainerCode ManagedCPlusPlusCode"><pre xml:space="preserve" class="libCScode"><span class="keyword">private</span>:
+<span class="keyword">void</span> <span class="identifier">getCandidateByMarkers</span>(
+	<span class="keyword">array</span>&lt;<span class="nolink">String</span>^&gt;^ <span class="parameter">generalStopWords</span>, 
+	<span class="keyword">array</span>&lt;<span class="nolink">String</span>^&gt;^ <span class="parameter">startMarkers</span>, 
+	<span class="keyword">array</span>&lt;<span class="keyword">array</span>&lt;<span class="nolink">String</span>^&gt;^&gt;^ <span class="parameter">endMarkers</span>, 
+	<span class="keyword">array</span>&lt;<span class="keyword">array</span>&lt;<span class="nolink">String</span>^&gt;^&gt;^ <span class="parameter">enderMarkers</span>, 
+	<span class="keyword">array</span>&lt;<span class="keyword">array</span>&lt;<span class="nolink">String</span>^&gt;^&gt;^ <span class="parameter">enderPOS</span>, 
+	<span class="keyword">array</span>&lt;<span class="keyword">array</span>&lt;<span class="nolink">String</span>^&gt;^&gt;^ <span class="parameter">enderPOSType</span>, 
+	<a href="http://msdn.microsoft.com/en-us/library/system.int32.aspx" target="_blank">int</a>^ <span class="parameter">i</span>, 
+	<a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>&lt;<a href="T-IE_lib.Models.Candidate.htm">Candidate</a>^&gt;^ <span class="parameter">candidates</span>, 
+	<a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a>&lt;<a href="T-IE_lib.Models.Token.htm">Token</a>^&gt;^ <span class="parameter">tokenizedArticle</span>, 
+	<a href="http://msdn.microsoft.com/en-us/library/system.boolean.aspx" target="_blank">bool</a>^ <span class="parameter">isExclusive</span>
+)</pre></div></div></div><div id="parameters"><h4 class="subHeading">Parameters</h4><dl paramName="generalStopWords"><dt><span class="parameterItalic">generalStopWords</span></dt><dd>Type: <span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="nolink">String</span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><br />The general stop words.</dd></dl><dl paramName="startMarkers"><dt><span class="parameterItalic">startMarkers</span></dt><dd>Type: <span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="nolink">String</span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><br />The start markers.</dd></dl><dl paramName="endMarkers"><dt><span class="parameterItalic">endMarkers</span></dt><dd>Type: <span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="nolink">String</span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><br />The end markers.</dd></dl><dl paramName="enderMarkers"><dt><span class="parameterItalic">enderMarkers</span></dt><dd>Type: <span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="nolink">String</span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><br />The ender markers.</dd></dl><dl paramName="enderPOS"><dt><span class="parameterItalic">enderPOS</span></dt><dd>Type: <span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="nolink">String</span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><br />The ender position.</dd></dl><dl paramName="enderPOSType"><dt><span class="parameterItalic">enderPOSType</span></dt><dd>Type: <span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="nolink">String</span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><br />Type of the ender position.</dd></dl><dl paramName="i"><dt><span class="parameterItalic">i</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/system.int32.aspx" target="_blank">Int32</a><br />The index.</dd></dl><dl paramName="candidates"><dt><span class="parameterItalic">candidates</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="T-IE_lib.Models.Candidate.htm">Candidate</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />The candidates.</dd></dl><dl paramName="tokenizedArticle"><dt><span class="parameterItalic">tokenizedArticle</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/6sh2ey19.aspx" target="_blank">List</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="T-IE_lib.Models.Token.htm">Token</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />The tokenized article.</dd></dl><dl paramName="isExclusive"><dt><span class="parameterItalic">isExclusive</span></dt><dd>Type: <a href="http://msdn.microsoft.com/en-us/library/system.boolean.aspx" target="_blank">Boolean</a><br />if set to <span class="code">true</span> [is exclusive].</dd></dl></div></div><div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">See Also</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="seeAlsoSection"><!----></a><div class="seeAlsoStyle"><span class="nolink">CandidateSelector </span></div><div class="seeAlsoStyle"><a href="N-IE_lib.htm">IE_lib Namespace</a></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div id="footer" class="footerContainer">
+          <div class="footerLogoContainer">
+            <div style="margin-top:5px">
+              <span class="customCopyrightFooter" />
+            </div>
+            <div style="margin-top:5px" class="copyrightFooter">
+              <a href="http://submain.com/fwlink/gd-help/generated/">Created with evaluation copy of GhostDoc Pro. Click here to purchase and remove this link.</a>
+            </div>
+            <div> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
