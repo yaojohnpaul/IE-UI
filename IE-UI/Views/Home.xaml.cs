@@ -32,9 +32,7 @@ namespace IE_UI.Views
             InitializeComponent();
 
             App.Current.MainWindow.Title = "Home";
-
-            /// TODO: Check if paths are valid
-            /// 
+            
             var recentFilesList = RecentFileManager.GetRecentFilesList();
 
             if (recentFilesList.Count() > 0)
@@ -78,7 +76,7 @@ namespace IE_UI.Views
 
             if (item != null)
             {
-                if (item.OperationType == Char.ConvertFromUtf32(0xE7E6))
+                if (item.OperationType == "/assets/images/extract.png")
                 {
                     ExtractConfig config = new ExtractConfig()
                     {
@@ -97,7 +95,7 @@ namespace IE_UI.Views
                             "Invalid file paths");
                     }
                 }
-                else if (item.OperationType == Char.ConvertFromUtf32(0xE8E5))
+                else if (item.OperationType == "/assets/images/view.png")
                 {
                     string sourceFilePath = String.Format("{0}\\{1}.xml", item.SourceFilePath, item.Name);
 

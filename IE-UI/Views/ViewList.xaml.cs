@@ -50,7 +50,7 @@ namespace IE_UI.Views
         /// <summary>
         /// The criterias
         /// </summary>
-        private String[] Criterias = new String[] { "Who", "When", "Where", "What", "Why" };
+        private String[] Criterias = new String[] { "who", "when", "where", "what", "why" };
         /// <summary>
         /// The types
         /// </summary>
@@ -102,7 +102,7 @@ namespace IE_UI.Views
                     ListRawListArticles.Add(new ListArticle()
                     {
                         DisplayArticle = d,
-                        MatchedString = d.Article.Body.Substring(0, 120) + "..."
+                        MatchedString = String.Format("{0} · {1}", d.Article.Date, d.Article.Author)
                     });
                 }
             }
@@ -119,6 +119,8 @@ namespace IE_UI.Views
         {
             if (AdvancedSearchPanel.Visibility == Visibility.Collapsed)
             {
+                LabelTextBlock.Text = "ADVANCED SEARCH";
+
                 AdvancedSearchPanel.Visibility = Visibility.Visible;
                 AdvancedSearchToggle.Content = Char.ConvertFromUtf32(0xE711);
                 BasicSearchTextBox.Visibility = Visibility.Hidden;
@@ -138,7 +140,7 @@ namespace IE_UI.Views
                 newQuery.Name = "searchQuery" + ListQueryTextBoxes.Count;
                 newQuery.FontSize = 16;
                 newQuery.Padding = new Thickness(8);
-                newQuery.Width = 600;
+                newQuery.Width = 632;
 
                 ListQueryTextBoxes.Add(newQuery);
                 newPanel.Children.Add(newQuery);
@@ -164,6 +166,8 @@ namespace IE_UI.Views
             }
             else if (AdvancedSearchPanel.Visibility == Visibility.Visible)
             {
+                LabelTextBlock.Text = "ARTICLES";
+
                 AdvancedSearchPanel.Visibility = Visibility.Collapsed;
                 AdvancedSearchToggle.Content = Char.ConvertFromUtf32(0xE713);
                 BasicSearchTextBox.Visibility = Visibility.Visible;
@@ -266,19 +270,19 @@ namespace IE_UI.Views
             {
                 switch (ListCriteriaComboBoxes[i].Text)
                 {
-                    case "Who":
+                    case "who":
                         whoIndex.Add(i);
                         break;
-                    case "When":
+                    case "when":
                         whenIndex.Add(i);
                         break;
-                    case "Where":
+                    case "where":
                         whereIndex.Add(i);
                         break;
-                    case "What":
+                    case "what":
                         whatIndex.Add(i);
                         break;
-                    case "Why":
+                    case "why":
                         whyIndex.Add(i);
                         break;
                     default:
@@ -435,7 +439,7 @@ namespace IE_UI.Views
             newQuery.Name = "searchQuery" + ListQueryTextBoxes.Count;
             newQuery.FontSize = 16;
             newQuery.Padding = new Thickness(8);
-            newQuery.Width = 600;
+            newQuery.Width = 632;
 
             ListQueryTextBoxes.Add(newQuery);
             newPanel.Children.Add(newQuery);
@@ -457,22 +461,22 @@ namespace IE_UI.Views
             ListCriteriaComboBoxes.Add(newCriteria);
             newPanel.Children.Add(newCriteria);
 
-            ComboBox newType = new ComboBox();
+            //ComboBox newType = new ComboBox();
 
-            newType.Name = "criteriaType" + ListTypeComboBoxes.Count;
-            newType.FontSize = 16;
-            newType.Padding = new Thickness(8);
-            newType.Width = 80;
+            //newType.Name = "criteriaType" + ListTypeComboBoxes.Count;
+            //newType.FontSize = 16;
+            //newType.Padding = new Thickness(8);
+            //newType.Width = 80;
 
-            foreach (String s in Types)
-            {
-                newType.Items.Add(s);
-            }
+            //foreach (String s in Types)
+            //{
+            //    newType.Items.Add(s);
+            //}
 
-            newType.SelectedIndex = 0;
+            //newType.SelectedIndex = 0;
 
-            ListTypeComboBoxes.Add(newType);
-            newPanel.Children.Add(newType);
+            //ListTypeComboBoxes.Add(newType);
+            //newPanel.Children.Add(newType);
 
             newPanel.Margin = new Thickness(0, 4, 0, 0);
 

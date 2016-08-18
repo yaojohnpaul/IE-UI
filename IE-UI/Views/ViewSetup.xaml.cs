@@ -80,7 +80,7 @@ namespace IE_UI.Views
 
                 RecentFileManager.AddRecentFile(new RecentFile()
                 {
-                    OperationType = Char.ConvertFromUtf32(0xE8E5),
+                    OperationType = "/assets/images/view.png",
                     Name = System.IO.Path.GetFileNameWithoutExtension(SourceTextBox.Text),
                     SourceFilePath = System.IO.Path.GetDirectoryName(SourceTextBox.Text),
                 });

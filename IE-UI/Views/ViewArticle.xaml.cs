@@ -276,8 +276,8 @@ namespace IE_UI.Views
 
             foreach (BodySegment segment in listBodySegments)
             {
-                body = body.Insert(segment.EndIndex, "</bold>");
-                body = body.Insert(segment.StartIndex, "<bold>");
+                //body = body.Insert(segment.EndIndex, "</bold>");
+                //body = body.Insert(segment.StartIndex, "<bold>");
             }
 
             InlineExpression.SetInlineExpression(BodyTextBlock, body);

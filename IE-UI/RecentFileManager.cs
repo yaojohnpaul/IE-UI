@@ -52,11 +52,11 @@ namespace IE_UI
         /// <returns>The text</returns>
         private static string GetText(RecentFile file)
         {
-            if (file.OperationType == Char.ConvertFromUtf32(0xE8E5))
+            if (file.OperationType == "/assets/images/view.png")
             {
                 return String.Format("{0}|{1}|{2}", "VIEW", file.Name, file.SourceFilePath);
             }
-            else if (file.OperationType == Char.ConvertFromUtf32(0xE7E6))
+            else if (file.OperationType == "/assets/images/extract.png")
             {
                 return String.Format("{0}|{1}|{2}|{3}", "EXTRACT", file.Name, file.SourceFilePath, file.DestinationFilePath);
             }
@@ -84,7 +84,7 @@ namespace IE_UI
                     {
                         RecentFile newRecentFile = new RecentFile()
                         {
-                            OperationType = Char.ConvertFromUtf32(0xE7E6),
+                            OperationType = "/assets/images/extract.png",
                             Name = splitLine[1],
                             SourceFilePath = splitLine[2],
                             DestinationFilePath = splitLine[3]
@@ -99,7 +99,7 @@ namespace IE_UI
                     {
                         RecentFile newRecentFile = new RecentFile()
                         {
-                            OperationType = Char.ConvertFromUtf32(0xE8E5),
+                            OperationType = "/assets/images/view.png",
                             Name = splitLine[1],
                             SourceFilePath = splitLine[2]
                         };

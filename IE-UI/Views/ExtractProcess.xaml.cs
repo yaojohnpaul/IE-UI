@@ -40,17 +40,9 @@ namespace IE_UI.Views
 
             Config = config;
 
-            ProgressRing = new SpinningWheel();
-
-            ProgressRing.CircleCount = 10;
-            ProgressRing.Radius = 35;
-            ProgressRing.Speed = 0.9;
-
-            ProgressRingContainer.Children.Add(ProgressRing);
-            Grid.SetRow(ProgressRing, 0);
-
             Worker = new BackgroundWorker();
             //Worker.WorkerSupportsCancellation = true;
+            Worker.WorkerReportsProgress = true;
 
             StatusTextBlock.Text = "extracting";
 
@@ -80,6 +72,13 @@ namespace IE_UI.Views
 
                 EndProcess();
             };
+
+            Worker.ProgressChanged += delegate (object s, ProgressChangedEventArgs args)
+            {
+                int percentage = args.ProgressPercentage;
+
+                ProgressBar.Value = percentage;
+            };
         }
 
         /// <summary>
@@ -88,6 +87,7 @@ namespace IE_UI.Views
         /// <returns></returns>
         private bool StartProcess()
         {
+            Worker.ReportProgress(57);
             return Task.Run(() => IE_lib.Main.Extract(Config.SourceFilePath, Config.DestinationFilePath)).Result;
         }
 
@@ -97,7 +97,6 @@ namespace IE_UI.Views
         private void EndProcess()
         {
             ProgressRing.Visibility = Visibility.Hidden;
-            //RepeatButton.Visibility = Visibility.Visible;
 
             StatusTextBlock.Margin = new Thickness(0);
         }

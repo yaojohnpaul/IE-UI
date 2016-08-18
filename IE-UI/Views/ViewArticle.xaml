@@ -98,15 +98,15 @@
                 Grid.Column="1"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
-                Background="Transparent"
-                BorderBrush="Transparent"
+                Background="{StaticResource ForegroundThemeBrush}"
+                Padding="8"
                 Margin="0, 8, 0, 0"
                 Click="EditButton_Click">
             <TextBlock Name="EditButtonLabel"
                        Text="edit"
                        FontWeight="Bold"
                        FontSize="16"
-                       Foreground="{StaticResource ForegroundThemeBrush}"/>
+                       Foreground="White"/>
         </Button>
     </Grid>
 </Window>

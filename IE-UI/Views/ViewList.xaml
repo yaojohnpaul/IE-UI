@@ -12,6 +12,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -39,12 +40,6 @@
                        FontWeight="Bold"
                        Text="ARTICLES"
                        VerticalAlignment="Center"/>
-            <TextBlock Name="StatusText"
-                       FontSize="20"
-                       FontWeight="ExtraLight"
-                       VerticalAlignment="Center"
-                       Margin="10, 0, 0, 0"
-                       Text="0 Articles Loaded"/>
         </StackPanel>
         <!--Search Box-->
         <StackPanel Grid.Row="0"
@@ -78,43 +73,69 @@
               Height="426"
               Visibility="Visible">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <ScrollViewer Grid.Row="0"
+            <StackPanel Grid.Row="0"
+                        Orientation="Horizontal">
+                <Label Content="match type"
+                       FontSize="20"
+                       FontWeight="ExtraLight"/>
+                <RadioButton GroupName="MatchType"
+                             Margin="16, 16, 0, 0"
+                             IsChecked="True">
+                    match all
+                </RadioButton>
+                <RadioButton GroupName="MatchType"
+                             Margin="8, 16, 0, 0">
+                    match any
+                </RadioButton>
+            </StackPanel>
+            <ScrollViewer Grid.Row="1"
                           VerticalScrollBarVisibility="Auto">
                 <StackPanel Margin="8, 8, 8, 0"
                             Name="QueryPanel">
-                            
                 </StackPanel>
             </ScrollViewer>
-            <StackPanel Grid.Row="1"
+            <StackPanel Grid.Row="2"
                         Orientation="Horizontal"
                         HorizontalAlignment="Right">
                 <Button Name="CriteriaAddButton"
-                    VerticalAlignment="Center"
-                    Background="Transparent" Click="CriteriaAddButton_Click"
-                    BorderBrush="Transparent"
-                    Margin="8">
+                        VerticalAlignment="Center"
+                        Click="CriteriaAddButton_Click"
+                        Margin="8"
+                        Padding="8"
+                        Background="{StaticResource ForegroundThemeBrush}">
                     <TextBlock Text="add"
                            FontWeight="Bold"
                            FontSize="24"
-                           Foreground="{StaticResource ForegroundThemeBrush}"/>
+                           Foreground="White"/>
                 </Button>
                 <Button Name="AdvancedSearchButton"
-                    VerticalAlignment="Center"
-                    Background="Transparent" Click="AdvancedSearchButton_Click"
-                    BorderBrush="Transparent"
-                    Margin="8, 8, 28, 8">
+                        VerticalAlignment="Center"
+                        Click="AdvancedSearchButton_Click"
+                        Margin="8, 8, 28, 8"
+                        Padding="8"
+                        Background="{StaticResource ForegroundThemeBrush}">
                     <TextBlock Text="search"
                            FontWeight="Bold"
                            FontSize="24"
-                           Foreground="{StaticResource ForegroundThemeBrush}"/>
+                           Foreground="White"/>
                 </Button>
             </StackPanel>
         </Grid>
         <!--Main Form Region-->
-        <ScrollViewer Grid.Row="2"
+        <TextBlock Name="StatusText"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                       FontSize="20"
+                       FontWeight="ExtraLight"
+                       VerticalAlignment="Center"
+                       Margin="0, 0, 0, 16"
+                       Text="0 Articles Loaded"/>
+        <ScrollViewer Grid.Row="3"
                       Grid.Column="1"
                       Grid.ColumnSpan="2" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel"
                       VerticalScrollBarVisibility="Auto">

@@ -63,7 +63,7 @@ namespace IE_UI.Views
 
                 RecentFileManager.AddRecentFile(new RecentFile()
                 {
-                    OperationType = Char.ConvertFromUtf32(0xE7E6),
+                    OperationType = "/assets/images/extract.png",
                     Name = System.IO.Path.GetFileNameWithoutExtension(SourceTextBox.Text),
                     SourceFilePath = System.IO.Path.GetDirectoryName(SourceTextBox.Text),
                     DestinationFilePath = DestinationTextBox.Text

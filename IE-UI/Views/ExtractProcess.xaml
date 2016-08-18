@@ -14,26 +14,19 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <!--Repeat Button-->
-        <Button Name="RepeatButton"
-                Grid.Row="0"
-                FontFamily="Segoe MDL2 Assets"
-                FontSize="24"
-                Background="Transparent"
-                Foreground="{StaticResource ForegroundThemeBrush}"
-                Content="&#xE149;"
-                Click="RepeatButton_Click"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Center"
-                BorderBrush="Transparent"
-                Visibility="Hidden"/>
+        <ProgressBar Name="ProgressBar" 
+                     Height="32" 
+                     Width="600" 
+                     IsIndeterminate="False"
+                     Background="{StaticResource BackgroundLightBrush}"
+                     Foreground="{StaticResource ForegroundThemeBrush}"/>
         <!--Status Text-->
         <TextBlock Name="StatusTextBlock"
                    Grid.Row="1"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Center"
                    FontSize="24"
-                   Margin="0, 40, 0, 0"
+                   Margin="0, 8, 0, 0"
                    Text="initializing"/>
     </Grid>
 </Page>

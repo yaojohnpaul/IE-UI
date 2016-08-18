@@ -11,8 +11,8 @@
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -86,17 +86,18 @@
                     Grid.Row="2"
                     Grid.Column="1"
                     Margin="0, 20, 80, 20"
-                    Visibility="Collapsed">
+                    Visibility="Visible">
             <Button Name="ProceedButton"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     FontSize="20"
-                    Background="Transparent"
-                    BorderBrush="Transparent" Click="ProceedButton_Click">
-                <TextBlock Text="proceed"
+                    Padding="8"
+                    Background="{StaticResource ForegroundThemeBrush}"
+                    Click="ProceedButton_Click">
+                <TextBlock Text="extract"
                            FontWeight="Bold"
                            FontSize="24"
-                           Foreground="{StaticResource ForegroundThemeBrush}"/>
+                           Foreground="White"/>
             </Button>
         </StackPanel>
     </Grid>

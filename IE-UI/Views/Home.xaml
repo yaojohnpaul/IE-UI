@@ -25,12 +25,11 @@
                     Width="200" Click="ExtractButton_Click">
                     <StackPanel Orientation="Vertical"
                             Margin="20">
-                        <Label Content="&#xE7E6;"
-                           FontFamily="Segoe MDL2 Assets"
-                           Foreground="{StaticResource ForegroundThemeBrush}"
-                           FontSize="72"
-                           Padding="0, 40, 0, 40"/>
-                        <TextBlock Text="extractor"
+                        <Image Width="72" 
+                               Height="72" 
+                               Source="/assets/images/extract.png"
+                               Margin="0, 40, 0, 40"/>
+                        <TextBlock Text="extract"
                                Foreground="{StaticResource ForegroundAccentBrush}"
                                FontSize="20"
                                HorizontalAlignment="Center"/>
@@ -43,12 +42,11 @@
                     Width="200" Click="ViewButton_Click">
                     <StackPanel Orientation="Vertical"
                             Margin="20">
-                        <Label Content="&#xE8E5;"
-                           FontFamily="Segoe MDL2 Assets"
-                           Foreground="{StaticResource ForegroundThemeBrush}"
-                           FontSize="72"
-                           Padding="0, 40, 0, 40"/>
-                        <TextBlock Text="viewer"
+                        <Image Width="72" 
+                               Height="72" 
+                               Source="/assets/images/view.png"
+                               Margin="0, 40, 0, 40"/>
+                        <TextBlock Text="view"
                                Foreground="{StaticResource ForegroundAccentBrush}"
                                FontSize="20"
                                HorizontalAlignment="Center"/>
@@ -71,12 +69,10 @@
                                         Width="250"
                                         Orientation="Horizontal">
                                 <!--Icon-->
-                                <TextBlock Text="{Binding OperationType}"
-                                           VerticalAlignment="Center"
-                                           FontFamily="Segoe MDL2 Assets"
-                                           Foreground="{StaticResource ForegroundThemeBrush}"
-                                           FontSize="24"
-                                           Margin="8, 0, 0, 0"/>
+                                <Image Source="{Binding OperationType}"
+                                       VerticalAlignment="Center"
+                                       Width="24"
+                                       Margin="8, 0, 0, 0"/>
                                 <StackPanel>
                                     <!--File Name-->
                                     <TextBlock Text="{Binding Name}"
