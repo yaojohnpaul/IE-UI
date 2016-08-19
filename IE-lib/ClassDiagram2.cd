@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IE_lib.CandidateSelector" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAEAAgAAEAAgACIAAAAACAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CandidateSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.FileParser" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.Identifier" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEBQCAwEAgqAFQCigEMUAAAYASAggAMAUQNXAgwggFA=</HashCode>
+      <FileName>Identifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.Main" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.Preprocessor" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AghAAAAIAAgwgAUgACIgAAAAAQAIhAAgQRAAEAAAABA=</HashCode>
+      <FileName>Preprocessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.ResultWriter" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABABAIBAAAAAAAAAYAQACBGEAIAhAAAAAAAAAgAA=</HashCode>
+      <FileName>ResultWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.Models.Annotation" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAAACAAAAAAAAAAAEAAAAAAAEIAAAAAAA=</HashCode>
+      <FileName>Models\Annotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.Models.Article" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAgAABAAAAAAAAAAABAAAAQAAAAAA=</HashCode>
+      <FileName>Models\Article.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.Models.Candidate" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Candidate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.Models.DisplayArticle" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DisplayArticle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.Models.ParsedResults" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAQBAAAAAAAAAAAAAEAAAAAAAAAABAQAAAAAA=</HashCode>
+      <FileName>Models\ParsedResults.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IE_lib.Models.Token" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAIAAAAAABsAggAADAAAAAAoCAAACAAAggAAIAAAA=</HashCode>
+      <FileName>Models\Token.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
