@@ -286,7 +286,7 @@ namespace IE_lib
         /// <param name="writer">The XML writer.</param>
         public void processWhen(DateTime date, string annotation, XmlTextWriter writer)
         {
-            Console.WriteLine("Annotation: " + annotation + "DATE: " + date);
+            //Console.WriteLine("Annotation: " + annotation + "DATE: " + date);
             if (annotation.Contains("kahapon"))
             {
                 date = date.AddDays(-1);
@@ -386,7 +386,7 @@ namespace IE_lib
             {
                 writer.WriteString(annotation);
             }
-            Console.WriteLine("NEW DATE: " + date);
+            //Console.WriteLine("NEW DATE: " + date);
         }
 
         /// <summary>

@@ -60,7 +60,7 @@ namespace IE_lib
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error while parsing file: " + e);
+                //Console.WriteLine("Error while parsing file: " + e);
             }
 
             return articleList;

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -131,7 +132,7 @@ namespace IE_UI.Views
                     {
                         whoMatched.Add(false);
 
-                        Console.WriteLine("\"{0}\" was not found in the article.", who);
+                        //Console.WriteLine("\"{0}\" was not found in the article.", who);
                     }
                 }
                 else
@@ -164,7 +165,7 @@ namespace IE_UI.Views
                     {
                         whenMatched.Add(false);
 
-                        Console.WriteLine("\"{0}\" was not found in the article.", when);
+                        //Console.WriteLine("\"{0}\" was not found in the article.", when);
                     }
                 }
                 else
@@ -197,7 +198,7 @@ namespace IE_UI.Views
                     {
                         whereMatched.Add(false);
 
-                        Console.WriteLine("\"{0}\" was not found in the article.", where);
+                        //Console.WriteLine("\"{0}\" was not found in the article.", where);
                     }
                 }
                 else
@@ -228,7 +229,7 @@ namespace IE_UI.Views
                 }
                 else
                 {
-                    Console.WriteLine("\"{0}\" was not found in the article.", what);
+                    //Console.WriteLine("\"{0}\" was not found in the article.", what);
                 }
             }
 
@@ -249,7 +250,7 @@ namespace IE_UI.Views
                 }
                 else
                 {
-                    Console.WriteLine("\"{0}\" was not found in the article.", Article.Annotation.Why);
+                    //Console.WriteLine("\"{0}\" was not found in the article.", Article.Annotation.Why);
                 }
             }
 
@@ -261,11 +262,11 @@ namespace IE_UI.Views
                 {
                     if (listBodySegments[i].Intersects(listBodySegments[j]))
                     {
-                        Console.WriteLine("\"{0}\":{1} intersects with \"{2}\":{3}",
-                            body.Substring(listBodySegments[i].StartIndex, listBodySegments[i].EndIndex),
-                            listBodySegments[i].Label,
-                            body.Substring(listBodySegments[j].StartIndex, listBodySegments[j].EndIndex),
-                            listBodySegments[j].Label);
+                        //Console.WriteLine("\"{0}\":{1} intersects with \"{2}\":{3}",
+                        //    body.Substring(listBodySegments[i].StartIndex, listBodySegments[i].EndIndex),
+                        //    listBodySegments[i].Label,
+                        //    body.Substring(listBodySegments[j].StartIndex, listBodySegments[j].EndIndex),
+                        //    listBodySegments[j].Label);
                     }
                 }
             }
@@ -311,11 +312,50 @@ namespace IE_UI.Views
                 XmlNode root;
                 string formattedDateFilePath = FilePath.Insert(FilePath.Length - 4, "_format_date");
                 string invertedIndexFilePath = FilePath.Insert(FilePath.Length - 4, "_inverted_index");
+                List<string> invalidEdit = new List<string>();
                 bool whoChanged = Article.Annotation.Who.Trim() != WhoTextBox.Text.Trim();
                 bool whenChanged = Article.Annotation.FormattedWhen.Trim() != WhenTextBox.Text.Trim();
                 bool whereChanged = Article.Annotation.Where.Trim() != WhereTextBox.Text.Trim();
                 bool whatChanged = Article.Annotation.What.Trim() != WhatTextBox.Text.Trim();
                 bool whyChanged = Article.Annotation.Why.Trim() != WhyTextBox.Text.Trim();
+                bool whoValid = true;
+                bool whenValid = true;
+                bool whereValid = true;
+                bool whatValid = Regex.Replace(Article.Article.Body, @"[^A-Za-z0-9]+", "").Contains(Regex.Replace(WhatTextBox.Text, @"[^A-Za-z0-9]+", ""));
+                bool whyValid = Regex.Replace(Article.Article.Body, @"[^A-Za-z0-9]+", "").Contains(Regex.Replace(WhyTextBox.Text, @"[^A-Za-z0-9]+", ""));
+
+                foreach (string who in WhoTextBox.Text.Split(';'))
+                {
+                    if (!string.IsNullOrEmpty(who))
+                    {
+                        if (!Regex.Replace(Article.Article.Body, @"[^A-Za-z0-9]+", "").Contains(Regex.Replace(who, @"[^A-Za-z0-9]+", "")))
+                        {
+                            whoValid = false;
+                        }
+                    }
+                }
+
+                foreach (string when in WhenTextBox.Text.Split(';'))
+                {
+                    if (!string.IsNullOrEmpty(when))
+                    {
+                        if (!Regex.Replace(Article.Article.Body, @"[^A-Za-z0-9]+", "").Contains(Regex.Replace(when, @"[^A-Za-z0-9]+", "")))
+                        {
+                            whenValid = false;
+                        }
+                    }
+                }
+
+                foreach (string where in WhereTextBox.Text.Split(';'))
+                {
+                    if (!string.IsNullOrEmpty(where))
+                    {
+                        if (!Regex.Replace(Article.Article.Body, @"[^A-Za-z0-9]+", "").Contains(Regex.Replace(where, @"[^A-Za-z0-9]+", "")))
+                        {
+                            whereValid = false;
+                        }
+                    }
+                }
 
                 // Edit base file
 
@@ -323,30 +363,30 @@ namespace IE_UI.Views
 
                 root = doc.DocumentElement;
 
-                if(whoChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["who"].InnerText = WhoTextBox.Text;
-                if(whenChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["when"].InnerText = WhenTextBox.Text;
-                if(whereChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["where"].InnerText = WhereTextBox.Text;
-                if(whatChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["what"].InnerText = WhatTextBox.Text;
-                if(whyChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["why"].InnerText = WhyTextBox.Text;
+                if (whoChanged && whoValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["who"].InnerText = WhoTextBox.Text;
+                if (whenChanged && whenValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["when"].InnerText = WhenTextBox.Text;
+                if (whereChanged && whereValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["where"].InnerText = WhereTextBox.Text;
+                if (whatChanged && whatValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["what"].InnerText = WhatTextBox.Text;
+                if (whyChanged && whyValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["why"].InnerText = WhyTextBox.Text;
 
                 doc.Save(FilePath);
 
                 // Edit formatted date file
-                
+
                 doc.Load(formattedDateFilePath);
 
                 root = doc.DocumentElement;
 
-                if(whoChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["who"].InnerText = WhoTextBox.Text;
-                if(whenChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["when"].InnerText = WhenTextBox.Text;
-                if(whereChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["where"].InnerText = WhereTextBox.Text;
-                if(whatChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["what"].InnerText = WhatTextBox.Text;
-                if(whyChanged) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["why"].InnerText = WhyTextBox.Text;
+                if (whoChanged && whoValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["who"].InnerText = WhoTextBox.Text;
+                if (whenChanged && whenValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["when"].InnerText = WhenTextBox.Text;
+                if (whereChanged && whereValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["where"].InnerText = WhereTextBox.Text;
+                if (whatChanged && whatValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["what"].InnerText = WhatTextBox.Text;
+                if (whyChanged && whyValid) root.SelectSingleNode("/data/article[" + (Article.Annotation.Index + 1) + "]")["why"].InnerText = WhyTextBox.Text;
 
                 doc.Save(formattedDateFilePath);
 
                 // Edit inverted index file
-                
+
                 doc.Load(invertedIndexFilePath);
 
                 XmlNode whoNode = doc.DocumentElement.SelectSingleNode("/data/who");
@@ -355,13 +395,46 @@ namespace IE_UI.Views
                 XmlNode whatNode = doc.DocumentElement.SelectSingleNode("/data/what");
                 XmlNode whyNode = doc.DocumentElement.SelectSingleNode("/data/why");
 
-                if(whoChanged) UpdateInvertedIndexFile(doc, whoNode, Article.Annotation.Who, WhoTextBox.Text);
-                if(whenChanged) UpdateInvertedIndexFile(doc, whenNode, Article.Annotation.When, WhenTextBox.Text);
-                if(whereChanged) UpdateInvertedIndexFile(doc, whereNode, Article.Annotation.Where, WhereTextBox.Text);
-                if(whatChanged) UpdateInvertedIndexFile(doc, whatNode, Article.Annotation.What, WhatTextBox.Text);
-                if(whyChanged) UpdateInvertedIndexFile(doc, whyNode, Article.Annotation.Why, WhyTextBox.Text);
+                if (whoChanged && whoValid) UpdateInvertedIndexFile(doc, whoNode, Article.Annotation.Who, WhoTextBox.Text);
+                if (whenChanged && whenValid) UpdateInvertedIndexFile(doc, whenNode, Article.Annotation.When, WhenTextBox.Text);
+                if (whereChanged && whereValid) UpdateInvertedIndexFile(doc, whereNode, Article.Annotation.Where, WhereTextBox.Text);
+                if (whatChanged && whatValid) UpdateInvertedIndexFile(doc, whatNode, Article.Annotation.What, WhatTextBox.Text);
+                if (whyChanged && whyValid) UpdateInvertedIndexFile(doc, whyNode, Article.Annotation.Why, WhyTextBox.Text);
 
                 doc.Save(invertedIndexFilePath);
+
+                if (!whoValid)
+                {
+                    WhoTextBox.Text = Article.Annotation.Who;
+                    invalidEdit.Add("Who");
+                }
+                if (!whenValid)
+                {
+                    WhenTextBox.Text = Article.Annotation.When;
+                    invalidEdit.Add("When");
+                }
+                if (!whereValid)
+                {
+                    WhereTextBox.Text = Article.Annotation.Where;
+                    invalidEdit.Add("Where");
+                }
+                if (!whatValid)
+                {
+                    WhatTextBox.Text = Article.Annotation.What;
+                    invalidEdit.Add("What");
+                }
+                if (!whyValid)
+                {
+                    WhyTextBox.Text = Article.Annotation.Why;
+                    invalidEdit.Add("Why");
+                }
+
+                if(invalidEdit.Any())
+                {
+                    MessageBox.Show(this,
+                        String.Format("The edit for the following have not been saved: {0}", String.Join(", ", invalidEdit)),
+                        "Invalid edit");
+                }
 
                 EditButtonLabel.Text = "edit";
             }
@@ -381,7 +454,7 @@ namespace IE_UI.Views
 
             foreach (XmlNode entry in nodeList)
             {
-                Console.WriteLine("''{0}'' vs ''{1}''", entry["text"].InnerText, oldFeature);
+                //Console.WriteLine("''{0}'' vs ''{1}''", entry["text"].InnerText, oldFeature);
 
                 if (entry["text"].InnerText == oldFeature)
                 {

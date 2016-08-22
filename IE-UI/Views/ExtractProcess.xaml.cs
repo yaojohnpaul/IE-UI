@@ -27,6 +27,10 @@ namespace IE_UI.Views
         /// The worker
         /// </summary>
         private BackgroundWorker Worker;
+        /// <summary>
+        /// The status text
+        /// </summary>
+        private string StatusText;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ExtractProcess"/> class.
@@ -43,8 +47,6 @@ namespace IE_UI.Views
             Worker = new BackgroundWorker();
             //Worker.WorkerSupportsCancellation = true;
             Worker.WorkerReportsProgress = true;
-
-            StatusTextBlock.Text = "extracting";
 
             Worker.DoWork += delegate (object s, DoWorkEventArgs args)
             {
@@ -78,6 +80,8 @@ namespace IE_UI.Views
                 int percentage = args.ProgressPercentage;
 
                 ProgressBar.Value = percentage;
+
+                StatusTextBlock.Text = StatusText;
             };
         }
 
@@ -87,8 +91,7 @@ namespace IE_UI.Views
         /// <returns></returns>
         private bool StartProcess()
         {
-            Worker.ReportProgress(57);
-            return Task.Run(() => IE_lib.Main.Extract(Config.SourceFilePath, Config.DestinationFilePath)).Result;
+            return Task.Run(() => IE_lib.Main.Extract(Config.SourceFilePath, Config.DestinationFilePath, Worker, ref StatusText)).Result;
         }
 
         /// <summary>
@@ -96,7 +99,7 @@ namespace IE_UI.Views
         /// </summary>
         private void EndProcess()
         {
-            ProgressRing.Visibility = Visibility.Hidden;
+            //ProgressRing.Visibility = Visibility.Hidden;
 
             StatusTextBlock.Margin = new Thickness(0);
         }

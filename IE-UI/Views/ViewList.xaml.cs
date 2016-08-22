@@ -166,7 +166,7 @@ namespace IE_UI.Views
             }
             else if (AdvancedSearchPanel.Visibility == Visibility.Visible)
             {
-                LabelTextBlock.Text = "ARTICLES";
+                LabelTextBlock.Text = IsAdvanced ? "SEARCH RESULTS" : "ARTICLES";
 
                 AdvancedSearchPanel.Visibility = Visibility.Collapsed;
                 AdvancedSearchToggle.Content = Char.ConvertFromUtf32(0xE713);
@@ -369,11 +369,11 @@ namespace IE_UI.Views
 
             foreach (List<int> list in queryResults)
             {
-                Console.WriteLine("Iteration " + itr);
+                //Console.WriteLine("Iteration " + itr);
 
                 foreach (int num in list)
                 {
-                    Console.Write(num + ";");
+                    //Console.Write(num + ";");
                 }
 
                 itr++;
@@ -382,11 +382,11 @@ namespace IE_UI.Views
             //Merge results from queries
             for (int i = 0; i < ListTypeComboBoxes.Count; i++)
             {
-                if (ListTypeComboBoxes[i].Text.Equals("AND"))
+                if (/*ListTypeComboBoxes[i].Text.Equals("AND")*/(bool)MatchAll.IsChecked)
                 {
                     queryResults[i + 1] = queryResults[i].Intersect<int>(queryResults[i + 1]).ToList<int>();
                 }
-                else if (ListTypeComboBoxes[i].Text.Equals("OR"))
+                else if (/*ListTypeComboBoxes[i].Text.Equals("OR")*/(bool)MatchAny.IsChecked)
                 {
                     mergedAndResults.Add(queryResults[i]);
 
@@ -461,21 +461,21 @@ namespace IE_UI.Views
             ListCriteriaComboBoxes.Add(newCriteria);
             newPanel.Children.Add(newCriteria);
 
-            //ComboBox newType = new ComboBox();
+            ComboBox newType = new ComboBox();
 
-            //newType.Name = "criteriaType" + ListTypeComboBoxes.Count;
-            //newType.FontSize = 16;
-            //newType.Padding = new Thickness(8);
-            //newType.Width = 80;
+            newType.Name = "criteriaType" + ListTypeComboBoxes.Count;
+            newType.FontSize = 16;
+            newType.Padding = new Thickness(8);
+            newType.Width = 80;
 
-            //foreach (String s in Types)
-            //{
-            //    newType.Items.Add(s);
-            //}
+            foreach (String s in Types)
+            {
+                newType.Items.Add(s);
+            }
 
-            //newType.SelectedIndex = 0;
+            newType.SelectedIndex = 0;
 
-            //ListTypeComboBoxes.Add(newType);
+            ListTypeComboBoxes.Add(newType);
             //newPanel.Children.Add(newType);
 
             newPanel.Margin = new Thickness(0, 4, 0, 0);

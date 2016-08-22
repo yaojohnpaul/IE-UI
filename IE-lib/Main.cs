@@ -1,6 +1,7 @@
 ﻿using IE_lib.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace IE_lib
         /// <param name="source">The source.</param>
         /// <param name="destination">The destination.</param>
         /// <returns>Boolean that denotes if the extraction succeeded.</returns>
-        public static bool Extract(string source, string destination)
+        public static bool Extract(string source, string destination, BackgroundWorker worker, ref string status)
         {
             FileParser fileParser = new FileParser();
             Preprocessor preprocessor = new Preprocessor();
@@ -38,10 +39,17 @@ namespace IE_lib
             List<String> listAllWhatAnnotations = new List<String>();
             List<String> listAllWhyAnnotations = new List<String>();
 
+            int totalProgress = 0;
+            int currentProgress = 0;
+
             #region Parse Source File
-            //status = "parsing source file";
+            status = "parsing source file";
 
             listCurrentArticles = fileParser.parseFile(source);
+
+            totalProgress = listCurrentArticles.Count * 2 + 2;
+
+            worker.ReportProgress(Convert.ToInt16((float)++currentProgress / totalProgress * 100));
 
             if (listCurrentArticles == null)
             {
@@ -50,7 +58,7 @@ namespace IE_lib
             #endregion
 
             #region Preprocess Article 
-            //status = "preprocessing articles";
+            status = "preprocessing articles";
 
             if (listCurrentArticles.Count > 0)
             {
@@ -65,6 +73,8 @@ namespace IE_lib
                     listAllWhereCandidates.Add(preprocessor.getWhereCandidates());
                     listAllWhatCandidates.Add(preprocessor.getWhatCandidates());
                     listAllWhyCandidates.Add(preprocessor.getWhyCandidates());
+
+                    worker.ReportProgress(Convert.ToInt16((float)++currentProgress / totalProgress * 100));
                 }
             }
             else
@@ -74,7 +84,7 @@ namespace IE_lib
             #endregion
 
             #region Identify 5W's
-            //status = "identifying features";
+            status = "identifying features";
 
             Identifier annotationIdentifier = new Identifier();
             for (int nI = 0; nI < listCurrentArticles.Count; nI++)
@@ -92,13 +102,14 @@ namespace IE_lib
                 listAllWhereAnnotations.Add(annotationIdentifier.getWhere());
                 listAllWhatAnnotations.Add(annotationIdentifier.getWhat());
                 listAllWhyAnnotations.Add(annotationIdentifier.getWhy());
+
+                worker.ReportProgress(Convert.ToInt16((float)++currentProgress / totalProgress * 100));
             }
 
             #endregion
 
             #region Generate Output
-            //status = "generating output";
-
+            status = "generating output";
 
             String destinationPath = destination;
             String invertedDestinationPath = destination.Insert(destination.Length - 4, "_inverted_index");
@@ -108,6 +119,8 @@ namespace IE_lib
             rw.generateOutput();
             rw.generateOutputFormatDate();
             rw.generateInvertedIndexOutput();
+
+            worker.ReportProgress(Convert.ToInt16((float)++currentProgress / totalProgress * 100));
 
             #endregion 
 

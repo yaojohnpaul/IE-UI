@@ -82,12 +82,14 @@
                 <Label Content="match type"
                        FontSize="20"
                        FontWeight="ExtraLight"/>
-                <RadioButton GroupName="MatchType"
+                <RadioButton Name="MatchAll"
+                             GroupName="MatchType"
                              Margin="16, 16, 0, 0"
                              IsChecked="True">
                     match all
                 </RadioButton>
-                <RadioButton GroupName="MatchType"
+                <RadioButton Name="MatchAny"
+                             GroupName="MatchType"
                              Margin="8, 16, 0, 0">
                     match any
                 </RadioButton>
