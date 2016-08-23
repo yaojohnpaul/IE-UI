@@ -432,8 +432,8 @@ namespace IE_UI.Views
                 if(invalidEdit.Any())
                 {
                     MessageBox.Show(this,
-                        String.Format("The edit for the following have not been saved: {0}", String.Join(", ", invalidEdit)),
-                        "Invalid edit");
+                        String.Format("An error prohibited the annotation(s) from being saved. The current annotation cannot be found in the article. \n\nThe annotation(s) for the following have not been saved: {0}", String.Join(", ", invalidEdit)),
+                        "Editing annotation");
                 }
 
                 EditButtonLabel.Text = "edit";

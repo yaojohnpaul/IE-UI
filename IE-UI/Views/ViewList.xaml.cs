@@ -92,8 +92,8 @@ namespace IE_UI.Views
             if (Results == null)
             {
                 MessageBox.Show(Application.Current.MainWindow,
-                    "Either there are no articles found or other input files are missing.",
-                    "Invalid input file");
+                    "There was a problem in loading the result files. Either the file selected does not contain any articles or the other result files are missing. \n\nKindly check your result files.",
+                    "Loading result files");
             }
             else
             {

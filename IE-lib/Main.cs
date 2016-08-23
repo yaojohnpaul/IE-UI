@@ -41,7 +41,7 @@ namespace IE_lib
 
             int totalProgress = 0;
             int currentProgress = 0;
-
+            
             #region Parse Source File
             status = "parsing source file";
 

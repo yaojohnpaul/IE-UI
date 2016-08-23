@@ -72,8 +72,8 @@ namespace IE_UI.Views
             else
             {
                 MessageBox.Show(Application.Current.MainWindow,
-                    "Please enter valid file paths.",
-                    "Invalid file paths");
+                    "An error prohibited the loading of the files. Either the source file or the destination path does not exist. \n\nKindly check on your input file and destination path.",
+                    "Selecting files");
             }
         }
 

@@ -58,8 +58,8 @@ namespace IE_UI.Views
                 if (!(bool)args.Result)
                 {
                     MessageBox.Show(Application.Current.MainWindow,
-                        "Invalid input file.",
-                        "Process failed");
+                        "There was a problem in extracting the 5Ws. The input file does not contain any articles. \n\nKindly check the input file.",
+                        "Extracting");
 
                     StatusTextBlock.Text = "process failed";
 
