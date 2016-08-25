@@ -121,10 +121,10 @@ namespace IE_UI.Views
             {
                 LabelTextBlock.Text = "ADVANCED SEARCH";
 
+                BasicSearchTextBox.Text = "";
+                BasicSearchTextBox.Visibility = Visibility.Hidden;
                 AdvancedSearchPanel.Visibility = Visibility.Visible;
                 AdvancedSearchToggle.Content = Char.ConvertFromUtf32(0xE711);
-                BasicSearchTextBox.Visibility = Visibility.Hidden;
-                BasicSearchTextBox.Text = "";
 
                 ListQueryTextBoxes = new List<TextBox>();
                 ListCriteriaComboBoxes = new List<ComboBox>();
