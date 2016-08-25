@@ -339,7 +339,8 @@ namespace IE_UI.Views
                 {
                     if (!string.IsNullOrEmpty(when))
                     {
-                        if (!Regex.Replace(Article.Article.Body, @"[^A-Za-z0-9]+", "").Contains(Regex.Replace(when, @"[^A-Za-z0-9]+", "")))
+                        if (!Regex.Replace(Article.Article.Body, @"[^A-Za-z0-9]+", "").Contains(Regex.Replace(when, @"[^A-Za-z0-9]+", "")) &&
+                            !Regex.Replace(Article.Annotation.FormattedWhen, @"[^A-Za-z0-9]+", "").Contains(Regex.Replace(when, @"[^A-Za-z0-9]+", "")))
                         {
                             whenValid = false;
                         }
